@@ -182,6 +182,8 @@ function light_scripts() {
 
 	wp_enqueue_style('arctic', get_template_directory_uri() . '/css/jquery.arcticmodal-0.3.css', array(), null, 'all');
 
+	wp_enqueue_style('style-new', get_template_directory_uri() . '/css/style-new.css', array(), null, 'all');
+
 	wp_enqueue_style( 'light-style', get_stylesheet_uri() );
 
 	wp_enqueue_script('jquery');

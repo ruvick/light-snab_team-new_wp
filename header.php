@@ -58,30 +58,40 @@
 
   <div id="page" class="site">
 
-    <header class="header">
-      <div class="header-top">
-        <div class="container">
-          <div class="header-address"><?php echo carbon_get_theme_option('as_address');?></div>
-          <a href="tel:<?php echo str_replace(array('(', ')', '-', ' '), '', carbon_get_theme_option('as_phone'))?>" class="header-phone"><?php echo carbon_get_theme_option('as_phone');?></a>
-          <a href="mailto:<?php echo carbon_get_theme_option('as_email');?>" class="header-email"><?php echo carbon_get_theme_option('as_email');?></a>
-        </div>
-      </div>
-      <div class="header-bottom"> 
-        <div class="container">
-          <a href="<?php echo home_url('/');?>" class="logo" style="background-image: url(<?php echo wp_get_attachment_image_src(carbon_get_theme_option('as_logo'), 'full')[0];?>)"></a>
+  <header id="header" class="header">
+	<div class="header__container _container">
 
-          <nav class="main-menu">
-            <div class="hamburger">
-              <span class="hamburger-top"></span>
-              <span class="hamburger-middle"></span>
-              <span class="hamburger-bottom"></span>
-            </div>
-            <?php main_menu();?>
-          </nav>
-          <a href="<?php echo get_category_link(3);?>" class="header__brand"></a>
-          <a href="<?php echo get_permalink(17172);?>" class="header__bascket bascket-icon"><span class="bascket-icon__number bascet_counter">0</span></a>
-        </div>
-      </div>
-    </header>
+		<div class="header__row d-flex">
+
+			<a href="<? bloginfo("url"); ?>" class="logo-icon header__logo"></a>
+
+			<div class="header__contacts d-flex">
+				<a href="#" class="header__contacts-address">Москва, ул. Маяковского,25</a>
+				<a href="tel:88007556504" class="header__contacts-phone">8 800 755 65 04</a>
+				<a href="mailto:info@light.ru" class="header__contacts-email">info@light.ru</a>
+			</div>
+
+			<div class="icon-menu" aria-label="Бургер меню">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+		</div>
+</header>
+
+<!-- Мобильное меню -->
+<div class="mob-menu header__mob-menu">
+	<ul class="mob-menu__list">
+		<li class="mob-menu__item"><a href="#" class="mob-menu__link">Пункт 1</a></li>
+		<li class="mob-menu__item"><a href="#" class="mob-menu__link">Пункт 2</a></li>
+		<li class="mob-menu__item"><a href="#" class="mob-menu__link">Пункт 3</a></li>
+		<li class="mob-menu__item"><a href="#" class="mob-menu__link">Пункт 4</a></li>
+		<li class="mob-menu__item"><a href="#" class="mob-menu__link">Пункт 5</a></li>
+	</ul>
+	<!-- <?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'mob-menu__list',
+		'container_class' => 'mob-menu__list','container' => false )); ?>  -->
+	<a href="#callback" class="header__popup-link header__popup-link_mob _popup-link">ЗАКАЗАТЬ ЗВОНОК</a>
+</div>
 
     <div id="content" class="site-content">

@@ -12,201 +12,385 @@
  * @package light
  */
 
-get_header();
+get_header(); 
 ?>
 
-<div id="primary" class="content-area">
-  <main id="main" class="site-main">
+<div id="primary" class="content-area"> 
+<main class="page">
 
-    <section class="main-slider">
-      <?php if(!empty(carbon_get_theme_option('banner_title_1')) && !empty(carbon_get_theme_option('banner_subtitle_1'))):?>
-      <div class="main-slider__item" style="background-image: url(<?php echo wp_get_attachment_image_src(carbon_get_theme_option('banner_image_1'), 'full')[0];?>)">
-        <div class="container">
-          <div class="main-slider__item-content">
-            <div class="main-slider__item-title"><?php echo carbon_get_theme_option('banner_title_1');?></div>
-            <div class="main-slider__item-subtitle"><?php echo carbon_get_theme_option('banner_subtitle_1');?></div>
+<section id="slider-main" class="slider-main">
+
+  <div class="slider-bg-wrap">
+    <div class="sliderMain _swiper">
+      <div class="slider-bg__slide slider__slide slider-main__slide">
+        <div class="slider-bg__container _container">
+          <h1 class="slider-main__title">
+            СОВРЕМЕННЫЙ <br>
+            <span>ДИЗАЙН</span>
+          </h1>
+          <p class="slider-main__subtitle">ЕВРОПЕЙСКОЕ КАЧЕСТВО</p>
+        </div>
+      </div>
+      <div class="slider-bg__slide slider__slide slider-main__slide">
+        <div class="slider-bg__container _container">
+          <h1 class="slider-main__title">
+            СОВРЕМЕННЫЙ <br>
+            <span>ДИЗАЙН</span>
+          </h1>
+          <p class="slider-main__subtitle">ЕВРОПЕЙСКОЕ КАЧЕСТВО</p>
+        </div>
+      </div>
+      <div class="slider-bg__slide slider__slide slider-main__slide">
+        <div class="slider-bg__container _container">
+          <h1 class="slider-main__title">
+            СОВРЕМЕННЫЙ <br>
+            <span>ДИЗАЙН</span>
+          </h1>
+          <p class="slider-main__subtitle">ЕВРОПЕЙСКОЕ КАЧЕСТВО</p>
+        </div>
+      </div>
+    </div>
+    <div class="slider-bg__swiper-button-block swiper-button-block">
+      <div class="_container">
+        <div class="slider-main__swiper-paggination swiper-paggination"></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section id="best-offers" class="best-offers">
+  <div class="_container">
+    <h2 class="best-offers__title title">ЛУЧШИЕ ПРЕДЛОЖЕНИЯ</h2>
+    <div class="best-offers__row">
+
+      <div class="card-column">
+        <div class="card-box">
+          <div class="card-box-img">
+            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/cards/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/cards/02.jpg?_v=1649104441578" alt=""></picture>
+          </div>
+          <div class="card-box-descp">
+            <h4 class="card-box-descp-title">
+              бра Golden Bird Double
+            </h4>
+            <div class="card-box-descp-payment d-flex">
+              <div class="card-box-descp-price rub">15 210 </div>
+              <a href="#" class="card-box-descp-btn btn">Подробнее</a>
+            </div>
           </div>
         </div>
       </div>
-      <?php endif;?>
-      <?php if(!empty(carbon_get_theme_option('banner_title_2')) && !empty(carbon_get_theme_option('banner_subtitle_2'))):?>
-      <div class="main-slider__item" style="background-image: url(<?php echo wp_get_attachment_image_src(carbon_get_theme_option('banner_image_2'), 'full')[0];?>)">
-        <div class="container">
-          <div class="main-slider__item-content">
-            <div class="main-slider__item-title"><?php echo carbon_get_theme_option('banner_title_2');?></div>
-            <div class="main-slider__item-subtitle"><?php echo carbon_get_theme_option('banner_subtitle_2');?></div>
+
+      <div class="card-column">
+        <div class="card-box">
+          <div class="card-box-img">
+            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/cards/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/cards/03.jpg?_v=1649104441578" alt=""></picture>
+          </div>
+          <div class="card-box-descp">
+            <h4 class="card-box-descp-title">
+              люстра The Fluttering Butterfly
+            </h4>
+            <div class="card-box-descp-payment d-flex">
+              <div class="card-box-descp-price rub">5230 </div>
+              <a href="#" class="card-box-descp-btn btn">Подробнее</a>
+            </div>
           </div>
         </div>
       </div>
-      <?php endif;?>
-      <?php if(!empty(carbon_get_theme_option('banner_title_3')) && !empty(carbon_get_theme_option('banner_subtitle_3'))):?>
-      <div class="main-slider__item" style="background-image: url(<?php echo wp_get_attachment_image_src(carbon_get_theme_option('banner_image_3'), 'full')[0];?>)">
-        <div class="container">
-          <div class="main-slider__item-content">
-            <div class="main-slider__item-title"><?php echo carbon_get_theme_option('banner_title_3');?></div>
-            <div class="main-slider__item-subtitle"><?php echo carbon_get_theme_option('banner_subtitle_3');?></div>
+
+      <div class="card-column">
+        <div class="card-box">
+          <div class="card-box-img">
+            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/cards/04.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/cards/04.jpg?_v=1649104441578" alt=""></picture>
+          </div>
+          <div class="card-box-descp">
+            <h4 class="card-box-descp-title">
+              люстра The Fluttering Butterfly
+            </h4>
+            <div class="card-box-descp-payment d-flex">
+              <div class="card-box-descp-price rub">5230 </div>
+              <a href="#" class="card-box-descp-btn btn">Подробнее</a>
+            </div>
           </div>
         </div>
       </div>
-    <?php endif;?>
-    </section>
 
-    <section class="popular">
-      <div class="container">
-        <h2 class="popular__title">Популярные товары</h2>
-        <div class="products-wrapper">
-        <?
-					$args = array(
-						'posts_per_page' => 4,
-						'post_type' => 'light',
-						'orderby' => 'rand',
-						'tax_query' => array(
-								array(
-										'taxonomy' => 'lightcat',
-										'field'    => 'slug',
-										'terms'    => 'dizajnerskie-svetilniki'
-								),
-						)
-					);
-					$query = new WP_Query($args);
+      <div class="card-column">
+        <div class="card-box">
+          <div class="card-box-img">
+            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/cards/05.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/cards/05.jpg?_v=1649104441578" alt=""></picture>
+          </div>
+          <div class="card-box-descp">
+            <h4 class="card-box-descp-title">
+              люстра Orion 4
+            </h4>
+            <div class="card-box-descp-payment d-flex">
+              <div class="card-box-descp-price rub">43 240 </div>
+              <a href="#" class="card-box-descp-btn btn">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-					foreach( $query->posts as $post ){
-						$query->the_post();
-						get_template_part('template-parts/product-loop');
-					}  
-					wp_reset_postdata(); 
-			?>
+      <div class="card-column">
+        <div class="card-box">
+          <div class="card-box-img">
+            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/cards/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/cards/01.jpg?_v=1649104441578" alt=""></picture>
+          </div>
+          <div class="card-box-descp">
+            <h4 class="card-box-descp-title">
+              люстра The Fluttering Butterfly
+            </h4>
+            <div class="card-box-descp-payment d-flex">
+              <div class="card-box-descp-price rub">5230 </div>
+              <a href="#" class="card-box-descp-btn btn">Подробнее</a>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section class="whom">
-      <div class="container">
-        <a href="<?php echo get_permalink(10);?>" class="whom-item">
-          <div class="whom-item__photo" style="background-image: url(<?php echo get_template_directory_uri();?>/img/designer.jpg)"></div>
-          <div class="whom-item__title">Дизайнерам <span class="color-yellow">/</span>Архитекторам</div>
-        </a>
-        <a href="<?php echo get_permalink(7);?>" class="whom-item">
-          <div class="whom-item__photo" style="background-image: url(<?php echo get_template_directory_uri();?>/img/complect.jpg)"></div>
-          <div class="whom-item__title">Комплектовщикам <span class="color-yellow">/</span>Снабженцам</div>
-        </a>
-      </div>
-    </section>
-    <section class="about">
-      <div class="container">
-        <h2 class="about-title"><?php echo carbon_get_theme_option('as_about_title');?></h2>
-        <div class="about-subtitle"><?php echo carbon_get_theme_option('as_about_subtitle');?></div>
-        <?php echo carbon_get_theme_option('as_about_text');?>
-      </div>
-    </section>
+    </div>
 
-    <section class="offers">
-      <div class="container">
-        <div class="offers-item">
-          <h2 class="offers-item__title">Дизайнеры <span class="color-yellow">/</span><br> Архитекторы <span class="color-yellow">/</span> Декораторы</h2>
-          <div class="offers-item__descr">Став нашим партнером<br> Вы получаете</div>
-          <ul class="offers-item__list ul-clean">
-            <li>более 200  топ  брендов </li>
-            <li>проверенный ассортимент</li>
-            <li>сопровождение проекта</li>
-            <li>подбор по визуализации</li>
-            <li>составление КП заказчику</li>
-            <li>производство по спец. заказу</li>
-            <li>образцы и каталоги</li>
-            <li>бонусная программа + Cashback</li>
-            <li>бартер-реклама в соцсетях</li>
-          </ul>
-          <a href="#" data-partner="Стать партнером (Дизайнеры/Архитекторы/Декораторы)" class="offers-item__link">Отправить заявку</a>
+  </div>
+</section>
+
+<section id="info" class="info">
+  <div class="_container">
+
+    <div class="info__row d-flex">
+
+      <div class="info__card-block d-flex">
+
+        <div class="info__card-block-item info__card-block-item_top d-flex">
+          <div class="info__card-block-item-descp">
+            <h2 class="info__card-block-item-title">
+              ДИЗАЙНЕРАМ / <br>
+              <span>АРХИТЕКТОРАМ</span>
+            </h2>
+            <a href="#" class="info__card-block-item-btn btn">Подробнее</a>
+          </div>
+          <div class="info__card-block-item-img">
+            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/info-01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/info-01.png?_v=1649104441578" alt=""></picture>
+          </div>
         </div>
-        <div class="offers-item">
-          <h2 class="offers-item__title">Комплектовщики <span class="color-yellow">/</span> Снабженцы <span class="color-yellow">/</span> Строители</h2>
-          <div class="offers-item__descr">Став нашим партнером<br> Вы получаете</div>
-          <ul class="offers-item__list ul-clean">
-            <li>более 50 000 товаров в наличии</li>
-            <li>накопительная система скидок</li>
-            <li>оформление спецификаций</li>
-            <li>контроль качества поставок</li>
-            <li>расчет освещения DiaLux</li>
-            <li>выезд сотрудника на объект</li>
-            <li>монтажная бригада</li>
-            <li>гарантийное сопровождение</li>
-            <li>услуга «примерки»</li>
-          </ul>
-          <a href="#" data-partner="Стать партнером (Комплектовщики/Снабженцы/Строители)" class="offers-item__link">Отправить заявку</a>
+
+        <div class="info__card-block-item info__card-block-item_bottom d-flex">
+          <div class="info__card-block-item-img">
+            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/info-02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/info-02.png?_v=1649104441578" alt=""></picture>
+          </div>
+          <div class="info__card-block-item-descp">
+            <h2 class="info__card-block-item-title">
+              КОМПЛЕКТОВЩИКАМ / <br>
+              <span>СНАБЖЕНЦАМ</span>
+            </h2>
+            <a href="#" class="info__card-block-item-btn btn">Подробнее</a>
+          </div>
         </div>
-        <div class="offers-item">
-          <h2 class="offers-item__title">Интернет-магазины <span class="color-yellow">/</span> Салоны света</h2>
-          <div class="offers-item__descr">Став нашим партнером<br> Вы получаете</div>
-          <ul class="offers-item__list ul-clean">
-            <li>более 250 брендов в одном месте</li>
-            <li>актуальные остатки и контент</li>
-            <li>экономия в логистике</li>
-            <li>отгрузка от 1 единицы</li>
-            <li>навигация по ассортименту</li>
-            <li>печатная и рекламная продукция</li>
-            <li>быстрые сроки отгрузки</li>
-            <li>программа дропшиппинг</li>
-            <li>гибкие условия возврата</li>
-          </ul>
-          <a href="#" data-formid="Заявка Стать партнером" data-mailmsg="Заявка Стать партнером" data-partner="Стать партнером (Интернет-магазины/Салоны света)" class="offers-item__link">Отправить заявку</a>
-        </div>
+
       </div>
-    </section>
-    <section class="brands">
-      <div class="container">
-        <h2 class="section-title">У нас только лучшие бренды</h2>
-        <div class="brands-about">
-          Мы собрали лучшие европейские и мировые бренды производителей люстр и светильников, которые есть на складе нашего интернет магазина. Мы можем поставить практически любое декоративное осещение. Свяжитесь с нами, если нужного товара нет на сайте.
+
+      <div class="info__card-big d-flex">
+        <div class="info__card-block-item-descp">
+          <h2 class="info__card-block-item-title">
+            LIGHTSNAB
+          </h2>
+          <p class="info__card-block-item-subtitle">
+            КРУПНЫЙ ДЕСТРИБЬЮТЕР
+            НА РЫНКЕ СВЕТА И
+            ЭЛЕКТРОУСТАНОВОЧНЫХ
+            ИЗДЕЛИЙ
+          </p>
+          <p class="info__card-block-item-text">
+            Без подвесных светильников не обходится оформление практически ни одного современного интерьера. А все
+            благодаря широкому спектру задач, которые можно решить с их помощью: это и основная подсветка
+            пространства, и выделение функциональной зоны, и украшение интерьера… В ассортименте Cosmorelax
+            представлены стильные и необычные подвесные светильники, которые не только будут наполнять интерьер
+            светом, но и радовать глаз
+          </p>
+          <a href="#" class="info__card-block-item-btn btn">Подробнее</a>
         </div>
-      </div>
-      <?php 
-        $arr_brands = carbon_get_theme_option('as_complex_brand');
-        if($arr_brands):
-      ?>
-      <div class="brands-wrapper-home">
-      <div class="container">
-      <div class="brands-wrapper page-brands-wrapper">
-          <?php 
-          $inc = 1;
-          foreach($arr_brands as $brand):
-              if($inc > 10) {
-                break;
-              }
-            ?>
-            <a href="#" data-text='<?php echo $brand['as_complex_brand_descr']?>'>
-              <img src="<?php echo wp_get_attachment_image_src($brand['as_complex_brand_img'], 'full')[0];?>" alt="">
-            </a>
-          <?php 
-          $inc++;
-          endforeach;?>
+        <div class="info__card-block-item-img_big info__card-block-item-img">
+          <picture><source srcset="<?php echo get_template_directory_uri();?>/img/info-05.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/info-05.png?_v=1649104441578" alt=""></picture>
         </div>
       </div>
-      <div class="btn-wrap">
-        <a href="<?php echo get_permalink(17);?>" class="more-link">Перейти к торговым маркам</a>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="inform" class="inform">
+  <div class="_container">
+    <div class="inform__row d-flex">
+
+      <div class="inform__img">
+        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/info-4.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/info-4.png?_v=1649104441578" alt=""></picture>
       </div>
+
+      <div class="inform__descp">
+        <h2 class="inform__title">Дизайнеры / Архитекторы / Декораторы</h2>
+        <ul class="inform__list">
+          <li class="inform__list-item">Более 200 топ брендов</li>
+          <li class="inform__list-item">Производство по спец. заказу</li>
+          <li class="inform__list-item">Проверенный ассортимент</li>
+          <li class="inform__list-item">Образцы и каталоги</li>
+          <li class="inform__list-item">Сопровождение проекта</li>
+          <li class="inform__list-item">Бонусная программа + Cashback</li>
+          <li class="inform__list-item">Подбор по визуализации</li>
+          <li class="inform__list-item">Бартер-реклама instagram</li>
+          <li class="inform__list-item">Составление КП заказчику</li>
+        </ul>
+        <a href="#callback" class="inform__btn btn _popup-link">Отправить заявку</a>
       </div>
-    <?php endif;?>
-    </section>
-    <section class="cert">
-      <div class="container">
-        <h2 class="section-title">Сертификаты</h2>
-        <?php 
-          $arr_cert = carbon_get_theme_option('complex_cert');
-          if($arr_cert):
-        ?>
-        <div class="cert-slider">
-          <?php foreach($arr_cert as $cert):?>
-            <a href="<?php echo wp_get_attachment_image_src($cert['complex_cert_img'], 'full')[0];?>" data-lightbox="cert" style="background-image: url(<?php echo wp_get_attachment_image_src($cert['complex_cert_img'], 'large')[0];?>)" class="cert-slider__item"></a>
-          <?php endforeach;?>
+
+    </div>
+  </div>
+</section>
+
+<section id="brends" class="brends">
+  <div class="_container">
+    <h2 class="brends__title title">У НАС ТОЛЬКО ЛУЧШИЕ БРЕНДЫ</h2>
+    <p class="brends__subtitle">
+      Мы собрали лучшие европейские и мировые бренды производителей люстр и светильников, которые есть на складе
+      нашего интернет магазина.
+      Мы можем поставить практически любое декоративное осещение. Свяжитесь с нами, если нужного товара нет на
+      сайте.
+    </p>
+
+    <div class="sliderBrends _swiper d-flex">
+      <div class="brends__slide slider__slide">
+        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/01.jpg?_v=1649104441578" alt=""></picture>
+      </div>
+      <div class="brends__slide slider__slide">
+        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/02.jpg?_v=1649104441578" alt=""></picture>
+      </div>
+      <div class="brends__slide slider__slide">
+        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/03.jpg?_v=1649104441578" alt=""></picture>
+      </div>
+      <div class="brends__slide slider__slide">
+        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/04.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/04.jpg?_v=1649104441578" alt=""></picture>
+      </div>
+      <div class="brends__slide slider__slide">
+        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/05.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/05.jpg?_v=1649104441578" alt=""></picture>
+      </div>
+      <div class="brends__slide slider__slide">
+        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/06.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/06.jpg?_v=1649104441578" alt=""></picture>
+      </div>
+      <div class="brends__slide slider__slide">
+        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/07.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/07.jpg?_v=1649104441578" alt=""></picture>
+      </div>
+      <div class="brends__slide slider__slide">
+        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/08.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/08.jpg?_v=1649104441578" alt=""></picture>
+      </div>
+      <div class="brends__slide slider__slide">
+        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/09.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/09.jpg?_v=1649104441578" alt=""></picture>
+      </div>
+    </div>
+
+    <a href="#" class="brends__btn btn">Перейти к торговым маркам</a>
+
+  </div>
+</section>
+
+<section id="reviews" class="reviews">
+  <div class="_container">
+
+    <div class="reviews__slider reviewsSl _swiper d-flex">
+
+      <div class="reviews__slide slider__slide">
+        <div class="reviews__message">
+          <h3 class="reviews__message-title">Клиентский подход на высоте!</h3>
+          <p class="reviews__message-subtitle">
+            Удобно, что есть проектный отдел и можно сделать световой расчет. Раньше "примерялись" и меняли
+            светильники, не хватало толкового совета - что лучше использовать и как подсветить. На ребят можно
+            положиться, доверил им свои проекты, считают все под ключ. Ассортимент широкий-
+          </p>
+          <a href="#" class="reviews__message-to-read">Читать полностью</a>
         </div>
-      <?php endif;?>
+        <div class="reviews__slide-name-block d-flex">
+          <div class="reviews__slide-name-block-img">
+            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/reviews/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/reviews/01.jpg?_v=1649104441578" alt=""></picture>
+          </div>
+          <div class="reviews__slide-name-block-text">
+            <div class="reviews__slide-name-block-descp">Студия дизайна “ВанДизайн”</div>
+            <h3 class="reviews__slide-name-block-name">Светлана</h3>
+          </div>
+        </div>
       </div>
-    </section>
-    <section class="form-section" style="background-image: url(<?php echo get_template_directory_uri();?>/img/fon1.jpg);">
-      <?php get_template_part('template-parts/form-section');?>
-    </section>
-    <?php get_template_part('template-parts/reviews');?>
-  </main><!-- #main -->
+
+      <div class="reviews__slide slider__slide">
+        <div class="reviews__message">
+          <h3 class="reviews__message-title">Качество и высокий уровень сервиса</h3>
+          <p class="reviews__message-subtitle">
+            Познакомились с Вами совсем недавно, а так много успели сделать. Для нас выстроили индивидуальный
+            подход
+            и за это БОЛЬШОЕ спасибо ! Теперь комплектуем объекты быстро, а самое главное - качественно.
+            Персональный менеджер Алексей, настоящий профессионал своего дела.удобно
+          </p>
+          <a href="#" class="reviews__message-to-read">Читать полностью</a>
+        </div>
+        <div class="reviews__slide-name-block d-flex">
+          <div class="reviews__slide-name-block-img">
+            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/reviews/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/reviews/02.jpg?_v=1649104441578" alt=""></picture>
+          </div>
+          <div class="reviews__slide-name-block-text">
+            <div class="reviews__slide-name-block-descp">Архитектор</div>
+            <h3 class="reviews__slide-name-block-name">Мария Гром</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews__slide slider__slide">
+        <div class="reviews__message">
+          <h3 class="reviews__message-title">Клиентский подход на высоте!</h3>
+          <p class="reviews__message-subtitle">
+            Удобно, что есть проектный отдел и можно сделать световой расчет. Раньше "примерялись" и меняли
+            светильники, не хватало толкового совета - что лучше использовать и как подсветить. На ребят можно
+            положиться, доверил им свои проекты, считают все под ключ. Ассортимент широкий-
+          </p>
+          <a href="#" class="reviews__message-to-read">Читать полностью</a>
+        </div>
+        <div class="reviews__slide-name-block d-flex">
+          <div class="reviews__slide-name-block-img">
+            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/reviews/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/reviews/03.jpg?_v=1649104441578" alt=""></picture>
+          </div>
+          <div class="reviews__slide-name-block-text">
+            <div class="reviews__slide-name-block-descp">Студия дизайна “ВанДизайн”</div>
+            <h3 class="reviews__slide-name-block-name">Светлана</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="certificates" class="certificates">
+  <div class="_container">
+    <h2 class="certificates__title title">СЕРТИФИКАТЫ</h2>
+
+    <div class="certificates__slider sliderCert _swiper d-flex">
+      <div class="certificates__slide slider__slide">
+        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/certificates/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/certificates/01.jpg?_v=1649104441578" alt=""></picture>
+      </div>
+      <div class="certificates__slide slider__slide">
+        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/certificates/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/certificates/01.jpg?_v=1649104441578" alt=""></picture>
+      </div>
+      <div class="certificates__slide slider__slide">
+        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/certificates/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/certificates/01.jpg?_v=1649104441578" alt=""></picture>
+      </div>
+      <div class="certificates__slide slider__slide">
+        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/certificates/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/certificates/01.jpg?_v=1649104441578" alt=""></picture>
+      </div>
+      <div class="certificates__slide slider__slide">
+        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/certificates/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/certificates/01.jpg?_v=1649104441578" alt=""></picture>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
 </div><!-- #primary -->
 
 <?php
