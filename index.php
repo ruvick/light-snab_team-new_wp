@@ -171,33 +171,20 @@
     </p>
 
     <div class="sliderBrends _swiper d-flex">
-      <div class="brends__slide slider__slide">
-        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/01.jpg?_v=1649104441578" alt=""></picture>
-      </div>
-      <div class="brends__slide slider__slide">
-        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/02.jpg?_v=1649104441578" alt=""></picture>
-      </div>
-      <div class="brends__slide slider__slide">
-        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/03.jpg?_v=1649104441578" alt=""></picture>
-      </div>
-      <div class="brends__slide slider__slide">
-        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/04.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/04.jpg?_v=1649104441578" alt=""></picture>
-      </div>
-      <div class="brends__slide slider__slide">
-        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/05.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/05.jpg?_v=1649104441578" alt=""></picture>
-      </div>
-      <div class="brends__slide slider__slide">
-        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/06.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/06.jpg?_v=1649104441578" alt=""></picture>
-      </div>
-      <div class="brends__slide slider__slide">
-        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/07.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/07.jpg?_v=1649104441578" alt=""></picture>
-      </div>
-      <div class="brends__slide slider__slide">
-        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/08.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/08.jpg?_v=1649104441578" alt=""></picture>
-      </div>
-      <div class="brends__slide slider__slide">
-        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/brends/09.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/brends/09.jpg?_v=1649104441578" alt=""></picture>
-      </div>
+      <? 
+				$brends = carbon_get_theme_option('complex_brends');
+					if ($brends) {
+						$brendsIndex = 0;
+					foreach ($brends as $item) {
+			?>
+        <div class="brends__slide slider__slide">
+          <img src="<?php echo wp_get_attachment_image_src($item['img_brends'], 'large')[0]; ?>" alt="">				
+        </div>
+			<?
+				$brendsIndex++; 
+						}
+					}
+			?>
     </div>
 
     <a href="#" class="brends__btn btn">Перейти к торговым маркам</a>
@@ -209,71 +196,34 @@
   <div class="_container">
 
     <div class="reviews__slider reviewsSl _swiper d-flex">
+    <? 
+			$reviews = carbon_get_theme_option('complex_reviews');
 
+				if ($reviews) {
+					$reviewsIndex = 0;
+				foreach ($reviews as $item) {
+		?>
       <div class="reviews__slide slider__slide">
         <div class="reviews__message">
-          <h3 class="reviews__message-title">Клиентский подход на высоте!</h3>
-          <p class="reviews__message-subtitle">
-            Удобно, что есть проектный отдел и можно сделать световой расчет. Раньше "примерялись" и меняли
-            светильники, не хватало толкового совета - что лучше использовать и как подсветить. На ребят можно
-            положиться, доверил им свои проекты, считают все под ключ. Ассортимент широкий-
-          </p>
-          <a href="#" class="reviews__message-to-read">Читать полностью</a>
+          <h3 class="reviews__message-title"><? echo $item['title_reviews']; ?></h3>
+          <p class="reviews__message-subtitle"><? echo $item['descp_reviews']; ?></p>
+          <a href="<? echo $item['link_reviews']; ?>" class="reviews__message-to-read">Читать полностью</a>
         </div>
         <div class="reviews__slide-name-block d-flex">
           <div class="reviews__slide-name-block-img">
-            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/reviews/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/reviews/01.jpg?_v=1649104441578" alt=""></picture>
+            <img src="<?php echo wp_get_attachment_image_src($item['img_reviews'], 'large')[0]; ?>" alt="">				
           </div>
           <div class="reviews__slide-name-block-text">
-            <div class="reviews__slide-name-block-descp">Студия дизайна “ВанДизайн”</div>
-            <h3 class="reviews__slide-name-block-name">Светлана</h3>
+            <div class="reviews__slide-name-block-descp"><? echo $item['position_reviews']; ?></div>
+            <h3 class="reviews__slide-name-block-name"><? echo $item['name_reviews']; ?></h3>
           </div>
         </div>
       </div>
-
-      <div class="reviews__slide slider__slide">
-        <div class="reviews__message">
-          <h3 class="reviews__message-title">Качество и высокий уровень сервиса</h3>
-          <p class="reviews__message-subtitle">
-            Познакомились с Вами совсем недавно, а так много успели сделать. Для нас выстроили индивидуальный
-            подход
-            и за это БОЛЬШОЕ спасибо ! Теперь комплектуем объекты быстро, а самое главное - качественно.
-            Персональный менеджер Алексей, настоящий профессионал своего дела.удобно
-          </p>
-          <a href="#" class="reviews__message-to-read">Читать полностью</a>
-        </div>
-        <div class="reviews__slide-name-block d-flex">
-          <div class="reviews__slide-name-block-img">
-            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/reviews/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/reviews/02.jpg?_v=1649104441578" alt=""></picture>
-          </div>
-          <div class="reviews__slide-name-block-text">
-            <div class="reviews__slide-name-block-descp">Архитектор</div>
-            <h3 class="reviews__slide-name-block-name">Мария Гром</h3>
-          </div>
-        </div>
-      </div>
-
-      <div class="reviews__slide slider__slide">
-        <div class="reviews__message">
-          <h3 class="reviews__message-title">Клиентский подход на высоте!</h3>
-          <p class="reviews__message-subtitle">
-            Удобно, что есть проектный отдел и можно сделать световой расчет. Раньше "примерялись" и меняли
-            светильники, не хватало толкового совета - что лучше использовать и как подсветить. На ребят можно
-            положиться, доверил им свои проекты, считают все под ключ. Ассортимент широкий-
-          </p>
-          <a href="#" class="reviews__message-to-read">Читать полностью</a>
-        </div>
-        <div class="reviews__slide-name-block d-flex">
-          <div class="reviews__slide-name-block-img">
-            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/reviews/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/reviews/03.jpg?_v=1649104441578" alt=""></picture>
-          </div>
-          <div class="reviews__slide-name-block-text">
-            <div class="reviews__slide-name-block-descp">Студия дизайна “ВанДизайн”</div>
-            <h3 class="reviews__slide-name-block-name">Светлана</h3>
-          </div>
-        </div>
-      </div>
-
+		<?
+			$reviewsIndex++; 
+					}
+				}
+		?>
     </div>
   </div>
 </section>
@@ -283,21 +233,20 @@
     <h2 class="certificates__title title">СЕРТИФИКАТЫ</h2>
 
     <div class="certificates__slider sliderCert _swiper d-flex">
+    <? 
+			$certificates = carbon_get_theme_option('complex_certificates');
+				if ($certificates) {
+					$certificatesIndex = 0;
+				foreach ($certificates as $item) {
+		?>
       <div class="certificates__slide slider__slide">
-        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/certificates/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/certificates/01.jpg?_v=1649104441578" alt=""></picture>
+        <img src="<?php echo wp_get_attachment_image_src($item['img_certificates'], 'large')[0]; ?>" alt="">				
       </div>
-      <div class="certificates__slide slider__slide">
-        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/certificates/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/certificates/01.jpg?_v=1649104441578" alt=""></picture>
-      </div>
-      <div class="certificates__slide slider__slide">
-        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/certificates/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/certificates/01.jpg?_v=1649104441578" alt=""></picture>
-      </div>
-      <div class="certificates__slide slider__slide">
-        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/certificates/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/certificates/01.jpg?_v=1649104441578" alt=""></picture>
-      </div>
-      <div class="certificates__slide slider__slide">
-        <picture><source srcset="<?php echo get_template_directory_uri();?>/img/certificates/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/certificates/01.jpg?_v=1649104441578" alt=""></picture>
-      </div>
+			<?
+				$certificatesIndex++; 
+					}
+				}
+			?>
     </div>
 
   </div>

@@ -49,6 +49,14 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
         Field::make("checkbox", "checkbox_stock_title", "Большая картинка, заголовок слева"),
         ))
     ))
+    ->add_tab('Бренды', array( 
+      Field::make('complex', 'complex_brends', 'Бренды')
+      // ->set_max(3) // Можно будет выбрать только 5 постов
+      ->add_fields(array(
+        Field::make('image', 'img_brends', 'Фото')
+        ->set_width(30),
+        ))
+    ))
     ->add_tab('Отзывы', array(
       Field::make('complex', 'complex_reviews', 'Выводим Отзывы')
       // ->set_max(3) // Можно будет выбрать только 5 постов
@@ -57,13 +65,23 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
         ->set_width(10),
         Field::make('text', 'name_reviews', 'Имя')   
         ->set_width(10),
-        Field::make('text', 'data_reviews', 'Дата')   
+        Field::make('text', 'position_reviews', 'Организация/Должность')   
+        ->set_width(10),
+        Field::make('text', 'title_reviews', 'Заголовок')   
         ->set_width(10),
         Field::make('text', 'descp_reviews', 'Текст')   
         ->set_width(30),
         Field::make('text', 'link_reviews', 'Ссылка')   
         ->set_width(10),
         )) 
+    ))
+    ->add_tab('Сертификаты', array( 
+      Field::make('complex', 'complex_certificates', 'Сертификаты')
+      // ->set_max(3) // Можно будет выбрать только 5 постов
+      ->add_fields(array(
+        Field::make('image', 'img_certificates', 'Фото')
+        ->set_width(30),
+        ))
     ))
     ->add_tab('Контакты', array(
         Field::make( 'text', 'as_company', __( 'Название' ) )
