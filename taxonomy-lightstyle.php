@@ -11,7 +11,7 @@
 				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
 			}
 			?> 
-		<h1 class="title-sec__title"><?php the_title();?></h1>
+		<h1 class="title-sec__title"><?php single_cat_title( '', true );?></h1> 
 	</div>
 </section>
 
