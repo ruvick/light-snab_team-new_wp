@@ -14,34 +14,24 @@ get_header(); ?>
 
 <section id="product-sec" class="product-sec recurring">
   <div class="_container">
-    <p id="breadcrumbs">
-      <span>
-        <span>
-          <a href="index.html">
-            Главная
-          </a> /
-          <a href="catalog.html">
-            Люстры
-          </a> /
-          <span class="breadcrumb_last" aria-current="page">
-            светильник 6475
-          </span>
-        </span>
-      </span>
-    </p>
+  <?php
+			if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
+			}
+			?> 
 
     <div class="product__row d-flex">
       <div class="product__slider _swiper d-flex">
         <div class="product__slide slider__slide">
-          <picture><source srcset="img/product/01.webp" type="image/webp"><img src="img/product/01.jpg?_v=1649104441578" alt=""></picture>
+          <picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/01.jpg?_v=1649104441578" alt=""></picture>
         </div>
         <div class="product__slide slider__slide">
-          <picture><source srcset="img/product/01.webp" type="image/webp"><img src="img/product/01.jpg?_v=1649104441578" alt=""></picture>
+          <picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/01.jpg?_v=1649104441578" alt=""></picture>
         </div>
       </div>
 
       <div class="product__descp">
-        <h1 class="product__descp-title">светильник 6475</h1>
+        <h1 class="product__descp-title"><?php the_title();?></h1>
         <p class="product__descp-product-code">код товара: <span>10950</span></p>
         <div class="product__descp-line"></div>
 
@@ -108,7 +98,7 @@ get_header(); ?>
       <div class="card-column">
         <div class="card-box">
           <div class="card-box-img">
-            <picture><source srcset="img/cards/02.webp" type="image/webp"><img src="img/cards/02.jpg?_v=1649104441578" alt=""></picture>
+            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/cards/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/cards/02.jpg?_v=1649104441578" alt=""></picture>
           </div>
           <div class="card-box-descp">
             <h4 class="card-box-descp-title">
@@ -125,7 +115,7 @@ get_header(); ?>
       <div class="card-column">
         <div class="card-box">
           <div class="card-box-img">
-            <picture><source srcset="img/cards/03.webp" type="image/webp"><img src="img/cards/03.jpg?_v=1649104441578" alt=""></picture>
+            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/cards/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/cards/03.jpg?_v=1649104441578" alt=""></picture>
           </div>
           <div class="card-box-descp">
             <h4 class="card-box-descp-title">
@@ -142,7 +132,7 @@ get_header(); ?>
       <div class="card-column">
         <div class="card-box">
           <div class="card-box-img">
-            <picture><source srcset="img/cards/04.webp" type="image/webp"><img src="img/cards/04.jpg?_v=1649104441578" alt=""></picture>
+            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/cards/04.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/cards/04.jpg?_v=1649104441578" alt=""></picture>
           </div>
           <div class="card-box-descp">
             <h4 class="card-box-descp-title">
@@ -159,7 +149,7 @@ get_header(); ?>
       <div class="card-column">
         <div class="card-box">
           <div class="card-box-img">
-            <picture><source srcset="img/cards/05.webp" type="image/webp"><img src="img/cards/05.jpg?_v=1649104441578" alt=""></picture>
+            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/cards/05.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/cards/05.jpg?_v=1649104441578" alt=""></picture>
           </div>
           <div class="card-box-descp">
             <h4 class="card-box-descp-title">
@@ -176,7 +166,7 @@ get_header(); ?>
       <div class="card-column">
         <div class="card-box">
           <div class="card-box-img">
-            <picture><source srcset="img/cards/01.webp" type="image/webp"><img src="img/cards/01.jpg?_v=1649104441578" alt=""></picture>
+            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/cards/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/cards/01.jpg?_v=1649104441578" alt=""></picture>
           </div>
           <div class="card-box-descp">
             <h4 class="card-box-descp-title">
