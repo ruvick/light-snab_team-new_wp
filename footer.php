@@ -15,9 +15,12 @@
 					</ul>
 
 					<div class="footer__contacts">
-						<a href="#" class="footer__contacts-address">Москва, ул. Маяковского,25</a>
-						<a href="tel:88007556504" class="footer__contacts-phone">8 800 755 65 04</a>
-						<a href="mailto:info@light.ru" class="footer__contacts-email">info@light.ru</a>
+						<? $adr = carbon_get_theme_option("as_address"); 
+							if (!empty($adr)){?><a href="#" class="footer__contacts-address"><? echo $adr; ?></a><?}?> 
+						<? $tel = carbon_get_theme_option("as_phones_1"); 
+							if (!empty($tel)){?><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="footer__contacts-phone"><? echo $tel; ?></a><?}?> 
+						<? $mail = carbon_get_theme_option("as_email");
+							if (!empty($mail)) { ?><a href="mailto:<? echo $mail; ?>" class="footer__contacts-email"><? echo $mail; ?></a><? } ?>
 					</div>
 
 					<form class="footer__form" action="#">
