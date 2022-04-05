@@ -22,12 +22,23 @@ get_header(); ?>
 
     <div class="product__row d-flex">
       <div class="product__slider _swiper d-flex">
+			<?
+				$pict = carbon_get_the_post_meta('offer_picture'); 
+					if($pict) {
+				$pictIndex = 0;
+					foreach($pict as $item) {
+			?>
         <div class="product__slide slider__slide">
-          <picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/01.jpg?_v=1649104441578" alt=""></picture>
-        </div>
-        <div class="product__slide slider__slide">
-          <picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/01.jpg?_v=1649104441578" alt=""></picture>
-        </div>
+          <img
+						id = "pict-<? echo empty($item['gal_img_sku'])?$pictIndex:$item['gal_img_sku']; ?>" 
+						alt = "<? echo $item['gal_img_alt']; ?>"
+						title = "<? echo $item['gal_img_alt']; ?>"
+						src = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'full')[0];?>" />         </div>
+			<?
+				$pictIndex++; 
+					}
+				}
+			?>
       </div>
 
       <div class="product__descp">
@@ -58,7 +69,7 @@ get_header(); ?>
 
         <div class="product__descp-line"></div>
 
-        <p class="product__descp-price">Цена <span class="product__descp-price-number rub">15 210</span> </p>
+        <p class="product__descp-price">Цена <span class="product__descp-price-number rub"><?php echo carbon_get_the_post_meta('offer_price');?></span> </p>
 
         <div class="product__descp-line"></div>
 
@@ -67,11 +78,22 @@ get_header(); ?>
           <div class="product__quantity quantity">
             <div class="quantity__button quantity__button_minus"></div>
             <div class="quantity__input">
-              <input autocomplete="off" type="number" name="form[]" value="1">
+              <input id="pageNumeric" autocomplete="off" type="number" name="form[]" value="1">
             </div>
             <div class="quantity__button quantity__button_plus"></div>
           </div>
-          <button class="product__btn btn">В корзину</button>
+          <button class="product__btn btn" id = "btn__to-card" onclick = "add_tocart(this, document.getElementById('pageNumeric').value); return false;"
+					  data-price = "<?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?>"
+  				  data-sku = "<? echo carbon_get_post_meta(get_the_ID(),"offer_sku")?>"
+  				  data-size = ""
+  				  data-oldprice = "<? echo carbon_get_post_meta(get_the_ID(),"offer_old_price")?>"
+  				  data-lnk = "<? echo  get_the_permalink(get_the_ID());?>"
+  				  data-name = "<? echo  get_the_title();?>"
+  				  data-count = "1"
+  				  data-picture = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'large')[0];?>"
+  				  data-picture = "<?php  $imgTm = get_the_post_thumbnail_url( get_the_ID(), "tominiatyre" ); echo empty($imgTm)?get_bloginfo("template_url")."/img/no-photo.jpg":$imgTm; ?>">
+            В корзину
+        </button>
         </form>
 
         <!-- <div class="product__text">

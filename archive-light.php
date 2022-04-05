@@ -95,7 +95,7 @@
 
 		</div>
 
-		<?php if ( function_exists( 'wp_corenavi' ) ) wp_corenavi($loop); ?>
+		<?php if ( function_exists( 'wp_corenavi' ) ) wp_corenavi($loop); ?> 
 
 		<nav class="pagination d-flex">
 			<div class="pagination__nav-links d-flex">
