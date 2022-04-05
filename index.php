@@ -49,92 +49,27 @@
   <div class="_container">
     <h2 class="best-offers__title title">ЛУЧШИЕ ПРЕДЛОЖЕНИЯ</h2>
     <div class="best-offers__row">
+    <?
+			$args = array(
+				'posts_per_page' => 5,
+				'post_type' => 'light',
+				'orderby' => 'rand',
+				'tax_query' => array(
+					array(
+					  'taxonomy' => 'lightcat',
+						'field'    => 'slug',
+						'terms'    => 'dizajnerskie-svetilniki'
+							),
+						)
+					);
+					$query = new WP_Query($args);
 
-      <div class="card-column">
-        <div class="card-box">
-          <div class="card-box-img">
-            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/cards/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/cards/02.jpg?_v=1649104441578" alt=""></picture>
-          </div>
-          <div class="card-box-descp">
-            <h4 class="card-box-descp-title">
-              бра Golden Bird Double
-            </h4>
-            <div class="card-box-descp-payment d-flex">
-              <div class="card-box-descp-price rub">15 210 </div>
-              <a href="#" class="card-box-descp-btn btn">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-column">
-        <div class="card-box">
-          <div class="card-box-img">
-            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/cards/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/cards/03.jpg?_v=1649104441578" alt=""></picture>
-          </div>
-          <div class="card-box-descp">
-            <h4 class="card-box-descp-title">
-              люстра The Fluttering Butterfly
-            </h4>
-            <div class="card-box-descp-payment d-flex">
-              <div class="card-box-descp-price rub">5230 </div>
-              <a href="#" class="card-box-descp-btn btn">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-column">
-        <div class="card-box">
-          <div class="card-box-img">
-            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/cards/04.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/cards/04.jpg?_v=1649104441578" alt=""></picture>
-          </div>
-          <div class="card-box-descp">
-            <h4 class="card-box-descp-title">
-              люстра The Fluttering Butterfly
-            </h4>
-            <div class="card-box-descp-payment d-flex">
-              <div class="card-box-descp-price rub">5230 </div>
-              <a href="#" class="card-box-descp-btn btn">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-column">
-        <div class="card-box">
-          <div class="card-box-img">
-            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/cards/05.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/cards/05.jpg?_v=1649104441578" alt=""></picture>
-          </div>
-          <div class="card-box-descp">
-            <h4 class="card-box-descp-title">
-              люстра Orion 4
-            </h4>
-            <div class="card-box-descp-payment d-flex">
-              <div class="card-box-descp-price rub">43 240 </div>
-              <a href="#" class="card-box-descp-btn btn">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-column">
-        <div class="card-box">
-          <div class="card-box-img">
-            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/cards/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/cards/01.jpg?_v=1649104441578" alt=""></picture>
-          </div>
-          <div class="card-box-descp">
-            <h4 class="card-box-descp-title">
-              люстра The Fluttering Butterfly
-            </h4>
-            <div class="card-box-descp-payment d-flex">
-              <div class="card-box-descp-price rub">5230 </div>
-              <a href="#" class="card-box-descp-btn btn">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
+					foreach( $query->posts as $post ){
+						$query->the_post();
+						get_template_part('template-parts/product-loop'); 
+					}  
+					wp_reset_postdata(); 
+			?>
     </div>
 
   </div>
