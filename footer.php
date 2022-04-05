@@ -3,9 +3,7 @@
 
 				<div class="footer__row d-flex">
 
-					<a href="index.html" class="logo-icon footer__logo">
-						<!-- <? bloginfo("url"); ?> -->
-					</a>
+					<a href="<? bloginfo("url"); ?>" class="logo-icon footer__logo"></a>
 
 					<!-- <?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'footer__menu',
 						'container_class' => 'footer__menu','container' => false )); ?>  -->
