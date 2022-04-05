@@ -7,6 +7,9 @@
 						<!-- <? bloginfo("url"); ?> -->
 					</a>
 
+					<!-- <?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'footer__menu',
+						'container_class' => 'footer__menu','container' => false )); ?>  -->
+
 					<ul class="footer__menu">
 						<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Главная</a></li>
 						<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Торговые марки</a></li>
@@ -48,9 +51,9 @@
 					<div class="footer__soc-block d-flex">
 						<p class="footer__soc-block-name">Социальные сети</p>
 						<div class="footer__soc-block-icons">
-							<a href="#" class="footer__soc-block-icons-link soc-block-icons-link-01"></a>
-							<a href="#" class="footer__soc-block-icons-link soc-block-icons-link-02"></a>
-							<a href="#" class="footer__soc-block-icons-link soc-block-icons-link-03"></a>
+						<a href="<?php echo carbon_get_theme_option('as_vk'); ?>" class="footer__soc-block-icons-link soc-block-icons-link-01"></a>
+						<a href="<?php echo carbon_get_theme_option('as_telegr'); ?>" class="footer__soc-block-icons-link soc-block-icons-link-02"></a>
+						<a href="<?php echo carbon_get_theme_option('as_whatsapp'); ?>" class="footer__soc-block-icons-link soc-block-icons-link-03"></a>
 						</div>
 					</div>
 

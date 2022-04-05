@@ -9,8 +9,9 @@ get_header(); ?>
 
 <?php get_template_part('template-parts/header-section');?>
 
-<main class="page">
-  <section class="content">
+<main class="page page-recurring">
+
+  <section class="content recurring"> 
   <div class="_container">
 
   <?php

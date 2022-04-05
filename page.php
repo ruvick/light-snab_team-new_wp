@@ -19,7 +19,7 @@ get_header(); ?>
 
 	<main id="primary" class="page site-main"> 
 
-		<section class="content"> 
+		<section class="content recurring"> 
 			<div class="_container">
 
 			<?php

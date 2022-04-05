@@ -3863,14 +3863,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   box-shadow: 0px 3px 5px 0px black;
   -webkit-transition: right 0.8s;
   -o-transition: right 0.8s;
-  margin-top: 30px;
+  margin-top: 160px;
   transition: right 0.8s;
   overflow: auto;
 }
 
 .mob-menu li a {
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   padding-bottom: 13px;
 }
 
