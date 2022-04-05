@@ -1,3 +1,4 @@
+
 <?php
 /**
  * The template for displaying all pages
@@ -9,29 +10,32 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package light
+ * @package light_market
  */
 
-get_header();
-?>
+get_header(); ?>
 
+<?php get_template_part('template-parts/header-section');?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-			<div class="single-bnr" style="background-image: url(<?php echo get_template_directory_uri();?>/img/LIGHT_ban_vnut.jpg);"></div>
-			<div class="container">
+	<main id="primary" class="page site-main"> 
+
+		<section class="content"> 
+			<div class="_container">
+
 			<?php
 			if ( function_exists('yoast_breadcrumb') ) {
-				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' ); 
+				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
 			}
 			?> 
 
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<h1><? the_title();?></h1>
+				<h1><?php the_title();?></h1>
 					<?php the_content();?>
 					<?php endwhile;?>
 				<?php endif; ?> 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+
+			</div>
+		</section>
+	</main>
 
 <?php get_footer();
