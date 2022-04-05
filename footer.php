@@ -24,7 +24,7 @@
 							if (!empty($mail)) { ?><a href="mailto:<? echo $mail; ?>" class="footer__contacts-email"><? echo $mail; ?></a><? } ?>
 					</div>
 
-					<form class="footer__form" action="#">
+					<form class="footer__form universal_form" action="#">
 						<div class="form__line">
 							<h3 class="footer__form-title">Форма обратной связи</h3>
 							<input id="name" autocomplete="off" type="text" name="form[]" data-error="Заполните поля"
@@ -33,11 +33,11 @@
 								data-value="Tелефон*" class="footer__form-input input _phone _req">
 							<input id="tel2" autocomplete="off" type="text" name="form[]" data-error="Заполните поля"
 								data-value="E-mail*" class="footer__form-input input _email _req">
-							<textarea class="input _req" name="" id="" name="form[]" data-error="Заполните поля"
+							<textarea class="input _req" name="" id="" name="form[]" data-error="Заполните поля" 
 								data-value="Сообщение"></textarea>
 						</div>
 						<div class="footer__form-block-btn d-flex">
-							<button type="submit" class="footer__form-btn btn">Отправить заявку</button>
+							<button type="submit" class="footer__form-btn form__btn uniSendBtn btn">Отправить заявку</button>
 							<p class="footer__form-policy">
 								* Нажимая на кнопку «Отправить»
 								Вы принимаете <a href="#" class="footer__form-policy-link">условия политики конфиденциальности

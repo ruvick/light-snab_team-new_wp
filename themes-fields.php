@@ -27,8 +27,8 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
             ->set_width(50),
           Field::make('text', 'slider_title', 'Заголовок слайдера')
             ->set_width(50),
-          // Field::make('text', 'slider_subtitle', 'Подзаголовок слайдера')
-          //   ->set_width(50),
+          Field::make('text', 'slider_subtitle', 'Подзаголовок слайдера')
+            ->set_width(50),
           // Field::make('text', 'slider_link', 'Ссылка в кнопке')
           //   ->set_width(50),
           // Field::make('text', 'slider_link_text', 'Текст в кнопке')

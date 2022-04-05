@@ -8,33 +8,25 @@
 
   <div class="slider-bg-wrap">
     <div class="sliderMain _swiper">
-      <div class="slider-bg__slide slider__slide slider-main__slide">
+    <?
+			$pict = carbon_get_theme_option('slider_index');
+				if ($pict) {
+					$pictIndex = 0;
+				foreach ($pict as $item) {
+		?>
+      <div class="slider-bg__slide slider__slide slider-main__slide" style="background-image: url(<?php echo wp_get_attachment_image_src($item['slider_img'], 'full')[0]; ?>);">
         <div class="slider-bg__container _container">
-          <h1 class="slider-main__title">
-            СОВРЕМЕННЫЙ <br>
-            <span>ДИЗАЙН</span>
-          </h1>
-          <p class="slider-main__subtitle">ЕВРОПЕЙСКОЕ КАЧЕСТВО</p>
+          <? if (!empty($item['slider_title'])) { ?>
+          <h1 class="slider-main__title"><? echo $item['slider_title']; ?></h1>
+          <p class="slider-main__subtitle"><? echo $item['slider_subtitle']; ?></p>
+          <? } ?>
         </div>
       </div>
-      <div class="slider-bg__slide slider__slide slider-main__slide">
-        <div class="slider-bg__container _container">
-          <h1 class="slider-main__title">
-            СОВРЕМЕННЫЙ <br>
-            <span>ДИЗАЙН</span>
-          </h1>
-          <p class="slider-main__subtitle">ЕВРОПЕЙСКОЕ КАЧЕСТВО</p>
-        </div>
-      </div>
-      <div class="slider-bg__slide slider__slide slider-main__slide">
-        <div class="slider-bg__container _container">
-          <h1 class="slider-main__title">
-            СОВРЕМЕННЫЙ <br>
-            <span>ДИЗАЙН</span>
-          </h1>
-          <p class="slider-main__subtitle">ЕВРОПЕЙСКОЕ КАЧЕСТВО</p>
-        </div>
-      </div>
+					<?
+							$pictIndex++;
+							}
+						}
+					?> 
     </div>
     <div class="slider-bg__swiper-button-block swiper-button-block">
       <div class="_container">
