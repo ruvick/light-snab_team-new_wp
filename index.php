@@ -181,7 +181,7 @@
           <img src="<?php echo wp_get_attachment_image_src($item['img_brends'], 'large')[0]; ?>" alt="">				
         </div>
 			<?
-				$brendsIndex++; 
+				$brendsIndex++;     
 						}
 					}
 			?>
