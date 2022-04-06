@@ -3862,8 +3862,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   height: 100%;
   padding: 35px 10px 0px 20px;
   background: #fff;
-  -webkit-box-shadow: 0px 3px 5px 0px black;
-  box-shadow: 0px 3px 5px 0px black;
+  /* -webkit-box-shadow: 0px 3px 5px 0px black;
+  box-shadow: 0px 3px 5px 0px black; */
   -webkit-transition: right 0.8s;
   -o-transition: right 0.8s;
   margin-top: 160px;
@@ -4836,6 +4836,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .header {
     padding: 30px 0;
   }
+
+  .mob-menu {
+    width: 60%;
+    margin-top: 140px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -4931,6 +4936,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .header__contacts-phone {
     order: 1;
+  }
+
+  .mob-menu {
+    margin-top: 80px;
   }
 }
 
