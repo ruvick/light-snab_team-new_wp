@@ -8,14 +8,14 @@
 					<!-- <?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'footer__menu',
 						'container_class' => 'footer__menu','container' => false )); ?>  -->
 
-					<ul class="footer__menu">
+					<ul class="footer__menu footer__col">
 						<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Главная</a></li>
 						<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Торговые марки</a></li>
 						<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Информация</a></li>
 						<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Контакты</a></li>
 					</ul>
 
-					<div class="footer__contacts">
+					<div class="footer__contacts footer__col">
 						<? $adr = carbon_get_theme_option("as_address"); 
 							if (!empty($adr)){?><a href="#" class="footer__contacts-address"><? echo $adr; ?></a><?}?> 
 						<? $tel = carbon_get_theme_option("as_phones_1"); 
@@ -24,7 +24,7 @@
 							if (!empty($mail)) { ?><a href="mailto:<? echo $mail; ?>" class="footer__contacts-email"><? echo $mail; ?></a><? } ?>
 					</div>
 
-					<form class="footer__form universal_form" action="#">
+					<form class="footer__form universal_form footer__col" action="#">
 						<div class="form__line">
 							<h3 class="footer__form-title">Форма обратной связи</h3>
 							<input id="name" autocomplete="off" type="text" name="form[]" data-error="Заполните поля"
@@ -34,7 +34,7 @@
 							<input id="tel2" autocomplete="off" type="text" name="form[]" data-error="Заполните поля"
 								data-value="E-mail*" class="footer__form-input input _email _req">
 							<textarea class="input _req" name="" id="" name="form[]" data-error="Заполните поля" 
-								data-value="Сообщение"></textarea>
+								data-value="Сообщение"></textarea>  
 						</div>
 						<div class="footer__form-block-btn d-flex">
 							<button type="submit" class="footer__form-btn form__btn uniSendBtn btn">Отправить заявку</button>

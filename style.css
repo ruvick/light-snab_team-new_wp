@@ -4050,9 +4050,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .footer__form {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 543px;
-  flex: 0 1 543px;
+  flex: 0 1 40.8%;
 }
 
 .footer__form-title {
@@ -4064,6 +4062,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .footer__form-btn {
+  min-width: 215px;
   margin-right: 10px;
 }
 
@@ -4771,6 +4770,21 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-size: 22px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 991.98px) {
 
   .quantity__button:hover::before,
@@ -4810,6 +4824,17 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 }
 
+@media (max-width: 1200px) {
+  .footer__logo {
+    margin-right: 20px;
+  }
+
+  .footer__col {
+    margin-right: 15px;
+    margin-bottom: 25px;
+  }
+}
+
 @media (max-width: 1150px) {
   .header__contacts {
     margin-right: 50px;
@@ -4819,6 +4844,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 @media (max-width: 1024px) {
   .header__contacts {
     margin-right: 30px;
+  }
+
+  .footer__form {
+    flex: 0 1 55%;
   }
 }
 
@@ -4941,6 +4970,26 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .mob-menu {
     margin-top: 80px;
   }
+
+  .footer {
+    padding: 20px 0;
+  }
+
+  .footer__logo {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+  .footer__col {
+    flex: 0 1 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .footer__form-block-btn {
+    justify-content: flex-start;
+    flex-wrap: wrap
+  }
 }
 
 @media (max-width: 700px) {
@@ -4962,6 +5011,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .popup__form-block {
     padding: 35px 15px;
+  }
+}
+
+@media (max-width: 530px) {
+  .footer__form-btn {
+    margin-bottom: 10px;
+  }
+
+  .footer__form-policy {
+    max-width: 100%;
   }
 }
 
@@ -5014,6 +5073,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 @media (max-width: 460px) {
   .header__contacts-email {
     display: none !important;
+  }
+}
+
+@media (max-width: 414px) {
+  .footer__form-btn {
+    margin-right: 0;
+    width: 100%;
   }
 }
 
