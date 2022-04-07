@@ -3866,7 +3866,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   box-shadow: 0px 3px 5px 0px black; */
   -webkit-transition: right 0.8s;
   -o-transition: right 0.8s;
-  margin-top: 160px;
+  margin-top: 130px;
   transition: right 0.8s;
   overflow: auto;
 }
@@ -4240,7 +4240,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .slider-bg__container {
   position: relative;
   z-index: 500;
-  padding: 134px 0;
+  padding: 134px 0 !important;
 }
 
 .slider-bg__swiper-button-block {
@@ -4818,9 +4818,21 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 }
 
+@media (max-width: 1440px) {
+  .slider-bg__swiper-button-block {
+    left: 3%;
+  }
+}
+
 @media (max-width: 1350px) {
   ._container {
     padding: 0 10px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .slider-main__slide {
+    background-position: 100% 100% !important;
   }
 }
 
@@ -4968,7 +4980,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 
   .mob-menu {
-    margin-top: 80px;
+    margin-top: 30px;
   }
 
   .footer {
@@ -4989,6 +5001,41 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .footer__form-block-btn {
     justify-content: flex-start;
     flex-wrap: wrap
+  }
+
+  .slider-bg__container {
+    padding: 80px 10px 50px 10px !important;
+  }
+
+  .slider-main__slide {
+    height: 370px;
+  }
+
+  .slider-main {
+    padding: 0 !important;
+  }
+
+  .slider-main__title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .slider-main__title span {
+    font-size: 32px;
+    line-height: 0;
+  }
+
+  .slider-main__title br {
+    display: none;
+  }
+
+  .slider-main__subtitle {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .slider-bg__swiper-button-block {
+    display: none;
   }
 }
 
@@ -5040,6 +5087,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     -webkit-box-flex: 0;
     -ms-flex: 0 1 100%;
     flex: 0 1 100%;
+  }
+
+  .slider-main__slide {
+    height: 250px;
   }
 }
 
