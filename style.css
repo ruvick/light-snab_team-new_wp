@@ -4770,7 +4770,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-size: 22px;
 }
 
-
+.footer__menu li a {
+  display: block;
+  margin-bottom: 22px;
+}
 
 
 
@@ -4847,6 +4850,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 
   .best-offers__row .card-column {
+    flex: 0 1 25%;
+  }
+
+  .card-column {
     flex: 0 1 33.333%;
   }
 }
@@ -4874,6 +4881,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .select__options {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 960px) {
+  .card-column {
+    flex: 0 1 50%;
+  }
+
+  .best-offers__row .card-column {
+    flex: 0 1 33.333%;
   }
 }
 
@@ -5052,6 +5069,36 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .best-offers__row .card-column {
     flex: 0 0 38%;
   }
+
+  .catalog__wrap {
+    flex-wrap: wrap;
+  }
+
+  .catalog__sidebar {
+    flex: 0 1 100%;
+    margin-right: 0;
+  }
+
+  .catalog__main-content {
+    flex: 0 1 100%;
+  }
+
+  .card-column {
+    flex: 0 1 33.333%;
+  }
+
+  .title-sec {
+    padding: 55px 0 15px 0 !important;
+  }
+
+  #breadcrumbs {
+    margin-bottom: 10px;
+  }
+
+  #breadcrumbs span a,
+  #breadcrumbs span {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -5067,6 +5114,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 @media (max-width: 630px) {
   .best-offers__row .card-column {
     flex: 0 0 50%;
+  }
+
+  .card-column {
+    flex: 0 1 50%;
   }
 }
 
@@ -5150,6 +5201,19 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .header__contacts-email {
     display: none !important;
   }
+
+  .card-box-img {
+    min-height: 200px;
+    max-height: 200px;
+  }
+
+  .card-box-descp-title {
+    margin-bottom: 20px;
+  }
+
+  .card-box-descp-btn {
+    margin-top: 6px;
+  }
 }
 
 @media (max-width: 414px) {
@@ -5165,6 +5229,17 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .card-box-img {
     min-height: 200px;
     max-height: 200px;
+  }
+
+  .card-box-descp-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .card-box-img {
+    min-height: 160px;
+    max-height: 160px;
   }
 }
 

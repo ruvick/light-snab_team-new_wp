@@ -5,17 +5,17 @@
 
 					<a href="<? bloginfo("url"); ?>" class="logo-icon footer__logo"></a>
 
-					<!-- <?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'footer__menu',
-						'container_class' => 'footer__menu','container' => false )); ?>  -->
+					<?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'footer__menu footer__col',
+						'container_class' => 'footer__menu footer__col','container' => false )); ?> 
 
-					<ul class="footer__menu footer__col">
+					<!-- <ul class="footer__menu footer__col">
 						<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Главная</a></li>
 						<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Торговые марки</a></li>
 						<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Информация</a></li>
 						<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Контакты</a></li>
-					</ul>
+					</ul> -->
 
-					<div class="footer__contacts footer__col">
+					<div class="footer__contacts footer__col"> 
 						<? $adr = carbon_get_theme_option("as_address"); 
 							if (!empty($adr)){?><a href="#" class="footer__contacts-address"><? echo $adr; ?></a><?}?> 
 						<? $tel = carbon_get_theme_option("as_phones_1"); 
