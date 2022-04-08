@@ -4256,6 +4256,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .inform__img {
+  position: absolute;
+  top: 0;
+  left: 0;
   -webkit-box-flex: 0;
   -ms-flex: 0 1 570px;
   flex: 0 1 570px;
@@ -4263,7 +4266,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   margin: -54px 15px -215px 0;
 }
 
+.inform__row {
+  position: relative;
+}
+
 .inform__descp {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4274,6 +4283,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-box-flex: 0;
   -ms-flex: 0 1 610px;
   flex: 0 1 610px;
+  margin-left: auto;
 }
 
 .inform__title {
@@ -4601,6 +4611,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .info__card-block-item {
+  position: relative;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -4621,11 +4632,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .info__card-block-item_top .info__card-block-item-descp {
-  padding-left: 45px;
+  padding-left: 35px;
+  padding: 10px 20px 10px 35px;
 }
 
 .info__card-block-item_bottom .info__card-block-item-descp {
-  padding-right: 45px;
+  padding: 10px 35px 10px 20px;
+  margin-left: auto;
 }
 
 .info__card-block-item_bottom .info__card-block-item-img {
@@ -4649,6 +4662,25 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  z-index: 5;
+}
+
+.info__card-block-item_top .info__card-block-item-img {
+  position: absolute;
+  width: 253px;
+  height: 253px;
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+
+.info__card-block-item_bottom .info__card-block-item-img {
+  position: absolute;
+  width: 253px;
+  height: 253px;
+  z-index: 1;
+  top: 0;
+  left: 0;
 }
 
 .info__card-block-item-btn {
@@ -4856,6 +4888,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .card-column {
     flex: 0 1 33.333%;
   }
+
+  .info__card-block-item_bottom .info__card-block-item-img {
+    height: auto;
+  }
 }
 
 @media (max-width: 1150px) {
@@ -4871,6 +4907,41 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .footer__form {
     flex: 0 1 55%;
+  }
+
+  .info__card-block-item-title {
+    font-size: 24px;
+  }
+
+  .info__card-big .info__card-block-item-title {
+    margin-bottom: 10px;
+  }
+
+  .info__card-block-item-subtitle {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .info__card-block-item-title br {
+    display: none;
+  }
+
+  .info__card-block-item-img img {
+    object-fit: fill;
+  }
+
+  .info__card-block-item-img_big {
+    z-index: 1;
+  }
+
+  .info__card-big .info__card-block-item-descp {
+    position: relative;
+    z-index: 2;
+  }
+
+  .inform__img {
+    flex: 0 1 438px;
+    height: 438px;
   }
 }
 
@@ -5099,6 +5170,52 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   #breadcrumbs span {
     font-size: 14px;
   }
+
+  .info__row {
+    flex-wrap: wrap;
+  }
+
+  .info__card-block {
+    flex: 0 1 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .info__card-block-item {
+    margin-bottom: 15px;
+  }
+
+  .info__card-big .info__card-block-item-descp {
+    max-width: 100%;
+    padding: 15px 31px 20px 31px;
+  }
+
+  .info__card-block-item-img_big {
+    right: -3%;
+    height: 330px;
+  }
+
+  .inform__img {
+    display: none;
+  }
+
+  .inform__descp {
+    flex: 0 1 100%;
+    padding: 15px;
+    margin-left: 0;
+  }
+
+  .inform__title {
+    margin-bottom: 15px;
+  }
+
+  .inform__btn {
+    margin-top: 25px;
+  }
+
+  .brends__subtitle {
+    margin-bottom: 25px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -5168,6 +5285,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .best-offers__row .card-column {
     flex: 0 0 60%;
   }
+
+  .inform__list-item {
+    flex: 0 1 49%;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -5232,6 +5355,21 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 
   .card-box-descp-btn {
+    width: 100%;
+  }
+
+  .inform__list-item {
+    flex: 0 1 100%;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .inform__title {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .inform__btn {
     width: 100%;
   }
 }

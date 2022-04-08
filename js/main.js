@@ -269,8 +269,8 @@ let sliderBrends = new Swiper('.sliderBrends', {
 
 	observer: true,
 	observeParents: true,
-	slidesPerView: 9,
-	spaceBetween: 40, //отступ в пикселях
+	slidesPerView: 2.5,
+	spaceBetween: 30, //отступ в пикселях
 	autoHeight: true,
 	speed: 2000,
 	//touchRatio: 0,
@@ -290,27 +290,33 @@ let sliderBrends = new Swiper('.sliderBrends', {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
-	/*
 	breakpoints: {
-		320: {
-			slidesPerView: 1,
-			spaceBetween: 0,
+		414: {
+			slidesPerView: 3.5,
+			spaceBetween: 30,
+			autoHeight: true,
+		},
+		515: {
+			slidesPerView: 4.5,
+			spaceBetween: 30,
 			autoHeight: true,
 		},
 		768: {
-			slidesPerView: 2,
-			spaceBetween: 20,
-		},
-		992: {
-			slidesPerView: 3,
-			spaceBetween: 20,
-		},
-		1268: {
-			slidesPerView: 4,
+			slidesPerView: 5,
 			spaceBetween: 30,
 		},
+		812: {
+			slidesPerView: 6,
+			spaceBetween: 30,
+		},
+		1024: {
+			slidesPerView: 7,
+		},
+		1200: {
+			slidesPerView: 9,
+			spaceBetween: 40,
+		},
 	},
-	*/
 	on: {
 		lazyImageReady: function () {
 			ibg();
@@ -332,8 +338,8 @@ let sliderCert = new Swiper('.sliderCert', {
 
 	observer: true,
 	observeParents: true,
-	slidesPerView: 5,
-	spaceBetween: 47, //отступ в пикселях
+	slidesPerView: 1.5,
+	spaceBetween: 10, //отступ в пикселях
 	autoHeight: true,
 	speed: 2000,
 	//touchRatio: 0,
@@ -353,27 +359,60 @@ let sliderCert = new Swiper('.sliderCert', {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
-	/*
 	breakpoints: {
 		320: {
-			slidesPerView: 1,
-			spaceBetween: 0,
+			slidesPerView: 1.8,
+			spaceBetween: 15,
+			autoHeight: true,
+		},
+		414: {
+			slidesPerView: 2.3,
+			spaceBetween: 15,
+			autoHeight: true,
+		},
+		515: {
+			slidesPerView: 2.8,
+			spaceBetween: 15,
+			autoHeight: true,
+		},
+		612: {
+			slidesPerView: 3.3,
+			spaceBetween: 20,
+			autoHeight: true,
+		},
+		700: {
+			slidesPerView: 3.5,
+			spaceBetween: 20,
 			autoHeight: true,
 		},
 		768: {
-			slidesPerView: 2,
+			slidesPerView: 3.8,
 			spaceBetween: 20,
+			autoHeight: true,
 		},
-		992: {
-			slidesPerView: 3,
-			spaceBetween: 20,
+		812: {
+			slidesPerView: 4.3,
+			spaceBetween: 25,
+			autoHeight: true,
 		},
-		1268: {
-			slidesPerView: 4,
+		940: {
+			slidesPerView: 4.5,
+			spaceBetween: 25,
+			autoHeight: true,
+		},
+		1024: {
+			slidesPerView: 5,
+			spaceBetween: 25,
+		},
+		1280: {
+			slidesPerView: 5,
 			spaceBetween: 30,
 		},
+		1330: {
+			slidesPerView: 5,
+			spaceBetween: 47,
+		},
 	},
-	*/
 	on: {
 		lazyImageReady: function () {
 			ibg();
@@ -456,8 +495,8 @@ let reviewsSl = new Swiper('.reviewsSl', {
 
 	observer: true,
 	observeParents: true,
-	slidesPerView: 3,
-	spaceBetween: 51,
+	slidesPerView: 1.5,
+	spaceBetween: 30,
 	autoHeight: true,
 	speed: 2000,
 	//touchRatio: 0,
@@ -475,27 +514,25 @@ let reviewsSl = new Swiper('.reviewsSl', {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
-	/*
 	breakpoints: {
 		320: {
-			slidesPerView: 1,
-			spaceBetween: 0,
+			slidesPerView: 1.6,
+			spaceBetween: 30,
 			autoHeight: true,
 		},
 		768: {
-			slidesPerView: 2,
+			slidesPerView: 2.5,
 			spaceBetween: 20,
 		},
-		992: {
+		1200: {
+			slidesPerView: 2.8,
+			spaceBetween: 40,
+		},
+		1280: {
 			slidesPerView: 3,
-			spaceBetween: 20,
-		},
-		1268: {
-			slidesPerView: 4,
-			spaceBetween: 30,
+			spaceBetween: 50,
 		},
 	},
-	*/
 	on: {
 		lazyImageReady: function () {
 			ibg();
