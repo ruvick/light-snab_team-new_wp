@@ -1361,6 +1361,8 @@ const menuBody = document.querySelector(".mob-menu");
 const menuListItemElems = document.querySelector(".mob-menu__list");
 const mobsearch = document.querySelector(".header__mob-search-btn");
 const headsearch = document.querySelector(".header__search-mob");
+const filterMob = document.querySelector(".catalog-sec__sidebar-filter-block-mob");
+const sidebarBody = document.querySelector(".catalog-sec__sidebar-body");
 
 //BURGER
 if (iconMenu) {
@@ -1384,6 +1386,12 @@ if (menuListItemElems) {
 if (mobsearch) {
 	mobsearch.addEventListener("click", function () {
 		headsearch.classList.toggle("_active");
+	});
+}
+
+if (filterMob) {
+	filterMob.addEventListener("click", function () {
+		sidebarBody.classList.toggle("active");
 	});
 }
 
