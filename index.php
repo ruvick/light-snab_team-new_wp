@@ -80,7 +80,7 @@
               ДИЗАЙНЕРАМ / <br>
               <span>АРХИТЕКТОРАМ</span>
             </h2>
-            <a href="#" class="info__card-block-item-btn btn">Подробнее</a>
+            <a href="<?php echo get_permalink(10);?>" class="info__card-block-item-btn btn">Подробнее</a>
           </div>
           <div class="info__card-block-item-img">
             <picture><source srcset="<?php echo get_template_directory_uri();?>/img/info-01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/info-01.png?_v=1649104441578" alt=""></picture>
@@ -96,7 +96,7 @@
               КОМПЛЕКТОВЩИКАМ / <br>
               <span>СНАБЖЕНЦАМ</span>
             </h2>
-            <a href="#" class="info__card-block-item-btn btn">Подробнее</a>
+            <a href="<?php echo get_permalink(7);?>" class="info__card-block-item-btn btn">Подробнее</a>
           </div>
         </div>
 
@@ -187,7 +187,7 @@
 			?>
     </div>
 
-    <a href="#" class="brends__btn btn">Перейти к торговым маркам</a>
+    <a href="<?php echo get_permalink(17);?>" class="brends__btn btn">Перейти к торговым маркам</a>
 
   </div>
 </section>
