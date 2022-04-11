@@ -14,6 +14,8 @@
 							if (!empty($mail)) { ?><a href="mailto:<? echo $mail; ?>" class="header__contacts-email"><? echo $mail; ?></a><? } ?>
 					</div>
 
+					<a href="<?php echo get_permalink(17172);?>" class="bascket-icon"><span class="bascket-icon__number bascet_counter">0</span></a>
+
 					<div class="icon-menu" aria-label="Бургер меню"> 
 						<span></span>
 						<span></span>
