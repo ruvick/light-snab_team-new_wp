@@ -3689,9 +3689,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 /*Popup-CSS*/
 
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 5000;
-  padding: 47px 0;
+  padding: 30px 0;
   background: #E3E3E3;
 }
 
@@ -3855,10 +3858,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .mob-menu {
   position: fixed;
-  z-index: 500;
+  z-index: 5000;
   top: 0;
   right: -100%;
-  width: 50%;
+  width: 30%;
   height: 100%;
   padding: 35px 10px 0px 20px;
   background: #fff;
@@ -3866,7 +3869,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   box-shadow: 0px 3px 5px 0px black; */
   -webkit-transition: right 0.8s;
   -o-transition: right 0.8s;
-  margin-top: 130px;
+  /* margin-top: 100px; */
   transition: right 0.8s;
   overflow: auto;
 }
@@ -4159,6 +4162,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  padding-top: 100px;
 }
 
 .slider-main {
