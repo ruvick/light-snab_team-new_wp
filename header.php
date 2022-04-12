@@ -48,3 +48,4 @@
   <div class="wrapper">  
     <!-- Подключение  модальных окон-->
     <? include "modal-win.php";?>
+    <div class="menu-side-nuar_blk nuar_blk"></div>
