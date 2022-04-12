@@ -5218,7 +5218,23 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
 /* Popup JS End*/
 
+.contacts-block {
+  margin-bottom: 25px;
+}
 
+.contacts-block:last-child {
+  margin-bottom: 35px;
+}
+
+.contacts-block__title {
+  margin-bottom: 10px;
+}
+
+.contacts-block__email {
+  margin-bottom: 8px;
+}
+
+.contacts-block__phone {}
 
 
 

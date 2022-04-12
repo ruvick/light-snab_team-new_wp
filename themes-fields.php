@@ -35,20 +35,6 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
           //   ->set_width(50),
         ))
     ))
-    ->add_tab('Разделы', array(
-      Field::make('complex', 'complex_sections', 'Разделы на главной')
-      ->set_max(5) // Можно будет выбрать только 5 постов
-      ->add_fields(array(
-        Field::make('image', 'img_sections', 'Фото')
-        ->set_width(30),
-        Field::make('text', 'text_sections', 'Текст')   
-        ->set_width(30),
-        Field::make('text', 'link_sections', 'Ссылка')   
-        ->set_width(30),
-        Field::make("checkbox", "checkbox_stock", "Большая картинка"),
-        Field::make("checkbox", "checkbox_stock_title", "Большая картинка, заголовок слева"),
-        ))
-    ))
     ->add_tab('Бренды', array( 
       Field::make('complex', 'complex_brends', 'Бренды')
       // ->set_max(3) // Можно будет выбрать только 5 постов
