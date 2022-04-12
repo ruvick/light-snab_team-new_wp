@@ -51,7 +51,7 @@
 						<div class="footer__soc-block-icons">
 						<a href="<?php echo carbon_get_theme_option('as_vk'); ?>" class="footer__soc-block-icons-link soc-block-icons-link-01"></a>
 						<a href="<?php echo carbon_get_theme_option('as_telegr'); ?>" class="footer__soc-block-icons-link soc-block-icons-link-02"></a>
-						<a href="<?php echo carbon_get_theme_option('as_whatsapp'); ?>" class="footer__soc-block-icons-link soc-block-icons-link-03"></a>
+						<!-- <a href="<?php echo carbon_get_theme_option('as_whatsapp'); ?>" class="footer__soc-block-icons-link soc-block-icons-link-03"></a> -->
 						</div>
 					</div>
 
