@@ -2579,6 +2579,8 @@ document.addEventListener("DOMContentLoaded", () => {
 					params.append('nonce', allAjax.nonce)
 					params.append('name', unisend_form.getElementsByClassName("_name")[0].value)
 					params.append('tel', unisend_form.getElementsByClassName("_tel")[0].value)
+					params.append('email', unisend_form.getElementsByClassName("_email")[0].value)
+					params.append('massege', unisend_form.getElementsByClassName("_massege")[0].value)
 
 					xhr.onload = function (e) {
 						// element.getElementsByClassName("headen_form_blk")[0].style.display = "none";
