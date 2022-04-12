@@ -765,9 +765,9 @@ input::-webkit-inner-spin-button {
   background-color: #00000035;
 }
 
-.nuar_blk:hover {
+/* .nuar_blk:hover {
   background-color: #00000050;
-}
+} */
 
 .nuar_color {
   position: relative;
@@ -4165,6 +4165,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .slider-main__title {
   font-size: 70.95px;
   line-height: 85.14px;
+  text-transform: uppercase;
 }
 
 .slider-main__title span {
@@ -5235,6 +5236,46 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 }
 
 .contacts-block__phone {}
+
+.main-baner-page {
+  padding-top: 70px;
+}
+
+.baner-page {
+  position: relative;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100%;
+  background-image: url('img/banner-page.jpg');
+}
+
+.baner-page ._container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.baner-page__text {
+  font-size: 34px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.baner-page__text:last-child {
+  margin-bottom: 0;
+}
+
+.baner-page__descp {
+  position: relative;
+  z-index: 5;
+}
+
+
+
+
+
 
 
 
