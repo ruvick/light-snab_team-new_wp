@@ -28,12 +28,13 @@ get_header(); ?>
 				$pictIndex = 0;
 					foreach($pict as $item) {
 			?>
-        <div class="product__slide slider__slide">
+        <a href="<?php echo wp_get_attachment_image_src($item['gal_img'], 'full')[0];?>" class="product__slide slider__slide" data-lightbox="gallery">
           <img
 						id = "pict-<? echo empty($item['gal_img_sku'])?$pictIndex:$item['gal_img_sku']; ?>" 
 						alt = "<? echo $item['gal_img_alt']; ?>"
 						title = "<? echo $item['gal_img_alt']; ?>"
-						src = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'full')[0];?>" />         </div>
+						src = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'full')[0];?>" />         
+        </a> 
 			<?
 				$pictIndex++; 
 					}

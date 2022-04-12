@@ -239,9 +239,9 @@
 					$certificatesIndex = 0;
 				foreach ($certificates as $item) {
 		?>
-      <div class="certificates__slide slider__slide">
+      <a href="<?php echo wp_get_attachment_image_src($item['img_certificates'], 'large')[0]; ?>" class="certificates__slide slider__slide" data-lightbox="gallery"> 
         <img src="<?php echo wp_get_attachment_image_src($item['img_certificates'], 'large')[0]; ?>" alt="">				
-      </div>
+      </a>
 			<?
 				$certificatesIndex++; 
 					}
