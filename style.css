@@ -218,7 +218,8 @@ h4 {
 
 .form__error {
   color: red;
-  margin-top: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .btn {
@@ -431,23 +432,23 @@ textarea.input {
 }
 
 ::-webkit-input-placeholder {
-  color: #8584847a;
+  color: #161615;
 }
 
 ::-moz-placeholder {
-  color: #8584847a;
+  color: #161615;
 }
 
 /* Firefox 19+ */
 
 :-moz-placeholder {
-  color: #8584847a;
+  color: #161615;
 }
 
 /* Firefox 18- */
 
 :-ms-input-placeholder {
-  color: #8584847a;
+  color: #161615;
 }
 
 input::-webkit-outer-spin-button,
@@ -5141,7 +5142,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  background: #EBEFE2;
+  background: #D2D1D1;
   overflow: hidden;
 }
 
@@ -5153,7 +5154,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   right: 15px;
   cursor: pointer;
   z-index: 30;
-  background: url("img/close.svg") 0 0 no-repeat;
+  background: url("img/icons/close.svg") 0 0 no-repeat;
 }
 
 .popup__form-block {
@@ -5171,32 +5172,25 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
 .popup__form-input {
   width: 100%;
-  min-height: 45px;
-  padding: 0 10px;
-  border: 1px solid lightgray;
-  border-radius: 3px;
+  /* min-height: 45px; */
   margin-bottom: 25px;
 }
 
 .popup__form-btn {
   display: inline-block;
-  padding: 12px 28px;
-  font-size: 18px;
+  /* padding: 12px 28px; */
+  /* font-size: 18px; */
   font-family: Lato-Light, sans-serif;
   text-transform: uppercase;
-  color: #d3820f;
-  border: 1px solid #d3820f;
+  /* color: #d3820f;
+  border: 1px solid #d3820f; */
   cursor: pointer;
 }
 
-.popup__form-btn:hover {
+/* .popup__form-btn:hover {
   color: #fff;
   background-color: #d3820f;
-}
-
-.popup__item img {
-  width: 40%;
-}
+} */
 
 .SendetMsg {
   padding: 10px 0;

@@ -2552,6 +2552,59 @@ function scroll_animate(event) {
 	//disableScroll();
 }
 
+
+// Отправщик ----------------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+	let universal_form = document.getElementsByClassName("universal_form");
+
+
+	if (universal_form !== undefined) {
+		Array.from(universal_form).forEach((element, index) => {
+			let unisend_form = element.getElementsByClassName("universal_send_form")[0];
+			let unisend_btn = element.getElementsByClassName("u_send")[0];
+
+			unisend_btn.onclick = (e) => {
+				// console.log(unisend_form);
+				// console.log(unisend_form.getElementsByClassName("_req"));
+
+
+				let error = form_validate(unisend_form);
+				if (error == 0) {
+					e.stopPropagation()
+
+					var xhr = new XMLHttpRequest()
+
+					var params = new URLSearchParams()
+					params.append('action', 'sendphone')
+					params.append('nonce', allAjax.nonce)
+					params.append('name', unisend_form.getElementsByClassName("_name")[0].value)
+					params.append('tel', unisend_form.getElementsByClassName("_tel")[0].value)
+
+					xhr.onload = function (e) {
+						// element.getElementsByClassName("headen_form_blk")[0].style.display = "none";
+						// element.getElementsByClassName("SendetMsg")[0].style.display = "block";
+						// to_crm(unisend_form.getElementsByClassName("_name")[0].value, unisend_form.getElementsByClassName("_tel")[0].value, obj[0].value);
+						window.location.href = "https://light-snab.ru/stranicza-blagodarnosti";
+					}
+
+					xhr.onerror = function () {
+						error(xhr, xhr.status);
+					};
+
+					xhr.open('POST', allAjax.ajaxurl, true);
+					xhr.send(params);
+				} else {
+					let form_error = unisend_form.querySelectorAll('._error');
+					if (form_error && unisend_form.classList.contains('_goto-error')) {
+						_goto(form_error[0], 1000, 50);
+					}
+					e.preventDefault();
+				}
+			}
+
+		});
+	}
+});
 // Файлы Java Script End -----------------------------------------------------------------------------------------------------
 
 $ = jQuery;
