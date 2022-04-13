@@ -227,7 +227,7 @@
 		?>
     </div>
   </div>
-  <div class="reviews__swiper-button-block swiper-button-block">
+  <div class="reviews__swiper-arrow-button-block swiper-arrow-button-block">
     <div class="reviews__swiper-button-next swiper-button swiper-button-next"></div>
 		<div class="reviews__swiper-button-prev swiper-button swiper-button-prev"></div>
   </div>
@@ -255,7 +255,7 @@
     </div>
 
   </div>
-  <div class="certificates__swiper-button-block swiper-button-block">
+  <div class="certificates__swiper-arrow-button-block swiper-arrow-button-block">
     <div class="certificates__swiper-button-next swiper-button swiper-button-next"></div>
 		<div class="certificates__swiper-button-prev swiper-button swiper-button-prev"></div>
   </div>
