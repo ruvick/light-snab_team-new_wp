@@ -356,8 +356,8 @@ let sliderCert = new Swiper('.sliderCert', {
 	// },
 	// Arrows
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: '.certificates__swiper-button-next',
+		prevEl: '.certificates__swiper-button-prev',
 	},
 	breakpoints: {
 		320: {
@@ -511,8 +511,8 @@ let reviewsSl = new Swiper('.reviewsSl', {
 	//},
 	// Arrows
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: '.reviews__swiper-button-next',
+		prevEl: '.reviews__swiper-button-prev',
 	},
 	breakpoints: {
 		320: {
