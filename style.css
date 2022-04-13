@@ -5367,6 +5367,12 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   }
 }
 
+@media (max-width: 1735px) {
+  .swiper-button-block {
+    top: 2%;
+  }
+}
+
 @media (max-width: 1640px) {
   .header__container {
     max-width: 1330px;
@@ -5736,6 +5742,10 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .brends__subtitle {
     margin-bottom: 25px;
+  }
+
+  .swiper-button-block {
+    display: none;
   }
 }
 
