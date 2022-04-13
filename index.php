@@ -5,6 +5,7 @@
 <main class="page"> 
 
 <section id="slider-main" class="slider-main">
+  <!-- <div class="nuar_blk"></div> -->
 
   <div class="slider-bg-wrap">
     <div class="sliderMain _swiper">
