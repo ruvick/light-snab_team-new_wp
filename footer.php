@@ -28,11 +28,11 @@
 					<form class="footer__form universal_send_form" action="#">
 						<div class="form__line">
 							<h3 class="footer__form-title">Форма обратной связи</h3>
-							<input id="name" autocomplete="off" type="text" name="name" data-error="Заполните поля"
+							<input autocomplete="off" type="text" name="name" data-error="Заполните поля"
 								data-value="Имя*" class="footer__form-input input _name _req">
-							<input id="tel2" autocomplete="off" type="text" name="tel" data-error="Заполните поля"
+							<input autocomplete="off" type="text" name="tel" data-error="Заполните поля"
 								data-value="Tелефон*" class="footer__form-input input _phone _tel _req">
-							<input id="tel2" autocomplete="off" type="text" name="Email" data-error="Заполните поля"
+							<input autocomplete="off" type="text" name="Email" data-error="Заполните поля"
 								data-value="E-mail*" class="footer__form-input input _email _req">
 							<textarea class="input _massege _req" name="" id="" name="Massege" data-error="Заполните поля" 
 								data-value="Сообщение"></textarea>  

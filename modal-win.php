@@ -21,8 +21,8 @@
 						<form action="#" class="form universal_send_form">
 
 							<div class="form__line">
-								<input id="name" autocomplete="off" type="text" name="name" data-error="Заполните поля" data-value="Имя*" class="popup__form-input input _req _name">
-								<input id="tel2" autocomplete="off" type="text" name="tel" data-error="Заполните поля" data-value="Телефон*" class="popup__form-input input _phone _req _tel">
+								<input autocomplete="off" type="text" name="name" data-error="Заполните поля" data-value="Имя*" class="popup__form-input input _req _name">
+								<input autocomplete="off" type="text" name="tel" data-error="Заполните поля" data-value="Телефон*" class="popup__form-input input _phone _req _tel">
 							</div>
 							<p class="popup__policy">Заполняя данную форму вы соглашаетесь с <a href="#">политикой
 									конфиденциальности</a></p>
