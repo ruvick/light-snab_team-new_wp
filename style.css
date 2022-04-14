@@ -5447,7 +5447,34 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   margin-top: 15px;
 }
 
+.about-block {}
 
+.about-block__row {
+  display: flex;
+  padding: 62px 0;
+  border-bottom: 2px solid #a6a7ab;
+}
+
+.about-block__row:last-child {
+  border-bottom: none;
+}
+
+.about-block__title {
+  width: 255px;
+  border: 3px solid #D98600;
+  padding: 14px 10px 15px 20px;
+  -ms-align-self: flex-start;
+  align-self: flex-start;
+  margin-right: 80px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.about-block__text {
+  line-height: 1.3;
+}
 
 
 
