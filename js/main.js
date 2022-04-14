@@ -2611,6 +2611,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 $ = jQuery;
 
+$('.page-brands-wrapper a').click(function (e) {
+	e.preventDefault();
+	var src = $(this).children('img').attr('src');
+	var text = $(this).data('text');
+
+	$("#brand-modal .brand-modal__photo").css('background-image', 'url(' + src + ')');
+	$('#brand-modal .brand-modal__content').html(text);
+	$('#brand-modal').arcticmodal();
+});
+
+
 // Файлы jQuery---------------------------------------------------------------------------------------------------------------
 
 

@@ -69,6 +69,17 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
         ->set_width(30),
         ))
     ))
+    ->add_tab('Торговые марки', array(
+      Field::make('complex', 'as_complex_brand', 'Торговые марки')
+        ->add_fields(array(
+          Field::make('text', 'as_complex_brand__title', 'Название')
+            ->set_width(30),
+          Field::make('image', 'as_complex_brand_img', 'Логотип')
+            ->set_width(30),
+          Field::make('textarea', 'as_complex_brand_descr', 'Краткое описание')
+            ->set_width(30),
+        ))
+    ))
     ->add_tab('Контакты', array(
         Field::make( 'text', 'as_company', __( 'Название' ) )
           ->set_width(50),

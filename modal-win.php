@@ -38,6 +38,19 @@
 <!-- Popup-JS End -->
 
 <div style="display: none;">
+    <div class="box-modal" id="brand-modal">
+        <div class="box-modal_close arcticmodal-close"></div>
+        <div class = "modalline" id = "lineIcon">
+    </div>
+    
+    <div class = "brand-modal-wrapper" id = "lineMsg">
+      <div class="brand-modal__photo"></div>
+      <div class="brand-modal__content"></div>
+    </div>
+    </div>
+  </div>
+
+<div style="display: none;">
 	<div class="box-modal" id="messgeModal">
 		<div class="box-modal_close arcticmodal-close"><? _e("закрыть", "rubex"); ?></div>
 
