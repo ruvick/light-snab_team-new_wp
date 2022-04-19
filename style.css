@@ -1049,7 +1049,7 @@ body.ie ._ibg img {
 }
 
 .swiper-button {
-  width: 9px;
+  width: 10px;
   height: 22px;
   cursor: pointer;
   display: -webkit-box;
@@ -1079,7 +1079,12 @@ body.ie ._ibg img {
 }
 
 .swiper-button-next:before {
+  filter: grayscale(90%);
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC4wNDQiIGhlaWdodD0iMjIuNzEyIiB2aWV3Qm94PSIwIDAgMTAuMDQ0IDIyLjcxMiI+DQogIDxnIGlkPSLQodCz0YDRg9C/0L/QuNGA0L7QstCw0YLRjF84OSIgZGF0YS1uYW1lPSLQodCz0YDRg9C/0L/QuNGA0L7QstCw0YLRjCA4OSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYxODMuNzA1IC0yOTUwLjYxKSI+DQogICAgPGxpbmUgaWQ9ItCb0LjQvdC40Y9fMTIiIGRhdGEtbmFtZT0i0JvQuNC90LjRjyAxMiIgeDE9IjkuMTIyIiB5Mj0iMTAuODUzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MTg0LjE2NiAyOTUxLjA3MikiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Q5ODYwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjAuNjU1Ii8+DQogICAgPGxpbmUgaWQ9ItCb0LjQvdC40Y9fMTMiIGRhdGEtbmFtZT0i0JvQuNC90LjRjyAxMyIgeDI9IjkuMTIyIiB5Mj0iMTAuODUzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MTg0LjE2NiAyOTYyLjAwOCkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Q5ODYwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjAuNjU1Ii8+DQogIDwvZz4NCjwvc3ZnPg0K');
+}
+
+.swiper-button-next:hover:before {
+  filter: grayscale(0%);
 }
 
 .swiper-button-prev {
@@ -1087,7 +1092,13 @@ body.ie ._ibg img {
 }
 
 .swiper-button-prev:before {
-  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC4wNDQiIGhlaWdodD0iMjIuNzEyIiB2aWV3Qm94PSIwIDAgMTAuMDQ0IDIyLjcxMiI+DQogIDxnIGlkPSLQodCz0YDRg9C/0L/QuNGA0L7QstCw0YLRjF85MCIgZGF0YS1uYW1lPSLQodCz0YDRg9C/0L/QuNGA0L7QstCw0YLRjCA5MCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYyMTYuMzEgLTI5NTAuNjEpIj4NCiAgICA8bGluZSBpZD0i0JvQuNC90LjRj18xNCIgZGF0YS1uYW1lPSLQm9C40L3QuNGPIDE0IiB4Mj0iOS4xMjIiIHkyPSIxMC44NTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYyMTYuNzcxIDI5NTEuMDcyKSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTYxNjE1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMC42NTUiLz4NCiAgICA8bGluZSBpZD0i0JvQuNC90LjRj18xNSIgZGF0YS1uYW1lPSLQm9C40L3QuNGPIDE1IiB4MT0iOS4xMjIiIHkyPSIxMC44NTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYyMTYuNzcxIDI5NjIuMDA4KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTYxNjE1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMC42NTUiLz4NCiAgPC9nPg0KPC9zdmc+DQo=');
+  transform: rotate(180deg);
+  filter: grayscale(90%);
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC4wNDQiIGhlaWdodD0iMjIuNzEyIiB2aWV3Qm94PSIwIDAgMTAuMDQ0IDIyLjcxMiI+DQogIDxnIGlkPSLQodCz0YDRg9C/0L/QuNGA0L7QstCw0YLRjF84OSIgZGF0YS1uYW1lPSLQodCz0YDRg9C/0L/QuNGA0L7QstCw0YLRjCA4OSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYxODMuNzA1IC0yOTUwLjYxKSI+DQogICAgPGxpbmUgaWQ9ItCb0LjQvdC40Y9fMTIiIGRhdGEtbmFtZT0i0JvQuNC90LjRjyAxMiIgeDE9IjkuMTIyIiB5Mj0iMTAuODUzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MTg0LjE2NiAyOTUxLjA3MikiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Q5ODYwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjAuNjU1Ii8+DQogICAgPGxpbmUgaWQ9ItCb0LjQvdC40Y9fMTMiIGRhdGEtbmFtZT0i0JvQuNC90LjRjyAxMyIgeDI9IjkuMTIyIiB5Mj0iMTAuODUzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MTg0LjE2NiAyOTYyLjAwOCkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Q5ODYwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjAuNjU1Ii8+DQogIDwvZz4NCjwvc3ZnPg0K');
+}
+
+.swiper-button-prev:hover:before {
+  filter: grayscale(0%);
 }
 
 .swiper-pagination-bullets {
@@ -3689,7 +3700,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 5;
+  z-index: 6;
   padding: 30px 0;
   background: #E3E3E3;
 }
@@ -5267,7 +5278,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 .menu-side-nuar_blk {
   display: none;
   background-color: #00000095;
-  z-index: 6;
+  z-index: 7;
 }
 
 .menu-side-nuar_blk.active {
@@ -5623,8 +5634,13 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
 
 @media (max-width: 1735px) {
+  .reviews {
+    padding: 52px 0 75px 0;
+  }
+
   .swiper-arrow-button-block {
-    top: 2%;
+    top: auto;
+    bottom: 2%;
   }
 }
 

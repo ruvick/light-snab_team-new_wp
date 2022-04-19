@@ -59,13 +59,13 @@ get_header(); ?>
 
           <p class="product__avail">Наличие: <span>есть на складе</span></p>
 
-          <div class="size-options">
+          <!-- <div class="size-options">
             <p class="size-options-name">Варианты размеров:</p>
             <div class="size-options-block-btn">
               <a href="#" class="size-options-block-btn-link _yellow">D30</a>
               <a href="#" class="size-options-block-btn-link _grey">D40</a>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <div class="product__descp-line"></div>
