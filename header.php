@@ -16,6 +16,7 @@
   <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri();?>/img/favicons/fav.svg" sizes="any">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="yandex-verification" content="853d5066ec9ce807" />
 
   <?php wp_head();?>   
 
@@ -48,4 +49,4 @@
   <div class="wrapper">  
     <!-- Подключение  модальных окон-->
     <? include "modal-win.php";?>
-    <div class="menu-side-nuar_blk nuar_blk"></div>
+    <div class="menu-side-nuar_blk nuar_blk"></div> 
