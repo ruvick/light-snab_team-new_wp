@@ -4573,6 +4573,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .catalog__sidebar-column-name {
+  font-weight: 700;
   padding-left: 10px;
   margin-bottom: 15px;
 }
