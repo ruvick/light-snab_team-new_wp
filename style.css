@@ -804,6 +804,7 @@ input::-webkit-inner-spin-button {
 }
 
 .rub:after {
+  font-family: 'Arial';
   content: "₽";
 }
 
