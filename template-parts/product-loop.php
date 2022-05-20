@@ -6,7 +6,7 @@
     <div class="card-box-descp">
       <h4 class="card-box-descp-title"><? the_title();?></h4>
       <div class="card-box-descp-payment d-flex">
-        <div class="card-box-descp-price rub"><?php echo carbon_get_the_post_meta('offer_price');?> </div>
+        <div class="card-box-descp-price rub"><span class = "price_formator"><?php echo carbon_get_the_post_meta('offer_price');?></span> </div>
         <a href="<?echo get_the_permalink(get_the_ID());?>" class="card-box-descp-btn btn">Подробнее</a>
       </div>
     </div>

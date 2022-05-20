@@ -70,7 +70,7 @@ get_header(); ?>
 
         <div class="product__descp-line"></div>
 
-        <p class="product__descp-price">Цена <span class="product__descp-price-number rub"><?php echo carbon_get_the_post_meta('offer_price');?></span> </p>
+        <p class="product__descp-price">Цена <span class="product__descp-price-number price_formator rub"><?php echo carbon_get_the_post_meta('offer_price');?></span> </p>
 
         <div class="product__descp-line"></div>
 
