@@ -463,6 +463,11 @@ input::-webkit-inner-spin-button {
   position: relative;
 }
 
+.checkbox_label {
+  width: 100%;
+  display: block;
+}
+
 .checkbox__input {
   position: absolute;
   width: 0;

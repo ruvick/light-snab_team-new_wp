@@ -72,90 +72,90 @@ document.addEventListener("DOMContentLoaded", () => {
     xhr.onload = () => {
         console.log(xhr.response);
         
-        // Цвет
-        let uStr = ""
-        xhr.response.tov_color.forEach((element, index) => {
-            
-            let checed = (qParam.color != undefined && qParam.color.includes(element) )?"checked":"";
-
-            uStr += '<div class="form_radio">'+
-                        '<input id="check_color'+index+'" type="checkbox" name="color[]" '+checed+' value="'+element+'">'+
-                        '<label title ="'+get_color_name(element)+'" for="check_color'+index+'" style="background: '+element+';"></label>'+
-                    '</div>';
-
-        });
-        if (document.getElementById("filterColorWrapper")) filterColorWrapper.innerHTML = uStr;
-
         // Материал
-        let uStr1 = ""
-
-        xhr.response.tov_material.forEach((element, index) => {
-
+        let uStr = ""
+        xhr.response.offer_material.forEach((element, index) => {
+            
             let checed = (qParam.material != undefined && qParam.material.includes(element) )?"checked":"";
-            
-            uStr1 += '<label for="check_material'+index+'" class="checkbox catalog-sec__sidebar-spollers-checkbox">'+
-				'<input id="check_material'+index+'" data-error="Ошибка" class="checkbox__input" type="checkbox" '+checed+' value="'+element+'" name="material[]">'+
-				'<span class="checkbox__text"><span>'+element+'</span></span>'+
-			'</label>';
-            console.log(element);
+
+            uStr += '<label for="material_'+index+'" class="checkbox checkbox_label">'+
+                        '<input id="material_'+index+'" '+checed+' class="checkbox__input" type="checkbox" value="'+element+'" name="material[]">'+
+                        '<span class="checkbox__text"><span>'+element+'</label>';
+
         });
+        if (document.getElementById("material_filter_wrapper")) material_filter_wrapper.innerHTML = uStr;
+        
+        // Цоколь
+        uStr = ""
+        xhr.response.offer_tsokol.forEach((element, index) => {
+            
+            let checed = (qParam.tsokol != undefined && qParam.tsokol.includes(element) )?"checked":"";
 
-        if (document.getElementById("filterMaterialWrapper")) filterMaterialWrapper.innerHTML = uStr1;
+            uStr += '<label for="tsokol_'+index+'" class="checkbox checkbox_label">'+
+                        '<input id="tsokol_'+index+'" '+checed+' class="checkbox__input" type="checkbox" value="'+element+'" name="tsokol[]">'+
+                        '<span class="checkbox__text"><span>'+element+'</label>';
 
+        });
+        if (document.getElementById("tsokol_filter_wrapper")) tsokol_filter_wrapper.innerHTML = uStr;
+        
+        // Количество ламп
+        uStr = ""
+        xhr.response.offer_lamp_count.forEach((element, index) => {
+            
+            let checed = (qParam.lamp_count != undefined && qParam.lamp_count.includes(element) )?"checked":"";
+
+            uStr += '<label for="lamp_count'+index+'" class="checkbox checkbox_label">'+
+                        '<input id="lamp_count'+index+'" '+checed+' class="checkbox__input" type="checkbox" value="'+element+'" name="lamp_count[]">'+
+                        '<span class="checkbox__text"><span>'+element+'</label>';
+
+        });
+        if (document.getElementById("lamp_count_filter_wrapper")) lamp_count_filter_wrapper.innerHTML = uStr;
+        
+        // Размер
+        uStr = ""
+        xhr.response.offer_size.forEach((element, index) => {
+            
+            let checed = (qParam.size != undefined && qParam.size.includes(element) )?"checked":"";
+
+            uStr += '<label for="size'+index+'" class="checkbox checkbox_label">'+
+                        '<input id="size'+index+'" '+checed+' class="checkbox__input" type="checkbox" value="'+element+'" name="size[]">'+
+                        '<span class="checkbox__text"><span>'+element+'</label>';
+
+        });
+        if (document.getElementById("size_filter_wrapper")) size_filter_wrapper.innerHTML = uStr;
+
+        // Дизайнер
+        uStr = ""
+        xhr.response.offer_designer.forEach((element, index) => {
+            
+            let checed = (qParam.designer != undefined && qParam.designer.includes(element) )?"checked":"";
+
+            uStr += '<label for="designer'+index+'" class="checkbox checkbox_label">'+
+                        '<input id="designer'+index+'" '+checed+' class="checkbox__input" type="checkbox" value="'+element+'" name="designer[]">'+
+                        '<span class="checkbox__text"><span>'+element+'</label>';
+
+        });
+        if (document.getElementById("designer_filter_wrapper")) designer_filter_wrapper.innerHTML = uStr;
 
         
-        // Вид росписи
-        let uStr2 = ""
-        let mainPage1 = "<option selected disabled>Выберите вид росписи</option>"
-
-        xhr.response.tov_vid_rosp.forEach((element, index) => {
-
-            let checed = (qParam.vid_rosp != undefined && qParam.vid_rosp.includes(element) )?"checked":"";
-            
-            uStr2 += '<label for="check_vid_rosp'+index+'" class="checkbox catalog-sec__sidebar-spollers-checkbox">'+
-				'<input id="check_vid_rosp'+index+'" data-error="Ошибка" class="checkbox__input" type="checkbox" '+checed+' value="'+element+'" name="vid_rosp[]">'+
-				'<span class="checkbox__text"><span>'+element+'</span></span>'+
-			'</label>';
-
-            mainPage1 += '<option value="'+element+'">'+element+'</option>'
-        });
-
-        if (document.getElementById("filterVidRospWrapper")) filterVidRospWrapper.innerHTML = uStr2;
-        if (document.getElementById("filterVidRospWrapper_main")) filterVidRospWrapper_main.innerHTML = mainPage1;
-
-        // Вид рисунка
-        let uStr3 = ""
-        let mainPage2 = "<option selected disabled>Выберите вид рисунка</option>"
-
-        xhr.response.tov_vid_ris.forEach((element, index) => {
     
-            let checed = (qParam.vid_ris != undefined && qParam.vid_ris.includes(element) )?"checked":"";
-            
-            uStr3 += '<label for="check_vid_ris'+index+'" class="checkbox catalog-sec__sidebar-spollers-checkbox">'+
-                '<input id="check_vid_ris'+index+'" data-error="Ошибка" class="checkbox__input" type="checkbox" '+checed+' value="'+element+'" name="vid_ris[]">'+
-                '<span class="checkbox__text"><span>'+element+'</span></span>'+
-            '</label>';
-
-            mainPage2 += '<option value="'+element+'">'+element+'</option>'
-        });
-    
-        if (document.getElementById("filterVidRisWrapper")) filterVidRisWrapper.innerHTML = uStr3;
-        if (document.getElementById("filterVidRisWrapper_main")) filterVidRisWrapper_main.innerHTML = mainPage2;
+        // if (document.getElementById("filterVidRisWrapper")) filterVidRisWrapper.innerHTML = uStr3;
+        // if (document.getElementById("filterVidRisWrapper_main")) filterVidRisWrapper_main.innerHTML = mainPage2;
 
 
-        // check_nal.checked  = (qParam.nal == undefined)?false:true;
+        // // check_nal.checked  = (qParam.nal == undefined)?false:true;
         
-        if (document.getElementById("price_ot")) price_ot.value = (qParam.price_ot == undefined)?xhr.response.offer_price_min:qParam.price_ot;
-        if (document.getElementById("price_do")) price_do.value = (qParam.price_do == undefined)?xhr.response.offer_price_max:qParam.price_do;
+        // if (document.getElementById("price_ot")) price_ot.value = (qParam.price_ot == undefined)?xhr.response.offer_price_min:qParam.price_ot;
+        // if (document.getElementById("price_do")) price_do.value = (qParam.price_do == undefined)?xhr.response.offer_price_max:qParam.price_do;
 
 
         if (document.getElementById("categoryFilterLoader")) categoryFilterLoader.style.display = "none";
         if (document.getElementById("categoryFilterForm")) categoryFilterForm.style.display = "block";
 
-        let selects = document.getElementsByTagName('select');
-        if (selects.length > 0) {
-          selects_init(selects);
-        }
+        // let selects = document.getElementsByTagName('select');
+        // if (selects.length > 0) {
+        //   selects_init(selects);
+        // }
 
     }
 

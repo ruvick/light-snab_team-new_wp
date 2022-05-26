@@ -875,6 +875,7 @@ function get_zak_detail() {
 
 // Фильтр Start ================================================================================================================
 
+define("IN_PAGE_COUNT", 48);
 
   add_action('rest_api_init', function () {
 	register_rest_route('gensvet/v2', '/get_filter', array(

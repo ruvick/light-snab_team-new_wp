@@ -13,7 +13,7 @@
     "send_index": "scp -C index.php u0743099@ftp.light-snab.ru:lsnab/wp-content/themes/light-new/",
     "send_footer": "scp -C footer.php u0743099@ftp.light-snab.ru:lsnab/wp-content/themes/light-new/",
     "send_fields": "scp -C themes-fields.php u0743099@ftp.light-snab.ru:lsnab/wp-content/themes/light-new/",
-    "send_one": "scp -C single-light.php u0743099@ftp.light-snab.ru:lsnab/wp-content/themes/light-new/",
+    "send_one": "scp -C taxonomy-lightcat.php u0743099@ftp.light-snab.ru:lsnab/wp-content/themes/light-new/",
     "mk_part_carbon": "ssh u0743099@ftp.light-snab.ru \"mkdir -p lsnab/wp-content/themes/light-new/inc\"",
     "send_carbon": "scp -C -r inc u0743099@ftp.light-snab.ru:lsnab/wp-content/themes/light-new/",
     "send_carbon_fild": "scp -C -r inc/custom-field-options u0743099@ftp.light-snab.ru:lsnab/wp-content/themes/light-new/inc",
