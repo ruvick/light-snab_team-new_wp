@@ -889,13 +889,13 @@ function get_zak_detail() {
 	));
 });
 
-//https://strader.asmi-studio.ru/wp-json/gensvet/v2/get_filter?catid=45
+//https://light-snab.ru/wp-json/gensvet/v2/get_filter?catid=9
 function get_filter(WP_REST_Request $request)
 {
 
 	$tax_array = array(
 		array(
-			'taxonomy' => 'asgproductcat',
+			'taxonomy' => 'lightcat',
 			'field'    => 'id',
 			'terms' =>  $request['catid']
 		)
@@ -904,7 +904,7 @@ function get_filter(WP_REST_Request $request)
 
 
 	$queryParam = array(
-		'post_type' => 'asgproduct',
+		'post_type' => 'light',
 		'posts_per_page' => -1,
 	);
 
@@ -923,49 +923,55 @@ function get_filter(WP_REST_Request $request)
 	$rez = array();
 
 	
-	$rez["tov_color"] = array();
-	$rez["tov_material"] = array();
+	$rez["offer_material"] = array();
+	$rez["offer_tsokol"] = array();
 
-	$rez["tov_vid_rosp"] = array();
-	$rez["tov_vid_ris"] = array();
+	$rez["offer_lamp_count"] = array();
+	$rez["offer_size"] = array();
+	$rez["offer_designer"] = array();
 
 	$min = PHP_INT_MAX;
 	$max = PHP_INT_MIN;
 
 	foreach ($queryMain->posts as $postM) {
 
-		$tov_color = get_post_meta($postM->ID, "_tov_color", true);
-		if (!empty($tov_color) && !in_array($tov_color, $rez["tov_color"]))
-			$rez["tov_color"][] = $tov_color;
+		$offer_material = get_post_meta($postM->ID, "_offer_material", true);
+		if (!empty($offer_material) && !in_array($offer_material, $rez["offer_material"]))
+			$rez["offer_material"][] = $offer_material;
 
-		$tov_material = get_post_meta($postM->ID, "_tov_material", true);
-		if (!empty($tov_material) && !in_array($tov_material, $rez["tov_material"]))
-			$rez["tov_material"][] = $tov_material;
+		$offer_tsokol = get_post_meta($postM->ID, "_offer_tsokol", true);
+		if (!empty($offer_tsokol) && !in_array($offer_tsokol, $rez["offer_tsokol"]))
+			$rez["offer_tsokol"][] = $offer_tsokol;
 		
-		$tov_vid_rosp = get_post_meta($postM->ID, "_tov_vid_rosp", true);
-		if (!empty($tov_vid_rosp) && !in_array($tov_vid_rosp, $rez["tov_vid_rosp"]))
-			$rez["tov_vid_rosp"][] = $tov_vid_rosp;
+		$offer_lamp_count = get_post_meta($postM->ID, "_offer_lamp_count", true);
+		if (!empty($offer_lamp_count) && !in_array($offer_lamp_count, $rez["offer_lamp_count"]))
+			$rez["offer_lamp_count"][] = $offer_lamp_count;
 
-		$tov_vid_ris = get_post_meta($postM->ID, "_tov_vid_ris", true);
-		if (!empty($tov_vid_ris) && !in_array($tov_vid_ris, $rez["tov_vid_ris"]))
-			$rez["tov_vid_ris"][] = $tov_vid_ris;
+		$offer_size = get_post_meta($postM->ID, "_offer_size", true);
+		if (!empty($offer_size) && !in_array($offer_size, $rez["offer_size"]))
+			$rez["offer_size"][] = $offer_size;
+
+		$offer_designer = get_post_meta($postM->ID, "_offer_designer", true);
+		if (!empty($offer_designer) && !in_array($offer_designer, $rez["offer_designer"]))
+			$rez["offer_designer"][] = $offer_designer;
 
 
 
-		if ($min > (int)get_post_meta($postM->ID, "_as_product_price", true))
-			$min = (int)get_post_meta($postM->ID, "_as_product_price", true);
+		if ($min > (int)get_post_meta($postM->ID, "_offer_price", true))
+			$min = (int)get_post_meta($postM->ID, "_offer_price", true);
 
-		if ($max < (int)get_post_meta($postM->ID, "_as_product_price", true))
-			$max = (int)get_post_meta($postM->ID, "_as_product_price", true);
+		if ($max < (int)get_post_meta($postM->ID, "_offer_price", true))
+			$max = (int)get_post_meta($postM->ID, "_offer_price", true);
 	}
 
 	$rez["offer_price_max"] = $max;
 	$rez["offer_price_min"] = $min;
 
-	sort($rez["tov_color"]);
-	sort($rez["tov_material"]);
-	sort($rez["tov_vid_rosp"]);
-	sort($rez["tov_vid_ris"]);
+	sort($rez["offer_material"]);
+	sort($rez["offer_tsokol"]);
+	sort($rez["offer_lamp_count"]);
+	sort($rez["offer_size"]);
+	sort($rez["offer_designer"]);
 
 	if (!empty($rez))
 		return $rez;
