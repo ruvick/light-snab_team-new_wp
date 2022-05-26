@@ -3,59 +3,52 @@
 <div class="catalog-sec__sidebar-body">
 <div class="catalog__sidebar-column">
   <div class="catalog__sidebar-btn-block spollers-block" data-spollers data-one-spoller>
+  
+  <?
+    $cats = get_categories( array(
+      'taxonomy'  => 'lightcat',
+      'orderby' => 'name',
+      'parent' => 0
+    ) );
+  
+    foreach ( $cats as $cat ) {
+  ?>
+
+  
+  
   <div class="spollers-block__item">
+    
     <div class="spollers-block__title" data-spoller>
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link btn-link_grey">
-        Дизайнерские
-        светильники
-    </a>
+      <a href="#" class="catalog__sidebar-btn-block-link btn-link btn-link_grey"><? echo $cat->name;?></a>
     </div>
-      <div class="spollers-block__body">
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link">Люстры</a>
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link">Бра</a>
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link">Лампы настольные</a>
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link">Торшеры</a>
-    </div>
-  </div>
-  <div class="spollers-block__item">
-    <div class="spollers-block__title" data-spoller>
-    <a href="#" class="catalog__sidebar-btn-block-link btn-link btn-link_grey"> 
-      Светильники в стиле Лофт /
-      Винтаж
-    </a>
-    </div>
+
     <div class="spollers-block__body">
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link">Люстры</a>
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link">Бра</a>
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link">Лампы настольные</a>
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link">Торшеры</a>
+      <?
+        $sub_cat = get_categories( array(
+          'taxonomy'  => 'lightcat',
+          'orderby' => 'name',
+          'parent'  => $cat->term_id
+        ) );
+
+        foreach ( $sub_cat as $s_cat ) {
+      ?>
+
+        <a href="<?echo get_category_link($s_cat->term_id);?>" class="catalog__sidebar-btn-block-link btn-link"><?echo $s_cat->name;?></a>
+
+      <?
+        }
+      ?>
+      
     </div>
+
   </div>
-  <div class="spollers-block__item">
-    <div class="spollers-block__title" data-spoller>
-    <a href="#" class="catalog__sidebar-btn-block-link btn-link btn-link_grey">
-      Светильники в стиле
-      Прованс
-    </a>
-    </div>
-    <div class="spollers-block__body">
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link">Люстры</a>
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link">Бра</a>
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link">Лампы настольные</a>
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link">Торшеры</a>
-    </div>
-  </div>
-  <div class="spollers-block__item">
-    <div class="spollers-block__title" data-spoller>
-    <a href="#" class="catalog__sidebar-btn-block-link btn-link btn-link_grey">Светодиодное освещение</a>
-    </div>
-    <div class="spollers-block__body">
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link">Люстры</a>
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link">Бра</a>
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link">Лампы настольные</a>
-      <a href="#" class="catalog__sidebar-btn-block-link btn-link">Торшеры</a>
-    </div>
-  </div>
+  <?
+    }
+  ?>
+
+  
+  
+  
   </div>
 </div>
 
