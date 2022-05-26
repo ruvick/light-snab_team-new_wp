@@ -49,12 +49,20 @@ get_header(); ?>
 
         <div class="product__charect">
           <ul class="product__charect-list">
-            <li class="product__charect-list-li"><span>Материал:</span> металл</li>
-            <li class="product__charect-list-li"><span>Цвет:</span> латунь</li>
+          <?
+				    $param = carbon_get_the_post_meta('offer_cherecter');
+
+            foreach ($param as $p) {
+          ?> 
+            <li class="product__charect-list-li"><span><?echo $p["c_name"]?></span> <?echo $p["c_val"]?></li>
+          <?
+            }
+          ?>  
+            <!-- <li class="product__charect-list-li"><span>Цвет:</span> латунь</li>
             <li class="product__charect-list-li"><span>Тип цоколя:</span> E27</li>
             <li class="product__charect-list-li"><span>Количество ламп:</span> 1 x 60Вт</li>
             <li class="product__charect-list-li"><span>Лампы:</span> в комплект не входят</li>
-            <li class="product__charect-list-li"><span>Длинна шнура:</span> max 90</li>
+            <li class="product__charect-list-li"><span>Длинна шнура:</span> max 90</li> -->
           </ul>
 
           <p class="product__avail">Наличие: <span>есть на складе</span></p>
