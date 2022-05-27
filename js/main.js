@@ -425,7 +425,7 @@ let sliderCert = new Swiper('.sliderCert', {
 });
 
 // Сюда пишем класс нашего слайдера и меняем переменную
-let productSlider = new Swiper('.product__slider', {
+let productSlider = new Swiper('.productSlider', {
 	// effect: 'fade',
 	// autoplay: {
 	// 	delay: 1300,
@@ -444,10 +444,10 @@ let productSlider = new Swiper('.product__slider', {
 	//preloadImages: false,
 	//lazy: true,
 	// Dotts
-	//pagination: {
-	//	el: '.slider-quality__pagging',
-	//	clickable: true,
-	//},
+	pagination: {
+		el: '.swiper-paggination',
+		clickable: true,
+	},
 	// Arrows
 	navigation: {
 		nextEl: '.swiper-button-next',
