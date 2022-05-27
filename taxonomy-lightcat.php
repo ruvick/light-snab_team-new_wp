@@ -224,9 +224,11 @@
 
 		</div>
 
-		<nav class="pagination d-flex">
+		<?php if ( function_exists( 'wp_corenavi' ) ) wp_corenavi($loop); ?> 
+
+		<!-- <nav class="pagination d-flex">
 			<div class="pagination__nav-links d-flex">
-				<!-- <a class="pagination__back" href="#">Назад</a> -->
+				<a class="pagination__back" href="#">Назад</a>
 				<span class="pagination__numbers">1</span>
 				<a class="pagination__numbers current" href="#">2</a>
 				<a class="pagination__numbers" href="#">3</a>
@@ -237,9 +239,9 @@
 				</div>
 				<a class="pagination__numbers" href="#">17</a>
 				<p class="pagination__info">Страница 1 из 17</p>
-				<!-- <a class="pagination__next" href="#">Вперед</a> -->
+				<a class="pagination__next" href="#">Вперед</a>
 			</div>
-		</nav>
+		</nav> -->
 
 		<?php  get_template_part('template-parts/page','navigation-in-cat', array("total_count" => $fullCount, "page_number" => $pagenumber));?>
 

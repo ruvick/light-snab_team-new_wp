@@ -2811,6 +2811,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background-repeat: no-repeat;
 }
 
+.page-numbers,
 .pagination__numbers {
   margin-right: 20px;
   font-size: 16px;
@@ -4462,6 +4463,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-box-flex: 0;
   -ms-flex: 0 0 258px;
   flex: 0 0 258px;
+  max-width: 258px;
+  width: 100%;
   margin-right: 15px;
 }
 
@@ -5630,6 +5633,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 .catalog-sec__sidebar-form-btn {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .btn-border {
@@ -5639,6 +5643,8 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 }
 
 .catalog-sec__sidebar-form-btn-limk {
+  font-size: 16px;
+  padding: 7px 20px;
   margin-right: 10px;
 }
 
@@ -5693,6 +5699,31 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 .swiper-pagination-bullet:last-child {
   margin: 0px 0px 0px 0px;
 }
+
+.catalog__sidebar-spollers-block-body {
+  height: 350px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.catalog__sidebar-spollers-block-body::-webkit-scrollbar-thumb {
+  background-color: #D98600;
+}
+
+.catalog__sidebar-spollers-block-body::-webkit-scrollbar {
+  overflow-y: scroll;
+  width: 1.5px;
+  background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6047,6 +6078,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .catalog__sidebar {
     flex: 0 1 100%;
+    max-width: 100%;
     margin-right: 0;
   }
 
@@ -6127,6 +6159,14 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .mob-menu {
     width: 60%;
+  }
+
+  .catalog-sec__sidebar-body {
+    margin-bottom: 25px;
+  }
+
+  .catalog-sec__sidebar-form-btn {
+    justify-content: start;
   }
 }
 
@@ -6314,6 +6354,12 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .inform__btn {
     width: 100%;
+  }
+
+  .catalog-sec__sidebar-form-btn-limk {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
 

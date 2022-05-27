@@ -47,7 +47,7 @@
       <div class="spollers-block__title" data-spoller>
         <h4 class="catalog__sidebar-column-name">Материал</h4>
       </div>
-      <div class="spollers-block__body">
+      <div class="catalog__sidebar-spollers-block-body spollers-block__body">
         <div class="form__line" id = "material_filter_wrapper">
         
         </div>
@@ -61,7 +61,7 @@
       <div class="spollers-block__title" data-spoller>
         <h4 class="catalog__sidebar-column-name">Цоколь</h4>
       </div>
-      <div class="spollers-block__body">
+      <div class="catalog__sidebar-spollers-block-body spollers-block__body">
         <div class="form__line" id = "tsokol_filter_wrapper">
         
         </div>
@@ -75,7 +75,7 @@
       <div class="spollers-block__title" data-spoller>
         <h4 class="catalog__sidebar-column-name">Количество ламп</h4>
       </div>
-      <div class="spollers-block__body">
+      <div class="catalog__sidebar-spollers-block-body spollers-block__body">
         <div class="form__line" id = "lamp_count_filter_wrapper">
         
         </div>
@@ -89,7 +89,7 @@
       <div class="spollers-block__title" data-spoller>
         <h4 class="catalog__sidebar-column-name">Размер</h4>
       </div>
-      <div class="spollers-block__body">
+      <div class="catalog__sidebar-spollers-block-body spollers-block__body">
         <div class="form__line" id = "size_filter_wrapper">
         
         </div>
@@ -103,7 +103,7 @@
       <div class="spollers-block__title" data-spoller>
         <h4 class="catalog__sidebar-column-name">Дизайнер</h4>
       </div>
-      <div class="spollers-block__body">
+      <div class="catalog__sidebar-spollers-block-body spollers-block__body">
         <div class="form__line" id = "designer_filter_wrapper">
         
         </div>
