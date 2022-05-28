@@ -27,8 +27,19 @@
 
 		<!-- Мобильное меню -->
 		<div class="mob-menu header__mob-menu">
+			<div class="header__mob-menu-img">
+				<img src="<?php echo get_template_directory_uri();?>/img/menu.jpg" alt="">
+			</div>
 			<button class="menu-side__closed menu-side-close"></button>
-			<?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'mob-menu__list',
-			'container_class' => 'mob-menu__list','container' => false )); ?> 
-			<a href="#callback" class="header__popup-link header__popup-link_mob _popup-link">ЗАКАЗАТЬ ЗВОНОК</a>
+			<div class="header__mob-menu-descp">
+				<ul class="mob-menu__list">
+					<li class="header-bottom-wrap-menu-item"><a href="#" class="header-bottom-wrap-menu-item__link header-bottom-wrap-menu-item__link_lyustry">Люстры</a></li>
+					<li class="header-bottom-wrap-menu-item"><a href="#" class="header-bottom-wrap-menu-item__link header-bottom-wrap-menu-item__link_bra">Бра</a></li>
+					<li class="header-bottom-wrap-menu-item"><a href="#" class="header-bottom-wrap-menu-item__link header-bottom-wrap-menu-item__link_torshery">Торшеры</a></li>
+					<li class="header-bottom-wrap-menu-item"><a href="#" class="header-bottom-wrap-menu-item__link header-bottom-wrap-menu-item__link_lampy">Настольные лампы</a></li>
+				</ul>
+				<?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'mob-menu__list',
+					'container_class' => 'mob-menu__list','container' => false )); ?> 
+				<a href="#callback" class="header__popup-link header__popup-link_mob btn _popup-link">ЗАКАЗАТЬ ЗВОНОК</a>
+			</div>
 		</div>
