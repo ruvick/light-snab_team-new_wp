@@ -39,7 +39,7 @@
 
 						$termID = get_queried_object()->term_id;
 
-						$term = get_term_by('id', $child, $taxonomyName);
+						$term = get_term_by('id', $child, $taxonomyName); 
 						$term_id = $term->term_taxonomy_id; 
 
 						$arg = $wp_query->query;
@@ -223,8 +223,6 @@
 			</div>
 
 		</div>
-
-		<?php if ( function_exists( 'wp_corenavi' ) ) wp_corenavi($loop); ?> 
 
 		<!-- <nav class="pagination d-flex">
 			<div class="pagination__nav-links d-flex">

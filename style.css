@@ -2790,10 +2790,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .pagination {
+  display: flex;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
   margin-top: 47px;
+}
+
+.pagging-list {
+  display: flex;
 }
 
 .pagination__nav-links {
@@ -2832,6 +2837,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background-repeat: no-repeat;
 }
 
+.pagging-list li,
 .page-numbers,
 .pagination__numbers {
   margin-right: 20px;
