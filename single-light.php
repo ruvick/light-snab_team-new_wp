@@ -32,7 +32,7 @@ get_header(); ?>
 							  $pictIndex = 0;
 							    foreach($pict as $item) {
 							?>
-                <a class="card-bg-item slider__slide fancybox" data-fancybox="gallery" href="<?php echo wp_get_attachment_image_src($item['gal_img'], 'full')[0];?>">
+                <a class="card-bg-item-slide card-bg-item slider__slide fancybox" data-fancybox="gallery" href="<?php echo wp_get_attachment_image_src($item['gal_img'], 'full')[0];?>">
                   <button class="product-sec__img-cursor"></button>
                   <img
 										id = "pict-<? echo empty($item['gal_img_sku'])?$pictIndex:$item['gal_img_sku']; ?>" 
