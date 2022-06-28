@@ -44,7 +44,7 @@
 <form id = "categoryFilterForm" action="" style="display: none;">
   <div class="catalog__sidebar-column">
     <div class="spollers-block__item">
-      <div class="spollers-block__title" data-spoller>
+      <div class="catalog__sidebar-spollers-name spollers-block__title _active" data-spoller>
         <h4 class="catalog__sidebar-column-name">Материал</h4>
       </div>
       <div class="catalog__sidebar-spollers-block-body spollers-block__body">
@@ -58,7 +58,7 @@
 
   <div class="catalog__sidebar-column">
     <div class="spollers-block__item">
-      <div class="spollers-block__title" data-spoller>
+      <div class="catalog__sidebar-spollers-name spollers-block__title" data-spoller>
         <h4 class="catalog__sidebar-column-name">Цоколь</h4>
       </div>
       <div class="catalog__sidebar-spollers-block-body spollers-block__body">
@@ -72,7 +72,7 @@
 
   <div class="catalog__sidebar-column">
     <div class="spollers-block__item">
-      <div class="spollers-block__title" data-spoller>
+      <div class="catalog__sidebar-spollers-name spollers-block__title" data-spoller>
         <h4 class="catalog__sidebar-column-name">Количество ламп</h4>
       </div>
       <div class="catalog__sidebar-spollers-block-body spollers-block__body">
@@ -86,7 +86,7 @@
 
   <div class="catalog__sidebar-column">
     <div class="spollers-block__item">
-      <div class="spollers-block__title" data-spoller>
+      <div class="catalog__sidebar-spollers-name spollers-block__title" data-spoller>
         <h4 class="catalog__sidebar-column-name">Размер</h4>
       </div>
       <div class="catalog__sidebar-spollers-block-body spollers-block__body">
@@ -100,7 +100,7 @@
 
   <div class="catalog__sidebar-column">
     <div class="spollers-block__item">
-      <div class="spollers-block__title" data-spoller>
+      <div class="catalog__sidebar-spollers-name spollers-block__title" data-spoller>
         <h4 class="catalog__sidebar-column-name">Дизайнер</h4>
       </div>
       <div class="catalog__sidebar-spollers-block-body spollers-block__body">
