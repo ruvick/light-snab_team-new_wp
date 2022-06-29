@@ -2922,20 +2922,39 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   align-items: start;
 }
 
-._no-webp .product__slider {
+/* ._no-webp .product__slider {
   background: url("img/nophoto.jpg");
-}
+} */
 
 .product__slider {
+  position: relative;
   -webkit-box-flex: 0;
   -ms-flex: 0 1 43.65%;
   flex: 0 1 43.65%;
-  max-height: 591px;
+  /* max-height: 591px; */
   background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
   overflow: hidden;
   margin-right: 88px;
+  border: 0.3px solid #E3E3E3;
+}
+
+/* .productSlider {
+  max-width: 520px;
+  width: 100%;
+} */
+
+.card-bg-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+  overflow: hidden;
+}
+
+.card-bg-item img {
+  object-fit: contain;
 }
 
 .product__descp {
@@ -4553,14 +4572,24 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .card-box-img {
+  /* min-height: 258px;
+  max-height: 258px;
+  overflow: hidden; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 100%;
   min-height: 258px;
   max-height: 258px;
+  height: 258px;
   overflow: hidden;
 }
 
 .card-box-img img {
-  -o-object-fit: fill;
-  object-fit: fill;
+  /* -o-object-fit: fill;
+  object-fit: fill; */
+  object-fit: contain;
 }
 
 .card-box-descp {
@@ -5705,8 +5734,10 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
 .product-sl-paggination {
   position: absolute;
-  left: 45%;
-  bottom: 10%;
+  left: 50%;
+  bottom: 5%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 .swiper-pagination-bullets {
@@ -5812,9 +5843,25 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   object-fit: fill;
 }
 
+.product__slider-button-block {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
 
+.product__swiper-button {
+  width: 25px;
+  height: 55px;
+}
 
-
+.product__swiper-button:before {
+  filter: grayscale(0%);
+}
 
 
 
@@ -6519,9 +6566,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   background: url(img/youtube-play.webp) no-repeat scroll 0 -60px transparent;
 }
 
-._webp .product__slider {
+/* ._webp .product__slider {
   background: url(img/nophoto.webp);
-}
+} */
 
 ._webp .slider-main__slide {
   background-image: url(img/index-bg.webp);

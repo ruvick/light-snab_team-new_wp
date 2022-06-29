@@ -23,34 +23,34 @@ get_header(); ?>
     <div class="product__row d-flex">
 
       <div class="product__slider">
-        <div class="product__slider-slider__wrap slider__wrap">
-          <div class="slider__container _container">
-            <div class="productSlider _swiper d-flex">
-              <?
-						    $pict = carbon_get_the_post_meta('offer_picture');
-						      if($pict) {
-							  $pictIndex = 0;
-							    foreach($pict as $item) {
-							?>
-                <a data-fslightbox="gallery" class="card-bg-item slider__slide fancybox" data-fancybox="gallery" href="<?php echo wp_get_attachment_image_src($item['gal_img'], 'full')[0];?>">
-                  <button class="product-sec__img-cursor"></button>
-                  <img
-                    
-                    id = "pict-<? echo empty($item['gal_img_sku'])?$pictIndex:$item['gal_img_sku']; ?>" 
-										alt = "<? echo $item['gal_img_alt']; ?>"
-										title = "<? echo $item['gal_img_alt']; ?>"
-										src = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'full')[0];?>" />                
-                </a>
-							<?
-								  $pictIndex++;
-							    }
-						    }
-						  ?>
-          </div>
+        <div class="productSlider _swiper d-flex">
+          <?
+						$pict = carbon_get_the_post_meta('offer_picture');
+						  if($pict) {
+						    $pictIndex = 0;
+							  foreach($pict as $item) {
+					?>
+            <a data-fslightbox="gallery" class="card-bg-item slider__slide fancybox" data-fancybox="gallery" href="<?php echo wp_get_attachment_image_src($item['gal_img'], 'full')[0];?>">
+              <!-- <button class="product-sec__img-cursor"></button> -->
+              <img
+                id = "pict-<? echo empty($item['gal_img_sku'])?$pictIndex:$item['gal_img_sku']; ?>" 
+								alt = "<? echo $item['gal_img_alt']; ?>"
+								title = "<? echo $item['gal_img_alt']; ?>"
+								src = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'full')[0];?>" />                
+            </a>
+					<?
+						$pictIndex++;
+							}
+						}
+					?>
         </div>
+        <!-- Стрелки -->
+        <div class="product__slider-button-block swiper-button-block"> 
+					<div class="product__swiper-button swiper-button swiper-button-next"></div>
+					<div class="product__swiper-button swiper-button swiper-button-prev"></div>
+			  </div>
         <!-- Кнопки-точки -->
         <div class="product-sl-paggination swiper-paggination"></div>
-        </div>
       </div>
 
       <div class="product__descp">
@@ -96,11 +96,11 @@ get_header(); ?>
         <form action="#" class="product__choice d-flex">
           <p class="product__choice-name">Кол-во:</p>
           <div class="product__quantity quantity">
-            <div class="quantity__button quantity__button_minus"></div>
+            <div class="quantity__button quantity__button_plus"></div>
             <div class="quantity__input">
               <input id="pageNumeric" autocomplete="off" type="number" name="form[]" value="1">
             </div>
-            <div class="quantity__button quantity__button_plus"></div>
+            <div class="quantity__button quantity__button_minus"></div>
           </div>
           <button class="product__btn btn" id = "btn__to-card" onclick = "add_tocart(this, document.getElementById('pageNumeric').value); return false;"
 					  data-price = "<?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?>"
@@ -125,7 +125,9 @@ get_header(); ?>
           </p>
         </div> -->
 
+      
       </div>
+
     </div>
 
   </div>
