@@ -2937,7 +2937,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background-repeat: no-repeat;
   overflow: hidden;
   margin-right: 88px;
-  border: 0.3px solid #E3E3E3;
 }
 
 /* .productSlider {
@@ -5751,6 +5750,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   -ms-flex-align: center;
   align-items: center;
   margin-top: 31px;
+  display: none;
 }
 
 .swiper-pagination-bullet {
@@ -5855,12 +5855,14 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 }
 
 .product__swiper-button {
-  width: 25px;
+  width: 15px;
   height: 55px;
+  margin: 10px;
 }
 
 .product__swiper-button:before {
   filter: grayscale(0%);
+  background-position: center;
 }
 
 
