@@ -836,7 +836,7 @@ if (spollersArray.length > 0) {
 			const oneSpoller = spollersBlock.hasAttribute('data-one-spoller') ? true : false;
 			if (!spollersBlock.querySelectorAll('._slide').length) {
 				if (oneSpoller && !spollerTitle.classList.contains('_active')) {
-					hideSpollersBody(spollersBlock);
+					// hideSpollersBody(spollersBlock);
 				}
 				spollerTitle.classList.toggle('_active');
 				_slideToggle(spollerTitle.nextElementSibling, 500);
@@ -1371,7 +1371,7 @@ const sidebarBody = document.querySelector(".catalog-sec__sidebar-body");
 //BURGER
 if (iconMenuOpen) {
 	iconMenuOpen.addEventListener("click", function () {
-		// iconMenuOpen.classList.toggle("active");
+		iconMenuOpen.classList.toggle("active");
 		body.classList.toggle("_lock");
 		menuBody.classList.toggle("active");
 		msNuarBlk.classList.toggle("active");

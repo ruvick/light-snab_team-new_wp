@@ -26,20 +26,210 @@
 		</header>
 
 		<!-- Мобильное меню -->
-		<div class="mob-menu header__mob-menu">
-			<div class="header__mob-menu-img">
-				<img src="<?php echo get_template_directory_uri();?>/img/menu.jpg" alt="">
-			</div>
-			<button class="menu-side__closed menu-side-close"></button>
-			<div class="header__mob-menu-descp">
-				<ul class="mob-menu__list">
-					<li class="header-bottom-wrap-menu-item"><a href="#" class="header-bottom-wrap-menu-item__link header-bottom-wrap-menu-item__link_lyustry">Люстры</a></li>
-					<li class="header-bottom-wrap-menu-item"><a href="#" class="header-bottom-wrap-menu-item__link header-bottom-wrap-menu-item__link_bra">Бра</a></li>
-					<li class="header-bottom-wrap-menu-item"><a href="#" class="header-bottom-wrap-menu-item__link header-bottom-wrap-menu-item__link_torshery">Торшеры</a></li>
-					<li class="header-bottom-wrap-menu-item"><a href="#" class="header-bottom-wrap-menu-item__link header-bottom-wrap-menu-item__link_lampy">Настольные лампы</a></li>
-				</ul>
+		<div class="mob-menu mob-menu_ns header__mob-menu">
+			<div class="mobMenuWrapper">
+				<div class="catalogMenu" data-spollers data-one-spoller>
+					<div class="catalogMenuPunct" >
+						<div class="catalogMenuPunctTitle" data-spoller>
+							<div class="cmpImg">
+								<img src="<?bloginfo("template_url")?>/img/formenu/lyustry.png" alt="">
+							</div>
+
+							<div class="cmpTitle">
+								<span>Люстры</span>
+							</div>
+						</div>
+
+						<div class="catalogMenuPunctTitle_sub spollers-block__body">
+							<ul>
+								<li>
+									<a href="#">Смотреть все люстры</a>
+								</li>
+
+								<li>
+									<a href="#">Дизайнерские люстры</a>
+								</li>
+								
+								<li>
+									<a href="#">Люстры в стиле лофт</a>
+								</li>
+
+								<li>
+									<a href="#">Люстры в стиле прованс</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="catalogMenuPunct" >
+						<div class="catalogMenuPunctTitle" data-spoller>
+							<div class="cmpImg">
+								<img src="<?bloginfo("template_url")?>/img/formenu/bra-i-podsvetki.png" alt="">
+							</div>
+
+							<div class="cmpTitle">
+								<span>Бра</span>
+							</div>
+						</div>
+
+						<div class="catalogMenuPunctTitle_sub spollers-block__body">
+							<ul>
+								<li>
+									<a href="#">Смотреть все Бра</a>
+								</li>
+
+								<li>
+									<a href="#">Дизайнерские бра</a>
+								</li>
+								
+								<li>
+									<a href="#">Бра в стиле лофт</a>
+								</li>
+
+								<li>
+									<a href="#">Бра в стиле прованс</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="catalogMenuPunct" >
+						<div class="catalogMenuPunctTitle" data-spoller>
+							<div class="cmpImg">
+								<img src="<?bloginfo("template_url")?>/img/formenu/torshery.png" alt="">
+							</div>
+
+							<div class="cmpTitle">
+								<span>Торшеры</span>
+							</div>
+						</div>
+
+						<div class="catalogMenuPunctTitle_sub spollers-block__body">
+							<ul>
+								<li>
+									<a href="#">Смотреть все Торшеры</a>
+								</li>
+
+								<li>
+									<a href="#">Дизайнерские торшеры</a>
+								</li>
+								
+								<li>
+									<a href="#">Торшеры в стиле лофт</a>
+								</li>
+
+								<li>
+									<a href="#">Торшеры в стиле прованс</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="catalogMenuPunct" >
+						<div class="catalogMenuPunctTitle" data-spoller>
+							<div class="cmpImg">
+								<img src="<?bloginfo("template_url")?>/img/formenu/nastolnye-lampy.png" alt="">
+							</div>
+
+							<div class="cmpTitle">
+								<span>Настольные лампы</span>
+							</div>
+						</div>
+
+						<div class="catalogMenuPunctTitle_sub spollers-block__body">
+							<ul>
+								<li>
+									<a href="#">Смотреть все Настольные лампы</a>
+								</li>
+
+								<li>
+									<a href="#">Дизайнерские настольные лампы</a>
+								</li>
+								
+								<li>
+									<a href="#">Настольные лампы в стиле лофт</a>
+								</li>
+
+								<li>
+									<a href="#">Настольные лампы в стиле прованс</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="catalogMenuPunct" >
+						<div class="catalogMenuPunctTitle" data-spoller>
+							<div class="cmpImg">
+								<img src="<?bloginfo("template_url")?>/img/formenu/ofisnoe-osveshchenie.png" alt="">
+							</div>
+
+							<div class="cmpTitle">
+								<span>Светодиодное освещение</span>
+							</div>
+						</div>
+
+						<div class="catalogMenuPunctTitle_sub spollers-block__body">
+							<ul>
+								<li>
+									<a href="#">Смотреть все светодиодное освещение</a>
+								</li>
+
+								<li>
+									<a href="#">Светодиодные люстры</a>
+								</li>
+								
+								<li>
+									<a href="#">Светодиодные бра</a>
+								</li>
+
+								<li>
+									<a href="#">светодиодные торшеры</a>
+								</li>
+
+								<li>
+									<a href="#">Точечьный свет</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="catalogMenuPunct" >
+						<div class="catalogMenuPunctTitle" data-spoller>
+							<div class="cmpImg">
+								<img src="<?bloginfo("template_url")?>/img/formenu/lampochki.png" alt="">
+							</div>
+
+							<div class="cmpTitle">
+								<span>Лампочки</span>
+							</div>
+						</div>
+
+						<div class="catalogMenuPunctTitle_sub spollers-block__body">
+							<ul>
+								<li>
+									<a href="#">Смотреть все светодиодное освещение</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
 				<?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'mob-menu__list',
-					'container_class' => 'mob-menu__list','container' => false )); ?> 
+						'container_class' => 'mob-menu__list','container' => false )); ?> 
 				<a href="#callback" class="header__popup-link header__popup-link_mob btn _popup-link">ЗАКАЗАТЬ ЗВОНОК</a>
+
+				<!-- <div class="header__mob-menu-img">
+					<img src="<?php echo get_template_directory_uri();?>/img/menu.jpg" alt="">
+				</div>
+				<button class="menu-side__closed menu-side-close"></button>
+				<div class="header__mob-menu-descp">
+					<ul class="mob-menu__list">
+						<li class="header-bottom-wrap-menu-item"><a href="#" class="header-bottom-wrap-menu-item__link header-bottom-wrap-menu-item__link_lyustry">Люстры</a></li>
+						<li class="header-bottom-wrap-menu-item"><a href="#" class="header-bottom-wrap-menu-item__link header-bottom-wrap-menu-item__link_bra">Бра</a></li>
+						<li class="header-bottom-wrap-menu-item"><a href="#" class="header-bottom-wrap-menu-item__link header-bottom-wrap-menu-item__link_torshery">Торшеры</a></li>
+						<li class="header-bottom-wrap-menu-item"><a href="#" class="header-bottom-wrap-menu-item__link header-bottom-wrap-menu-item__link_lampy">Настольные лампы</a></li>
+					</ul>
+					
+				</div> -->
 			</div>
 		</div>
