@@ -43,19 +43,19 @@
 						<div class="catalogMenuPunctTitle_sub spollers-block__body">
 							<ul>
 								<li>
-									<a href="#">Смотреть все люстры</a>
+									<a href="<?echo get_category_link(12);?>">Смотреть все люстры</a>
 								</li>
 
 								<li>
-									<a href="#">Дизайнерские люстры</a>
+									<a href="<?echo get_category_link(12);?>">Дизайнерские люстры</a>
 								</li>
 								
 								<li>
-									<a href="#">Люстры в стиле лофт</a>
+									<a href="<?echo get_category_link(10);?>">Люстры в стиле лофт</a>
 								</li>
 
 								<li>
-									<a href="#">Люстры в стиле прованс</a>
+									<a href="<?echo get_category_link(43);?>">Люстры в стиле прованс</a>
 								</li>
 							</ul>
 						</div>
@@ -75,19 +75,19 @@
 						<div class="catalogMenuPunctTitle_sub spollers-block__body">
 							<ul>
 								<li>
-									<a href="#">Смотреть все Бра</a>
+									<a href="<?echo get_category_link(17);?>">Смотреть все Бра</a>
 								</li>
 
 								<li>
-									<a href="#">Дизайнерские бра</a>
+									<a href="<?echo get_category_link(17);?>">Дизайнерские бра</a>
 								</li>
 								
 								<li>
-									<a href="#">Бра в стиле лофт</a>
+									<a href="<?echo get_category_link(15);?>">Бра в стиле лофт</a>
 								</li>
 
 								<li>
-									<a href="#">Бра в стиле прованс</a>
+									<a href="<?echo get_category_link(19);?>">Бра в стиле прованс</a>
 								</li>
 							</ul>
 						</div>
@@ -107,19 +107,15 @@
 						<div class="catalogMenuPunctTitle_sub spollers-block__body">
 							<ul>
 								<li>
-									<a href="#">Смотреть все Торшеры</a>
+									<a href="<?echo get_category_link(60);?>">Смотреть все Торшеры</a>
 								</li>
 
 								<li>
-									<a href="#">Дизайнерские торшеры</a>
+									<a href="<?echo get_category_link(60);?>">Дизайнерские торшеры</a>
 								</li>
 								
 								<li>
-									<a href="#">Торшеры в стиле лофт</a>
-								</li>
-
-								<li>
-									<a href="#">Торшеры в стиле прованс</a>
+									<a href="<?echo get_category_link(61);?>">Торшеры в стиле прованс</a>
 								</li>
 							</ul>
 						</div>
@@ -139,19 +135,19 @@
 						<div class="catalogMenuPunctTitle_sub spollers-block__body">
 							<ul>
 								<li>
-									<a href="#">Смотреть все Настольные лампы</a>
+									<a href="<?echo get_category_link(33);?>">Смотреть все Настольные лампы</a>
 								</li>
 
 								<li>
-									<a href="#">Дизайнерские настольные лампы</a>
+									<a href="<?echo get_category_link(33);?>">Дизайнерские настольные лампы</a>
 								</li>
 								
 								<li>
-									<a href="#">Настольные лампы в стиле лофт</a>
+									<a href="<?echo get_category_link(25);?>">Настольные лампы в стиле лофт</a>
 								</li>
 
 								<li>
-									<a href="#">Настольные лампы в стиле прованс</a>
+									<a href="<?echo get_category_link(34);?>">Настольные лампы в стиле прованс</a>
 								</li>
 							</ul>
 						</div>
@@ -171,23 +167,23 @@
 						<div class="catalogMenuPunctTitle_sub spollers-block__body">
 							<ul>
 								<li>
-									<a href="#">Смотреть все светодиодное освещение</a>
+									<a href="<?echo get_category_link(13);?>">Смотреть все светодиодное освещение</a>
 								</li>
 
 								<li>
-									<a href="#">Светодиодные люстры</a>
+									<a href="<?echo get_category_link(41);?>">Светодиодные люстры</a>
 								</li>
 								
 								<li>
-									<a href="#">Светодиодные бра</a>
+									<a href="<?echo get_category_link(16);?>">Светодиодные бра</a>
 								</li>
 
 								<li>
-									<a href="#">светодиодные торшеры</a>
+									<a href="<?echo get_category_link(62);?>">Cветодиодные торшеры</a>
 								</li>
 
 								<li>
-									<a href="#">Точечьный свет</a>
+									<a href="<?echo get_category_link(14);?>">Точечьный свет</a>
 								</li>
 							</ul>
 						</div>
@@ -207,7 +203,7 @@
 						<div class="catalogMenuPunctTitle_sub spollers-block__body">
 							<ul>
 								<li>
-									<a href="#">Смотреть все светодиодное освещение</a>
+									<a href="<?echo get_category_link(21);?>">Смотреть все лампочки</a>
 								</li>
 							</ul>
 						</div>

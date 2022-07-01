@@ -26,7 +26,7 @@
 
           foreach ( $sub_cat as $s_cat ) {
         ?>
-          <a href="<?echo get_category_link($s_cat->term_id);?>" class="catalog__sidebar-btn-block-link btn-link"><?echo $s_cat->name;?></a>
+          <a href="<?echo get_category_link($s_cat->term_id);?>" class="catalog__sidebar-btn-block-link btn-link"><?echo $s_cat->name . " (".$s_cat->term_id.")";?></a>
 
         <?
           }
