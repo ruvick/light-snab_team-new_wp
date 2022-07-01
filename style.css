@@ -5128,7 +5128,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   padding-top: 75px
 }
 
-.mob-menu_ns ul li a{
+.mob-menu_ns ul li a {
   font-size: 14px;
 }
 
@@ -5152,7 +5152,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   border-bottom: 1px solid lightgrey;
 }
 
-.catalogMenuPunctTitle._active::before { 
+.catalogMenuPunctTitle._active::before {
   transform: rotate(-90deg);
   background-image: url(img/icons/list_arrow_color.svg)
 }
@@ -5170,9 +5170,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 }
 
 .catalogMenuPunctTitle {
-  width:100%;
+  width: 100%;
   display: flex;
-  
+
   padding-bottom: 5px;
   margin-bottom: 5px;
   cursor: pointer;
@@ -5180,45 +5180,45 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
 }
 
-.catalogMenuPunctTitle .cmpImg{
+.catalogMenuPunctTitle .cmpImg {
   max-width: 50px;
   display: flex;
   margin-right: 10px;
 }
 
-.catalogMenuPunctTitle .cmpTitle{
+.catalogMenuPunctTitle .cmpTitle {
   display: flex;
 }
 
-.catalogMenuPunctTitle .cmpTitle span{
-  margin: auto auto auto 0; 
+.catalogMenuPunctTitle .cmpTitle span {
+  margin: auto auto auto 0;
 }
 
 
-.catalogMenuPunctTitle .cmpImg img{
-  width:100%;
+.catalogMenuPunctTitle .cmpImg img {
+  width: 100%;
   margin: auto;
-  
- }
+
+}
 
 .catalogMenuPunctTitle_sub {
-  width:100%
+  width: 100%
 }
 
-.catalogMenuPunctTitle_sub ul{ 
+.catalogMenuPunctTitle_sub ul {
   margin: 5px 10px 10px 61px;
 }
 
-.catalogMenuPunctTitle_sub ul li a { 
+.catalogMenuPunctTitle_sub ul li a {
   padding: 0;
   margin-bottom: 20px;
 }
 
-.catalogMenuPunctTitle_sub ul li a:hover { 
+.catalogMenuPunctTitle_sub ul li a:hover {
   color: #D98600;
 }
 
-.catalogMenuPunctTitle_sub ul li:first-child a{ 
+.catalogMenuPunctTitle_sub ul li:first-child a {
   color: #D98600;
   border-bottom: 1px dotted #D98600;
 }
@@ -5846,7 +5846,6 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   -ms-flex-align: center;
   align-items: center;
   margin-top: 31px;
-  display: none;
 }
 
 .swiper-pagination-bullet {

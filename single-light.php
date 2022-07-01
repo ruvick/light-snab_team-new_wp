@@ -50,7 +50,7 @@ get_header(); ?>
 					<div class="product__swiper-button swiper-button swiper-button-prev"></div>
 			  </div>
         <!-- Кнопки-точки -->
-        <div class="product-sl-paggination swiper-paggination"></div>
+        <!-- <div class="product-sl-paggination swiper-paggination"></div> -->
       </div>
 
       <div class="product__descp">
