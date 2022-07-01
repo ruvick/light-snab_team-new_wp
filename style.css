@@ -3773,8 +3773,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .header__container {
-  max-width: 1520px;
-  margin-right: 110px;
+  /* max-width: 1520px;
+  margin-right: 110px; */
+  max-width: 100%;
+  margin-right: 0;
+  padding: 0 30px;
 }
 
 .header__logo {
@@ -5980,10 +5983,10 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 }
 
 @media (max-width: 1640px) {
-  .header__container {
+  /* .header__container {
     max-width: 1330px;
     margin: 0 auto;
-  }
+  } */
 }
 
 @media (max-width: 1440px) {
