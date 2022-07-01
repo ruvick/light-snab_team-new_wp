@@ -209,7 +209,7 @@ let slider = new Swiper('.sliderMain', {
 	slidesPerView: 1,
 	spaceBetween: 0, //отступ в пикселях
 	autoHeight: true,
-	speed: 2000,
+	speed: 1000,
 	//touchRatio: 0,
 	//simulateTouch: false,
 	loop: true, //циклично
@@ -272,7 +272,7 @@ let sliderBrends = new Swiper('.sliderBrends', {
 	slidesPerView: 2.5,
 	spaceBetween: 30, //отступ в пикселях
 	autoHeight: true,
-	speed: 2000,
+	speed: 1000,
 	//touchRatio: 0,
 	//simulateTouch: false,
 	loop: true, //циклично
@@ -341,7 +341,7 @@ let sliderCert = new Swiper('.sliderCert', {
 	slidesPerView: 1.5,
 	spaceBetween: 10, //отступ в пикселях
 	autoHeight: true,
-	speed: 2000,
+	speed: 1000,
 	//touchRatio: 0,
 	//simulateTouch: false,
 	loop: true, //циклично
@@ -437,7 +437,7 @@ let productSlider = new Swiper('.productSlider', {
 	slidesPerView: 1,
 	spaceBetween: 0,
 	autoHeight: true,
-	speed: 2000,
+	speed: 1000,
 	//touchRatio: 0,
 	//simulateTouch: false,
 	loop: true,
@@ -498,7 +498,7 @@ let reviewsSl = new Swiper('.reviewsSl', {
 	slidesPerView: 1.5,
 	spaceBetween: 30,
 	autoHeight: true,
-	speed: 2000,
+	speed: 1000,
 	//touchRatio: 0,
 	//simulateTouch: false,
 	loop: true,

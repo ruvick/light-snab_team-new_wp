@@ -21,6 +21,9 @@
           <h1 class="slider-main__title"><? echo $item['slider_title']; ?></h1>
           <p class="slider-main__subtitle"><? echo $item['slider_subtitle']; ?></p>
           <? } ?>
+          <div class="mob-slider-slide">
+            <img src="<?php echo wp_get_attachment_image_src($item['slider_img'], 'large')[0]; ?>" alt="<? echo $item['slider_title']; ?>"> 
+          </div>
         </div>
       </div>
 					<?

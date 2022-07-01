@@ -5965,7 +5965,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   background-size: 50%;
 }
 
-
+.mob-slider-slide {
+  display: none;
+}
 
 
 
@@ -6607,6 +6609,69 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   .search__input {
     border-radius: 0 !important;
   }
+
+  .info__card-block-item-img_big {
+    right: -10%;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .info__card-block-item-btn {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .info__card-big .info__card-block-item-descp {
+    padding: 15px 15px 20px 15px;
+  }
+
+  .info__card-block-item {
+    height: 180px;
+  }
+
+  .info__card-block-item-title {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .info__card-block-item_bottom .info__card-block-item-descp,
+  .info__card-block-item_top .info__card-block-item-descp {
+    padding: 15px;
+    max-width: 250px;
+    width: 100%;
+  }
+
+  .info__card-block-item_bottom .info__card-block-item-img,
+  .info__card-block-item_top .info__card-block-item-img {
+    position: relative;
+    max-width: 253px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .info__card-block-item_bottom .info__card-block-item-img {
+    order: 2;
+  }
+
+  .slider-main__slide {
+    /* height: 325px; */
+    height: auto;
+    background-image: none !important;
+  }
+
+  .mob-slider-slide {
+    display: block;
+    margin: 0 -10px;
+  }
+
+  .slider-main__subtitle,
+  .slider-main__title {
+    text-align: center;
+  }
+
+  .slider-bg__container {
+    padding: 50px 10px 0px 10px !important;
+  }
 }
 
 @media (max-width: 460px) {
@@ -6702,6 +6767,19 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   .product__quantity {
     margin-right: 15px;
   }
+
+  .slider-main__title span,
+  .slider-main__title {
+    font-size: 22px;
+  }
+
+  .slider-main__subtitle {
+    font-size: 20px;
+  }
+
+  .slider-bg__container {
+    padding: 20px 10px 0px 10px !important;
+  }
 }
 
 @media (max-width: 375px) {
@@ -6709,11 +6787,28 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     min-height: 160px;
     max-height: 160px;
   }
+
+  .info__card-block-item {
+    height: 150px;
+  }
+
+  .info__card-block-item_bottom .info__card-block-item-descp,
+  .info__card-block-item_top .info__card-block-item-descp {
+    max-width: 200px;
+  }
+
+  .info__card-block-item-title {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 345px) {
   .best-offers__row .card-column {
     flex: 0 0 90%;
+  }
+
+  .info__card-block-item {
+    height: 130px;
   }
 }
 
