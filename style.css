@@ -5436,9 +5436,10 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 .baner-page {
   position: relative;
   height: 300px;
+  /* padding: 70px 0; */
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: 100%;
+  background-size: cover;
   background-image: url('img/banner-page.jpg');
 }
 
@@ -6460,6 +6461,14 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .product__charect {
     margin-bottom: 15px;
+  }
+
+  .baner-page {
+    height: 230px;
+  }
+
+  .page-h1 {
+    text-align: center;
   }
 }
 
