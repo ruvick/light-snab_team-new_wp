@@ -413,11 +413,11 @@ textarea:focus {
   font-weight: 400;
   padding: 0px 15px 0 0;
   background: transparent;
-  border-bottom: 2px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
 .input._focus {
-  border-bottom: 2px solid grey;
+  border-bottom: 1px solid grey;
 }
 
 .input._error {
@@ -4123,7 +4123,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .footer__form-input {
-  margin-bottom: 16px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .footer__form-btn {
@@ -6642,6 +6643,10 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   .logo-icon {
     flex: 0 0 80px;
     height: 20px;
+  }
+
+  .bascket-icon__number {
+    top: 0;
   }
 }
 

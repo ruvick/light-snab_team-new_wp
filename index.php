@@ -188,7 +188,7 @@
 			?>
     </div>
 
-    <a href="<?php echo get_permalink(17);?>" class="brends__btn btn">Перейти к торговым маркам</a>
+    <a href="<?php echo get_permalink(17215);?>" class="brends__btn btn">Перейти к торговым маркам</a>
 
   </div>
 </section>
@@ -206,7 +206,7 @@
 					$certificatesIndex = 0;
 				foreach ($certificates as $item) {
 		?>
-      <a href="<?php echo wp_get_attachment_image_src($item['img_certificates'], 'large')[0]; ?>" class="certificates__slide slider__slide" data-lightbox="gallery"> 
+      <a href="<?php echo wp_get_attachment_image_src($item['img_certificates'], 'large')[0]; ?>" class="certificates__slide slider__slide" data-fslightbox="gallery"> 
         <img src="<?php echo wp_get_attachment_image_src($item['img_certificates'], 'large')[0]; ?>" alt="">				
       </a>
 			<?

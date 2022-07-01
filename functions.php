@@ -166,7 +166,7 @@ function my_assets()
 	wp_enqueue_script('vendors', get_template_directory_uri() . '/js/vendors.min.js', array(), $scrypt_version, true); //Библиотеки
 	// wp_enqueue_script('html2pdf', get_template_directory_uri() . '/js/html2pdf.bundle.js', array(), $scrypt_version, true); //Create PDF-page 
 
-	wp_enqueue_script( 'filter', get_template_directory_uri(). '/js/filter.js', array(), $scrypt_version, true);
+	wp_enqueue_script( 'filter', get_template_directory_uri(). '/js/filter.js', array(), $scrypt_version, true); 
 
 	wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array(), $scrypt_version, true); // Подключение основного скрипта в самом конце
 
