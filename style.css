@@ -4823,11 +4823,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   display: flex;
 }
 
-.reviews__slide {
+/* .reviews__slide {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 410px;
   flex: 0 1 410px;
-}
+} */
 
 .reviews__message {
   padding: 21px 18px 23px 39px;

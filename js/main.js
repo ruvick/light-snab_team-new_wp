@@ -287,8 +287,8 @@ let sliderBrends = new Swiper('.sliderBrends', {
 	// },
 	// Arrows
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: '.swiper-button-brends-next',
+		prevEl: '.swiper-button-brends-prev',
 	},
 	breakpoints: {
 		414: {
@@ -516,19 +516,31 @@ let reviewsSl = new Swiper('.reviewsSl', {
 	},
 	breakpoints: {
 		320: {
-			slidesPerView: 1.6,
-			spaceBetween: 30,
+			slidesPerView: 0.8,
+			spaceBetween: 8,
 			autoHeight: true,
 		},
+		414: {
+			slidesPerView: 1.2,
+			spaceBetween: 10,
+		},
+		515: {
+			slidesPerView: 1.3,
+			spaceBetween: 13,
+		},
 		768: {
-			slidesPerView: 2.5,
+			slidesPerView: 1.5,
+			spaceBetween: 15,
+		},
+		1024: {
+			slidesPerView: 2.3,
 			spaceBetween: 20,
 		},
 		1200: {
-			slidesPerView: 2.8,
-			spaceBetween: 40,
+			slidesPerView: 2.5,
+			spaceBetween: 30,
 		},
-		1280: {
+		1283: {
 			slidesPerView: 3,
 			spaceBetween: 50,
 		},
