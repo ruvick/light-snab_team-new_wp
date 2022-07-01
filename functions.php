@@ -144,8 +144,8 @@ function my_assets()
 
 	// Подключение стилей 
 
-	$style_version = "1.0.11";
-	$scrypt_version = "1.0.11";
+	$style_version = "1.0.111";
+	$scrypt_version = "1.0.111";
 
 	wp_enqueue_style("style-modal", get_template_directory_uri() . "/css/jquery.arcticmodal-0.3.css", array(), $style_version, 'all'); //Модальные окна (стили)
 	wp_enqueue_style("style-lightbox", get_template_directory_uri() . "/css/lightbox.min.css", array(), $style_version, 'all'); //Лайтбокс (стили)

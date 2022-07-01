@@ -27,10 +27,12 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
             ->set_width(15),
           Field::make('image', 'slider_img_mob', 'Картинка слайдера на мобильном')
             ->set_width(15),
+          Field::make('color', 'slider_color_mob', 'Цвет на мобильном')
+            ->set_width(15),
           Field::make('text', 'slider_title', 'Заголовок слайдера')
-            ->set_width(35),
+            ->set_width(30),
           Field::make('text', 'slider_subtitle', 'Подзаголовок слайдера')
-            ->set_width(35),
+            ->set_width(25),
           // Field::make('text', 'slider_link', 'Ссылка в кнопке')
           //   ->set_width(50),
           // Field::make('text', 'slider_link_text', 'Текст в кнопке')

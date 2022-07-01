@@ -6316,10 +6316,6 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     line-height: 0;
   }
 
-  .slider-main__title br {
-    display: none;
-  }
-
   .slider-main__subtitle {
     font-size: 24px;
     line-height: 1.5;
@@ -6661,7 +6657,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .mob-slider-slide {
     display: block;
-    margin: 0 -10px;
+    margin: 15px -5px 0 -5px;
   }
 
   .slider-main__subtitle,

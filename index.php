@@ -15,8 +15,8 @@
 					$pictIndex = 0;
 				foreach ($pict as $item) {
 		?>
-      <div class="slider-bg__slide slider__slide slider-main__slide" style="background-image: url(<?php echo wp_get_attachment_image_src($item['slider_img'], 'full')[0]; ?>);">
-        <div class="slider-bg__container _container">
+      <div class="slider-bg__slide slider__slide slider-main__slide" style="background-image: url(<?php echo wp_get_attachment_image_src($item['slider_img'], 'full')[0]; ?>); <? if (!empty($item['slider_color_mob'])) echo 'background-color: '.$item['slider_color_mob']; ?>">
+        <div  class="slider-bg__container _container">
           <? if (!empty($item['slider_title'])) { ?>
           <h1 class="slider-main__title"><? echo $item['slider_title']; ?></h1>
           <p class="slider-main__subtitle"><? echo $item['slider_subtitle']; ?></p>
