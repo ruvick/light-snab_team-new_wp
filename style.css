@@ -5970,6 +5970,18 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   display: none;
 }
 
+#brand-modal {
+  max-width: 800px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -6512,6 +6524,10 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   .popup__form-block {
     padding: 35px 15px;
   }
+
+  #brand-modal .brand-modal-wrapper {
+    padding: 25px;
+  }
 }
 
 @media (max-width: 530px) {
@@ -6586,6 +6602,10 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .card-bg-item {
     height: 330px;
+  }
+
+  #brand-modal .brand-modal-wrapper {
+    flex-wrap: wrap;
   }
 }
 
@@ -6784,6 +6804,10 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .slider-bg__container {
     padding: 20px 10px 0px 10px !important;
+  }
+
+  #brand-modal .brand-modal-wrapper {
+    padding: 0;
   }
 }
 
