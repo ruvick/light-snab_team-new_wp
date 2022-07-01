@@ -297,7 +297,7 @@ let sliderBrends = new Swiper('.sliderBrends', {
 			autoHeight: true,
 		},
 		515: {
-			slidesPerView: 4.5,
+			slidesPerView: 4.5, 
 			spaceBetween: 30,
 			autoHeight: true,
 		},

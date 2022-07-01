@@ -24,11 +24,13 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
       Field::make('complex', 'slider_index', 'Слайдер на главной')
         ->add_fields(array(
           Field::make('image', 'slider_img', 'Картинка слайдера')
-            ->set_width(50),
+            ->set_width(15),
+          Field::make('image', 'slider_img_mob', 'Картинка слайдера на мобильном')
+            ->set_width(15),
           Field::make('text', 'slider_title', 'Заголовок слайдера')
-            ->set_width(50),
+            ->set_width(35),
           Field::make('text', 'slider_subtitle', 'Подзаголовок слайдера')
-            ->set_width(50),
+            ->set_width(35),
           // Field::make('text', 'slider_link', 'Ссылка в кнопке')
           //   ->set_width(50),
           // Field::make('text', 'slider_link_text', 'Текст в кнопке')
@@ -70,7 +72,7 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
         ))
     ))
     ->add_tab('Торговые марки', array(
-      Field::make('complex', 'as_complex_brand', 'Торговые марки')
+      Field::make('complex', 'as_complex_brand', 'Торговые марки') 
         ->add_fields(array(
           Field::make('text', 'as_complex_brand__title', 'Название')
             ->set_width(30),

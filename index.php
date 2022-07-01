@@ -22,7 +22,7 @@
           <p class="slider-main__subtitle"><? echo $item['slider_subtitle']; ?></p>
           <? } ?>
           <div class="mob-slider-slide">
-            <img src="<?php echo wp_get_attachment_image_src($item['slider_img'], 'large')[0]; ?>" alt="<? echo $item['slider_title']; ?>"> 
+            <img src="<?php echo wp_get_attachment_image_src($item['slider_img_mob'], 'large')[0]; ?>" alt="<? echo $item['slider_title']; ?>"> 
           </div>
         </div>
       </div>
@@ -191,7 +191,7 @@
 			?>
     </div>
 
-    <a href="<?php echo get_permalink(17215);?>" class="brends__btn btn">Перейти к торговым маркам</a>
+    <a href="<?php echo get_permalink(17215);?>" class="brends__btn btn">Перейти к торговым маркам</a> 
 
   </div>
 </section>
