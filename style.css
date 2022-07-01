@@ -6326,14 +6326,14 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   }
 
   .best-offers__row {
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap;
     width: auto;
-    overflow: auto;
+    overflow: auto; */
     margin: 0 -7.5px;
   }
 
   .best-offers__row .card-column {
-    flex: 0 0 38%;
+    flex: 0 1 33%;
   }
 
   .catalog__wrap {
@@ -6537,9 +6537,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     height: 250px;
   }
 
-  .best-offers__row .card-column {
+  /* .best-offers__row .card-column {
     flex: 0 0 60%;
-  }
+  } */
 
   .inform__list-item {
     flex: 0 1 49%;
@@ -6717,9 +6717,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     width: 100%;
   }
 
-  .best-offers__row .card-column {
+  /* .best-offers__row .card-column {
     flex: 0 0 80%;
-  }
+  } */
 
   .card-box-img {
     min-height: 200px;
@@ -6799,9 +6799,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 }
 
 @media (max-width: 345px) {
-  .best-offers__row .card-column {
+  /* .best-offers__row .card-column {
     flex: 0 0 90%;
-  }
+  } */
 
   .info__card-block-item {
     height: 130px;
