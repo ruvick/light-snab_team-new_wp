@@ -6509,6 +6509,10 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     flex: 0 0 50%;
   }
 
+  .best-offers__row .card-column:last-child{
+    display: none;
+  }
+
   .card-column {
     flex: 0 1 50%;
   }
