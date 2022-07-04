@@ -985,4 +985,7 @@ function get_filter(WP_REST_Request $request)
 
 // Фильтр End ================================================================================================================
 
+
+include "filter_content.php";
+include "mainTovarOperation.php";
 ?>
