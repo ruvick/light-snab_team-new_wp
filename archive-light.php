@@ -4,7 +4,7 @@
 
 <main class="page">
 
-<div style = "display:none" id = "tovarCategoryId" data-id = "<? echo get_queried_object()->term_id; ?>"></div>
+<div style = "display:none" id = "tovarCategoryId" data-id = "<? echo $thisCatID = get_queried_object()->term_id; ?>"></div>
 
 <section class="title-sec">
 	<div class="_container">
@@ -26,11 +26,16 @@
 
 			<div class="catalog__main-content main-content">
 				<div class="card-row"> 
-				<?php
-						while(have_posts()):
-							the_post();
-							get_template_part('template-parts/product-loop');  
-						endwhile;
+					<? 
+						$curent_page = (empty($_REQUEST["page_number"]))?1:$_REQUEST["page_number"];
+						$rez = get_tovar($thisCatID, ($curent_page-1)*IN_PAGE_COUNT);
+					?>
+
+					<?
+						foreach ($rez["tovars"] as $tov) {
+							$arg = $tov;
+							get_template_part('template-parts/product-loop',"param", $arg); 
+						}
 					?>
 				</div>
 			</div>

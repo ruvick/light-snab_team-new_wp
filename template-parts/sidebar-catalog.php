@@ -41,7 +41,17 @@
 
 <div class="loaderSize" id="categoryFilterLoader" style="display: block;">Загрузка...</div>
 
-<form id = "categoryFilterForm" action="" style="display: none;">
+<form id = "categoryFilterForm" class = "filterForm" action="" style="display: none;">
+  <div style = "display:none" class = "flter_pods" id = "flter_pods" >
+		
+		<div class = "loader_white"></div>
+			
+		<div class = "loader_info">
+			<p  class = "pds_naideno" id = "pds_naideno" class = "naideno"></p>
+			<button type = "submit" class = "pds_submit">Показать</button>	
+		</div>
+	</div>
+
   <div class="catalog__sidebar-column">
     <div class="spollers-block__item">
       <div class="catalog__sidebar-spollers-name spollers-block__title _active" data-spoller>

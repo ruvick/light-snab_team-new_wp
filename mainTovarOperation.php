@@ -4,40 +4,61 @@ define("IN_PAGE_COUNT", 48);
 function generate_query($PARAM) {
     if (empty($PARAM)) $PARAM = $_REQUEST;
 
-    $brand = "";
+    $material = "";
 
-	if (!empty($PARAM["brand"])) {
+	if (!empty($PARAM["material"])) {
 		
-		for ($i = 0; $i<count($PARAM["brand"]); $i++) {
-			$brand .= "(offer_brend = '".$PARAM["brand"][$i]."')";
-			if ($i != count($PARAM["brand"]) - 1) $brand .= " OR ";
+		for ($i = 0; $i<count($PARAM["material"]); $i++) {
+			$material .= "(offer_material = '".$PARAM["material"][$i]."')";
+			if ($i != count($PARAM["material"]) - 1) $material .= " OR ";
 		} 
 	}
 
-    if (!empty($brand)) $brand = ' AND ('.$brand.')';
+    if (!empty($material)) $material = ' AND ('.$material.')';
     
-    $style = "";
-	if (!empty($PARAM["style"])) {
+    $tsokol = "";
+	if (!empty($PARAM["tsokol"])) {
 		
-		for ($i = 0; $i<count($PARAM["style"]); $i++) {
-			$style .= "(offer_style = '".$PARAM["style"][$i]."')";
-			if ($i != count($PARAM["style"]) - 1) $style .= " OR ";
+		for ($i = 0; $i<count($PARAM["tsokol"]); $i++) {
+			$tsokol .= "(offer_tsokol = '".$PARAM["tsokol"][$i]."')";
+			if ($i != count($PARAM["tsokol"]) - 1) $style .= " OR ";
 		} 
 	}
 
-    if (!empty($style)) $style = " AND (".$style.")";
+    if (!empty($tsokol)) $tsokol = " AND (".$tsokol.")";
 
 	
-    $forma = "";
-    if (!empty($PARAM["forma"])) {
+    $lamp_count = "";
+    if (!empty($PARAM["lamp_count"])) {
 		
-		for ($i = 0; $i<count($PARAM["forma"]); $i++) {
-			$forma .= "(offer_forma = '".$PARAM["forma"][$i]."')";
-			if ($i != count($PARAM["forma"]) - 1) $forma .= " OR ";
+		for ($i = 0; $i<count($PARAM["lamp_count"]); $i++) {
+			$lamp_count .= "(offer_lamp_count = '".$PARAM["lamp_count"][$i]."')";
+			if ($i != count($PARAM["lamp_count"]) - 1) $lamp_count .= " OR ";
 		} 
 	}
 
-    if (!empty($forma)) $forma = " AND (".$forma.")";
+    if (!empty($lamp_count)) $lamp_count = " AND (".$lamp_count.")";
+
+
+    $size = "";
+    if (!empty($PARAM["size"])) {
+		
+		for ($i = 0; $i<count($PARAM["size"]); $i++) {
+			$size .= "(offer_size = '".$PARAM["size"][$i]."')";
+			if ($i != count($PARAM["size"]) - 1) $size .= " OR ";
+		} 
+	}
+    if (!empty($size)) $size = " AND (".$size.")";
+
+    $designer = "";
+    if (!empty($PARAM["designer"])) {
+		
+		for ($i = 0; $i<count($PARAM["designer"]); $i++) {
+			$designer .= "(offer_designer = '".$PARAM["designer"][$i]."')";
+			if ($i != count($PARAM["designer"]) - 1) $designer .= " OR ";
+		} 
+	}
+    if (!empty($designer)) $designer = " AND (".$designer.")";
 
 
     $price = "";
@@ -48,17 +69,19 @@ function generate_query($PARAM) {
     }
     if (!empty($price)) $price = " AND ".$price;
 
-    return $brand.$style.$forma.$price." ORDER BY offer_price ASC" ;
+    return $material.$lamp_count.$size.$tsokol.$designer.$price." ORDER BY offer_price ASC" ;
 }
 
 function get_tovar_count($thisCatID) {
     global $wpdb;
     $dopquery = generate_query([]);
-    $rez = $wpdb->get_results( "SELECT COUNT(*) as 'total_count' FROM mrksv_filter WHERE (cat= ".$thisCatID." OR cat1= ".$thisCatID." OR cat2= ".$thisCatID.") ".$dopquery);
+    $rez = $wpdb->get_results( "SELECT COUNT(*) as 'total_count' FROM light_filter WHERE (cat= ".$thisCatID." OR cat1= ".$thisCatID." OR cat2= ".$thisCatID.") ".$dopquery);
     return $rez[0]->total_count;
 }
 
 function cat_query_param($thisCatID, $sparam) {
+    if (empty($thisCatID))
+        return "(cat LIKE '%' OR cat1 LIKE '%' OR cat2 LIKE '%') ";
     if ($thisCatID == "%")
         return "(title LIKE '%".$sparam."%' OR offer_brend LIKE '%".$sparam."%' OR offer_material_plaf LIKE '%".$sparam."%') ";
     else
@@ -76,7 +99,7 @@ function get_tovar($thisCatID, $offset) {
     $total_count = get_tovar_count($thisCatID);
 
     $start = microtime(true);
-    $qq = "SELECT * FROM mrksv_filter WHERE ".$cat_query.$dopquery." LIMIT ".$offset.", ".IN_PAGE_COUNT;					
+    $qq = "SELECT * FROM light_filter WHERE ".$cat_query.$dopquery." LIMIT ".$offset.", ".IN_PAGE_COUNT;					
 	
     $rez = $wpdb->get_results($qq);
 
@@ -120,34 +143,29 @@ function get_filter_count(WP_REST_Request $request)
 
     $dopquery = generate_query(json_decode($request['filter_param'], true));
     
-    $q = "SELECT `offer_brend`, `offer_style`, `offer_forma`, `offer_material_plaf`, `offer_color_plaf`, `offer_lamp_type`, `offer_tsokol` FROM `mrksv_filter` WHERE ".$cat_query.$dopquery;
+    $q = "SELECT * FROM `light_filter` WHERE ".$cat_query.$dopquery;
 
 	$rez = $wpdb->get_results($q, ARRAY_A );
 	
     foreach ($rez as $r) {
-        if (!empty($r["offer_brend"]))
-            $filter["offer_brend"][$r["offer_brend"]]+=1;
+        if (!empty($r["offer_material"]))
+            $filter["offer_material"][$r["offer_material"]]+=1;
         
-        if (!empty($r["offer_style"]))
-            $filter["offer_style"][$r["offer_style"]]+=1;
+        if (!empty($r["offer_lamp_count"]))
+            $filter["offer_lamp_count"][$r["offer_lamp_count"]]+=1;
         
-        if (!empty($r["offer_forma"]))
-            $filter["offer_forma"][$r["offer_forma"]]+=1;
+        if (!empty($r["offer_size"]))
+            $filter["offer_size"][$r["offer_size"]]+=1;
         
-        if (!empty($r["offer_material_plaf"]))
-            $filter["offer_material_plaf"][$r["offer_material_plaf"]]+=1;
-        
-        if (!empty($r["offer_color_plaf"]))
-            $filter["offer_color_plaf"][$r["offer_color_plaf"]]+=1;
-        
-        if (!empty($r["offer_lamp_type"]))
-            $filter["offer_lamp_type"][$r["offer_lamp_type"]]+=1;
+        if (!empty($r["offer_designer"]))
+            $filter["offer_designer"][$r["offer_designer"]]+=1;
         
         if (!empty($r["offer_tsokol"]))
             $filter["offer_tsokol"][$r["offer_tsokol"]]+=1;
+        
     }
 
-    $mm = $wpdb->get_results("SELECT MIN(`offer_price`) as 'min', MAX(`offer_price`) as 'max' FROM `mrksv_filter` WHERE ".$cat_query.$dopquery );
+    $mm = $wpdb->get_results("SELECT MIN(`offer_price`) as 'min', MAX(`offer_price`) as 'max' FROM `light_filter` WHERE ".$cat_query.$dopquery );
 	$filter["offer_price_max"] = $mm[0]->max;
 	$filter["offer_price_min"] = $mm[0]->min;
 
@@ -156,12 +174,10 @@ function get_filter_count(WP_REST_Request $request)
 	$filter["filter"] = json_decode($request['filter_param']);
 	$filter["time"] = (microtime(true) - $start);
 
-    uasort($filter["offer_brend"], function($a, $b) { return $a < $b; });
-    uasort($filter["offer_style"], function($a, $b) { return $a < $b; });
-    uasort($filter["offer_forma"], function($a, $b) { return $a < $b; });
-    uasort($filter["offer_material_plaf"], function($a, $b) { return $a < $b; });
-    uasort($filter["offer_color_plaf"], function($a, $b) { return $a < $b; });
-    uasort($filter["offer_lamp_type"], function($a, $b) { return $a < $b; });
+    uasort($filter["offer_material"], function($a, $b) { return $a < $b; });
+    uasort($filter["offer_lamp_count"], function($a, $b) { return $a < $b; });
+    uasort($filter["offer_size"], function($a, $b) { return $a < $b; });
+    uasort($filter["offer_designer"], function($a, $b) { return $a < $b; });
     uasort($filter["offer_tsokol"], function($a, $b) { return $a < $b; });
 
 	if (!empty($filter))

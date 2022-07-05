@@ -10,7 +10,7 @@
  
     global $wpdb;
 
-    // $wpdb->query("TRUNCATE `mrksv_filter`");
+    // $wpdb->query("TRUNCATE `light_filter`");
 
     $posts = $wpdb->get_results("SELECT * FROM `light_posts` WHERE `post_status` = 'publish' AND `post_type` = 'light' LIMIT 0, 10000");
 
