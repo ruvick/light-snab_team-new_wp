@@ -10,7 +10,7 @@
  
     global $wpdb;
 
-    // $wpdb->query("TRUNCATE `light_filter`");
+    $wpdb->query("TRUNCATE `light_filter`");
 
     $posts = $wpdb->get_results("SELECT * FROM `light_posts` WHERE `post_status` = 'publish' AND `post_type` = 'light' LIMIT 0, 10000");
 
@@ -22,7 +22,7 @@
             $args = array(
                 "post_id" => $post->ID,
                 "lnk" => get_the_permalink($post->ID),
-                "img_lnk" => get_the_post_thumbnail_url($post->ID, "tominiatyre"),
+                "img_lnk" => get_the_post_thumbnail_url($post->ID, "medium"),
                 "title" => $post->post_title,
                 "offer_sku" => carbon_get_post_meta( $post->ID, 'offer_sku'),
                 "offer_material" => carbon_get_post_meta( $post->ID, 'offer_material'),

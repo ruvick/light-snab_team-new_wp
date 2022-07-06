@@ -21,7 +21,7 @@ function generate_query($PARAM) {
 		
 		for ($i = 0; $i<count($PARAM["tsokol"]); $i++) {
 			$tsokol .= "(offer_tsokol = '".$PARAM["tsokol"][$i]."')";
-			if ($i != count($PARAM["tsokol"]) - 1) $style .= " OR ";
+			if ($i != count($PARAM["tsokol"]) - 1) $tsokol .= " OR ";
 		} 
 	}
 

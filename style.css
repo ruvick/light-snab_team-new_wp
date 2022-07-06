@@ -9,6 +9,42 @@ Version: 1.0.1
 @charset "UTF-8";
 
 @font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Thin.eot');
+  src: local('Lato Thin'), local('Lato-Thin'),
+      url('fonts/Lato-Thin.eot?#iefix') format('embedded-opentype'),
+      url('fonts/Lato-Thin.woff') format('woff'),
+      url('fonts/Lato-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Regular.eot');
+  src: local('Lato Regular'), local('Lato-Regular'),
+      url('fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+      url('fonts/Lato-Regular.woff') format('woff'),
+      url('fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Bold.eot');
+  src: local('Lato Bold'), local('Lato-Bold'),
+      url('fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+      url('fonts/Lato-Bold.woff') format('woff'),
+      url('fonts/Lato-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* @font-face {
   font-family: "Lato";
   src: url("fonts/Lato-Light.eot");
   src: local("☺"), url("fonts/Lato-Light.woff") format("woff"), url("fonts/Lato-Light.ttf") format("truetype"), url("fonts/Lato-Light.svg") format("svg");
@@ -54,7 +90,7 @@ Version: 1.0.1
   src: local("☺"), url("fonts/Lato-Heavy.woff") format("woff"), url("fonts/Lato-Heavy.ttf") format("truetype"), url("fonts/Lato-Heavy.svg") format("svg");
   font-weight: 900;
   font-style: normal;
-}
+} */
 
 * {
   padding: 0px;
@@ -5075,6 +5111,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .filterForm {
   position: relative;
+}
+
+.fp_count {
+  color: lightgray;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-top: 2px;
 }
 
 @media (max-width: 600px) {
