@@ -74,8 +74,9 @@ function generate_query($PARAM) {
 
 function get_tovar_count($thisCatID) {
     global $wpdb;
+    $cat_query = cat_query_param($thisCatID,[]);
     $dopquery = generate_query([]);
-    $rez = $wpdb->get_results( "SELECT COUNT(*) as 'total_count' FROM light_filter WHERE (cat= ".$thisCatID." OR cat1= ".$thisCatID." OR cat2= ".$thisCatID.") ".$dopquery);
+    $rez = $wpdb->get_results( "SELECT COUNT(*) as 'total_count' FROM light_filter WHERE ".$cat_query.$dopquery);
     return $rez[0]->total_count;
 }
 

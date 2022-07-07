@@ -42,7 +42,8 @@
 
 		</div>
 
-		<?php if ( function_exists( 'wp_corenavi' ) ) wp_corenavi($loop); ?> 
+		<?php  
+		get_template_part('template-parts/page','navigation-in-cat', array("total_count" => $rez["total_count"], "page_number" => $curent_page));?>
 
 	</div>
 </section>
