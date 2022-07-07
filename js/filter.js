@@ -32,7 +32,9 @@ function getRequests() {
 // Изменение элемента фильтра
 function filter_element_chenge(e_value, key) {
     let inpEl = document.querySelector('.fp_inp[data-vals="'+key+'"]')
+    let inpEl_sp = document.querySelector('label[data-vals="'+key+'"]')
     if (inpEl) inpEl.disabled = (e_value == 0)?true:false
+    if (inpEl_sp) inpEl_sp.style.display = (e_value == 0)?"none":"block"
     let countEl = document.querySelector('.fp_count[data-vals="'+key+'"]')
     if (countEl) countEl.innerHTML = e_value
 }
@@ -46,7 +48,7 @@ function repaint_filter(element) {
         document.querySelector(".flter_pods .loader_info").style.display = "none"
         let inp = element.getBoundingClientRect();
         let win = document.getElementById("categoryFilterForm").getBoundingClientRect();
-        flter_pods.style.top = (inp.top - win.top)+"px"
+        if ( screen.width > 768) flter_pods.style.top = (inp.top - win.top)+"px"
         flter_pods.style.display = "block"
         
     let fname = element.dataset.fname
@@ -88,6 +90,7 @@ function repaint_filter(element) {
 
     xhr.onload = () => {
 
+
         if (fname != "Материал")
         Object.keys(xhr.response.offer_material).forEach(key => {
             filter_element_chenge(xhr.response.offer_material[key], key)
@@ -98,15 +101,15 @@ function repaint_filter(element) {
             filter_element_chenge(xhr.response.offer_tsokol[key], key)
         });
 
-        if (fname != "Количество ламп")
-        Object.keys(xhr.response.offer_lamp_count).forEach(key => {
-            filter_element_chenge(xhr.response.offer_lamp_count[key], key)
-        });
+        // if (fname != "Количество ламп")
+        // Object.keys(xhr.response.offer_lamp_count).forEach(key => {
+        //     filter_element_chenge(xhr.response.offer_lamp_count[key], key)
+        // });
 
-        if (fname != "Размер")
-        Object.keys(xhr.response.offer_size).forEach(key => {
-            filter_element_chenge(xhr.response.offer_size[key], key)
-        });
+        // if (fname != "Размер")
+        // Object.keys(xhr.response.offer_size).forEach(key => {
+        //     filter_element_chenge(xhr.response.offer_size[key], key)
+        // });
 
         if (fname != "Дизайнер")
         Object.keys(xhr.response.offer_designer).forEach(key => {
@@ -147,6 +150,7 @@ function acsept_filter(category, qParam) {
         
         // Бренд
         let uStr = ""
+        let count = 0
         Object.keys(xhr.response.offer_material).forEach((key, index) => {
             let e_value = xhr.response.offer_material[key];
             
@@ -156,11 +160,15 @@ function acsept_filter(category, qParam) {
                 uStr += '<label data-vals = "'+key+'" for="material_'+index+'" class="checkbox checkbox_label">' +
                     '<input data-fname = "Материал" id="material_'+index+'" '+checed+' class="checkbox__input" type="checkbox" data-vals = "'+key+'" value="'+key+'" name="material[]" onclick="repaint_filter(this)"><span class="checkbox__text"><span>'+key+'</span> <span data-vals = "'+key+'" class = "fp_count"> ('+e_value+')</span></span>'+
                 '</label>'
+
+                if (checed === "checked") count++
             }
         });
         if (document.getElementById("material_filter_wrapper")) material_filter_wrapper.innerHTML = uStr;
+        if (document.getElementById("material_filter_head") && (count > 0)) material_filter_head.hidden = false;
 
         uStr = ""
+        count = 0
         Object.keys(xhr.response.offer_tsokol).forEach((key, index) => {
             let e_value = xhr.response.offer_tsokol[key];
             
@@ -170,40 +178,42 @@ function acsept_filter(category, qParam) {
                 uStr += '<label data-vals = "'+key+'" for="tsokol_'+index+'" class="checkbox checkbox_label">' +
                     '<input data-fname = "Цоколь" id="tsokol_'+index+'" '+checed+' class="checkbox__input" type="checkbox" data-vals = "'+key+'" value="'+key+'" name="tsokol[]" onclick="repaint_filter(this)"><span class="checkbox__text"><span>'+key+'</span><span data-vals = "'+key+'" class = "fp_count"> ('+e_value+')</span></span>'+
                 '</label>'
+                if (checed === "checked") count++
             }
         });
         if (document.getElementById("tsokol_filter_wrapper")) tsokol_filter_wrapper.innerHTML = uStr;
-
-        uStr = ""
-        Object.keys(xhr.response.offer_lamp_count).forEach((key, index) => {
-            let e_value = xhr.response.offer_lamp_count[key];
+        if (document.getElementById("tsokol_filter_head") && (count > 0)) tsokol_filter_head.hidden = false;
+        // uStr = ""
+        // Object.keys(xhr.response.offer_lamp_count).forEach((key, index) => {
+        //     let e_value = xhr.response.offer_lamp_count[key];
             
-            if (e_value != 0) {  
-                let checed = (qParam.lamp_count != undefined && qParam.lamp_count.includes(key) )?"checked":"";
+        //     if (e_value != 0) {  
+        //         let checed = (qParam.lamp_count != undefined && qParam.lamp_count.includes(key) )?"checked":"";
                 
-                uStr += '<label data-vals = "'+key+'" for="lamp_count_'+index+'" class="checkbox checkbox_label">' +
-                    '<input data-fname = "Количество ламп" id="lamp_count_'+index+'" '+checed+' class="checkbox__input" type="checkbox" data-vals = "'+key+'" value="'+key+'" name="lamp_count[]" onclick="repaint_filter(this)"><span class="checkbox__text"><span>'+key+'</span><span data-vals = "'+key+'" class = "fp_count"> ('+e_value+')</span></span>'+
-                '</label>'
-            }
-        });
-        if (document.getElementById("lamp_count_filter_wrapper")) lamp_count_filter_wrapper.innerHTML = uStr;
+        //         uStr += '<label data-vals = "'+key+'" for="lamp_count_'+index+'" class="checkbox checkbox_label">' +
+        //             '<input data-fname = "Количество ламп" id="lamp_count_'+index+'" '+checed+' class="checkbox__input" type="checkbox" data-vals = "'+key+'" value="'+key+'" name="lamp_count[]" onclick="repaint_filter(this)"><span class="checkbox__text"><span>'+key+'</span><span data-vals = "'+key+'" class = "fp_count"> ('+e_value+')</span></span>'+
+        //         '</label>'
+        //     }
+        // });
+        // if (document.getElementById("lamp_count_filter_wrapper")) lamp_count_filter_wrapper.innerHTML = uStr;
 
     
-        uStr = ""
-        Object.keys(xhr.response.offer_size).forEach((key, index) => {
-            let e_value = xhr.response.offer_size[key];
+        // uStr = ""
+        // Object.keys(xhr.response.offer_size).forEach((key, index) => {
+        //     let e_value = xhr.response.offer_size[key];
             
-            if (e_value != 0) {  
-                let checed = (qParam.size != undefined && qParam.size.includes(key) )?"checked":"";
+        //     if (e_value != 0) {  
+        //         let checed = (qParam.size != undefined && qParam.size.includes(key) )?"checked":"";
                 
-                uStr += '<label data-vals = "'+key+'" for="size_'+index+'" class="checkbox checkbox_label">' +
-                    '<input data-fname = "Размер" id="size_'+index+'" '+checed+' class="checkbox__input fp_inp" type="checkbox" data-vals = "'+key+'" value="'+key+'" name="size[]" onclick="repaint_filter(this)"><span class="checkbox__text"><span>'+key+'</span><span data-vals = "'+key+'" class = "fp_count"> ('+e_value+')</span></span>'+
-                '</label>'
-            }
-        });
-        if (document.getElementById("size_filter_wrapper")) size_filter_wrapper.innerHTML = uStr;
+        //         uStr += '<label data-vals = "'+key+'" for="size_'+index+'" class="checkbox checkbox_label">' +
+        //             '<input data-fname = "Размер" id="size_'+index+'" '+checed+' class="checkbox__input fp_inp" type="checkbox" data-vals = "'+key+'" value="'+key+'" name="size[]" onclick="repaint_filter(this)"><span class="checkbox__text"><span>'+key+'</span><span data-vals = "'+key+'" class = "fp_count"> ('+e_value+')</span></span>'+
+        //         '</label>'
+        //     }
+        // });
+        // if (document.getElementById("size_filter_wrapper")) size_filter_wrapper.innerHTML = uStr;
     
         uStr = ""
+        count = 0
         Object.keys(xhr.response.offer_designer).forEach((key, index) => {
             let e_value = xhr.response.offer_designer[key];
             
@@ -213,9 +223,11 @@ function acsept_filter(category, qParam) {
                 uStr += '<label data-vals = "'+key+'" for="designer_'+index+'" class="checkbox checkbox_label">' +
                     '<input data-fname = "Дизайнер" id="designer_'+index+'" '+checed+' class="checkbox__input" type="checkbox" data-vals = "'+key+'" value="'+key+'" name="designer[]" onclick="repaint_filter(this)"><span class="checkbox__text"><span>'+key+'</span><span data-vals = "'+key+'" class = "fp_count"> ('+e_value+')</span></span>'+
                 '</label>'
+                if (checed === "checked") count++
             }
         });
         if (document.getElementById("designer_filter_wrapper")) designer_filter_wrapper.innerHTML = uStr;
+        if (document.getElementById("designer_filter_head") && (count > 0)) designer_filter_head.hidden = false;
 
        
         if (document.getElementById("price_ot")) price_ot.value = (qParam.price_ot == undefined)?xhr.response.offer_price_min:qParam.price_ot;

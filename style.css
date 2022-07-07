@@ -2828,17 +2828,17 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 #breadcrumbs span {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   color: #161615;
 }
 
 #breadcrumbs span a {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 21px;
-  color: #161615;
+  color: #D98600;
 }
 
 .pagination {
@@ -5119,6 +5119,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   margin: 0;
   background: no-repeat;
   color: white;
+  width: 100%;
 }
 
 .pds_submit:hover{ 
@@ -5986,7 +5987,8 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 }
 
 .catalog__sidebar-spollers-block-body {
-  max-height: 350px;
+  max-height: 150px;
+  height: 150px;
   overflow-y: scroll;
   overflow-x: hidden;
   padding-left: 13px;
@@ -5998,7 +6000,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
 .catalog__sidebar-spollers-block-body::-webkit-scrollbar {
   overflow-y: scroll;
-  width: 1.5px;
+  width: 5.5px;
   background-color: transparent;
 }
 
@@ -6297,6 +6299,16 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 }
 
 @media (max-width: 768px) {
+
+  .flter_pods {
+    position: fixed;
+    width:90%;
+    margin: 0 5%;
+    bottom: 30px;
+    left: 0;
+    box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+  }
+
   h1 {
     font-size: 26px;
   }
