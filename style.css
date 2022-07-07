@@ -270,7 +270,7 @@ h4 {
   align-items: center;
   text-align: center;
   padding: 7px 33px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   color: #fff;
   background: #D98600;
@@ -1235,7 +1235,7 @@ body.ie ._ibg img {
 }
 
 .spollers-block__title:before {
-  right: 5px;
+  right: 10px;
   top: 44%;
 }
 
@@ -4681,7 +4681,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .card-box-descp-btn {
   padding: 9px 10px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .catalog__sidebar-column {
@@ -4700,7 +4700,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .btn-link {
-  padding: 7px 8px;
+  padding: 7px 21px 7px 10px;
   border-bottom: 0.02px solid #e3e3e3;
 }
 
@@ -4821,8 +4821,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .info__card-block-item-btn {
-  padding: 9px;
-  margin-left: auto;
+  margin-left: 0;
   margin-top: 36px;
 }
 

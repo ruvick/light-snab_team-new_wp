@@ -100,7 +100,7 @@
               КОМПЛЕКТОВЩИКАМ / <br>
               <span>СНАБЖЕНЦАМ</span>
             </h2>
-            <a href="<?php echo get_permalink(7);?>" class="info__card-block-item-btn btn">Подробнее</a>
+            <a href="<?php echo get_permalink(10);?>" class="info__card-block-item-btn btn">Подробнее</a>
           </div>
         </div>
 
@@ -124,7 +124,7 @@
             представлены стильные и необычные подвесные светильники, которые не только будут наполнять интерьер
             светом, но и радовать глаз
           </p>
-          <a href="#" class="info__card-block-item-btn btn">Подробнее</a>
+          <a href="<?php echo get_permalink(7);?>" class="info__card-block-item-btn btn">Подробнее</a>
         </div>
         <div class="info__card-block-item-img_big info__card-block-item-img">
           <picture><source srcset="<?php echo get_template_directory_uri();?>/img/info-05.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/info-05.png?_v=1649104441578" alt=""></picture>
