@@ -54,10 +54,10 @@
 
   <div class="catalog__sidebar-column">
     <div class="spollers-block__item">
-      <div class="catalog__sidebar-spollers-name spollers-block__title _active" data-spoller>
+      <div  class="catalog__sidebar-spollers-name spollers-block__title _active" data-spoller>
         <h4 class="catalog__sidebar-column-name">Материал</h4>
       </div>
-      <div class="catalog__sidebar-spollers-block-body spollers-block__body">
+      <div id = "material_filter_head" class="catalog__sidebar-spollers-block-body spollers-block__body">
         <div class="form__line" id = "material_filter_wrapper">
         
         </div>
@@ -68,10 +68,10 @@
 
   <div class="catalog__sidebar-column">
     <div class="spollers-block__item">
-      <div class="catalog__sidebar-spollers-name spollers-block__title" data-spoller>
+      <div  class="catalog__sidebar-spollers-name spollers-block__title" data-spoller>
         <h4 class="catalog__sidebar-column-name">Цоколь</h4>
       </div>
-      <div class="catalog__sidebar-spollers-block-body spollers-block__body">
+      <div id = "tsokol_filter_head" class="catalog__sidebar-spollers-block-body spollers-block__body">
         <div class="form__line" id = "tsokol_filter_wrapper">
         
         </div>
@@ -80,7 +80,7 @@
     <div class="catalog__sidebar-column-line"></div>
   </div>
 
-  <div class="catalog__sidebar-column">
+  <!-- <div class="catalog__sidebar-column">
     <div class="spollers-block__item">
       <div class="catalog__sidebar-spollers-name spollers-block__title" data-spoller>
         <h4 class="catalog__sidebar-column-name">Количество ламп</h4>
@@ -106,14 +106,14 @@
       </div>
     </div>
     <div class="catalog__sidebar-column-line"></div>
-  </div>
+  </div> -->
 
   <div class="catalog__sidebar-column">
     <div class="spollers-block__item">
       <div class="catalog__sidebar-spollers-name spollers-block__title" data-spoller>
         <h4 class="catalog__sidebar-column-name">Дизайнер</h4>
       </div>
-      <div class="catalog__sidebar-spollers-block-body spollers-block__body">
+      <div id = "designer_filter_head"  class="catalog__sidebar-spollers-block-body spollers-block__body">
         <div class="form__line" id = "designer_filter_wrapper">
         
         </div>
