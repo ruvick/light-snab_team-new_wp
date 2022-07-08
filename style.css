@@ -12,9 +12,9 @@ Version: 1.0.1
   font-family: 'Lato';
   src: url('fonts/Lato-Thin.eot');
   src: local('Lato Thin'), local('Lato-Thin'),
-      url('fonts/Lato-Thin.eot?#iefix') format('embedded-opentype'),
-      url('fonts/Lato-Thin.woff') format('woff'),
-      url('fonts/Lato-Thin.ttf') format('truetype');
+    url('fonts/Lato-Thin.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Lato-Thin.woff') format('woff'),
+    url('fonts/Lato-Thin.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -24,9 +24,9 @@ Version: 1.0.1
   font-family: 'Lato';
   src: url('fonts/Lato-Regular.eot');
   src: local('Lato Regular'), local('Lato-Regular'),
-      url('fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
-      url('fonts/Lato-Regular.woff') format('woff'),
-      url('fonts/Lato-Regular.ttf') format('truetype');
+    url('fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Lato-Regular.woff') format('woff'),
+    url('fonts/Lato-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -36,9 +36,9 @@ Version: 1.0.1
   font-family: 'Lato';
   src: url('fonts/Lato-Bold.eot');
   src: local('Lato Bold'), local('Lato-Bold'),
-      url('fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'),
-      url('fonts/Lato-Bold.woff') format('woff'),
-      url('fonts/Lato-Bold.ttf') format('truetype');
+    url('fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Lato-Bold.woff') format('woff'),
+    url('fonts/Lato-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -1216,8 +1216,8 @@ body.ie ._ibg img {
   position: relative;
 }
 
-.spollers-block__title{
-  position:relative
+.spollers-block__title {
+  position: relative
 }
 
 .spollers-block__title:before,
@@ -5085,14 +5085,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   width: 100px;
   height: 65px;
   background-color: #D3820F;
-  color:white;
+  color: white;
   text-align: center;
-  right:calc(0px - 100px);
+  right: calc(0px - 100px);
   z-index: 10000000;
   padding: 5px;
 }
 
-.flter_pods .loader_info{
+.flter_pods .loader_info {
   display: none;
 }
 
@@ -5103,13 +5103,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background-position: center;
   background-size: 130%;
   background-repeat: no-repeat;
-  background-image: url(img/icons/white-loader.svg); 
+  background-image: url(img/icons/white-loader.svg);
 }
 
 .pds_naideno {
-  font-size: 12px!important;
+  font-size: 12px !important;
   line-height: 1.3;
-  margin: 0 0 3px 0!important;
+  margin: 0 0 3px 0 !important;
 }
 
 .pds_submit {
@@ -5121,7 +5121,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   width: 100%;
 }
 
-.pds_submit:hover{ 
+.pds_submit:hover {
   text-decoration: underline;
 }
 
@@ -6301,7 +6301,7 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .flter_pods {
     position: fixed;
-    width:90%;
+    width: 90%;
     margin: 0 5%;
     bottom: 30px;
     left: 0;
@@ -6594,11 +6594,59 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   }
 
   .baner-page {
-    height: 230px;
+    height: 200px;
   }
 
   .page-h1 {
     text-align: center;
+  }
+
+  .baner-page__text br {
+    display: none;
+  }
+
+  .baner-page__text {
+    margin-bottom: 10px;
+  }
+
+  .recurring h1,
+  .recurring h2 {
+    margin-bottom: 10px;
+  }
+
+  .cooperation-content ol ul {
+    margin: 10px 10px 25px 5px;
+  }
+
+  .cooperation-content ol>li {
+    font-size: 18px;
+  }
+
+  .cooperation-content ul li {
+    font-size: 15px;
+    padding-left: 16px;
+  }
+
+  .cooperation-content ul li:before {
+    top: 4px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .cooperation-content ol>li:before {
+    margin-right: 6px;
+  }
+
+  .cooperation-content__form {
+    padding: 30px 20px;
+  }
+
+  .cooperation-content__form-title {
+    margin-bottom: 25px;
+  }
+
+  .cooperation-content {
+    margin-bottom: 35px;
   }
 }
 
@@ -6627,12 +6675,24 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     flex: 0 0 50%;
   }
 
-  .best-offers__row .card-column:last-child{
+  .best-offers__row .card-column:last-child {
     display: none;
   }
 
   .card-column {
     flex: 0 1 50%;
+  }
+
+  .cooperation-content {
+    flex-wrap: wrap;
+  }
+
+  .cooperation-content__text {
+    margin-right: 0;
+  }
+
+  .cooperation-content__form {
+    width: 100%;
   }
 }
 
@@ -6950,6 +7010,12 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .info__card-block-item-title {
     font-size: 14px;
+  }
+
+  .recurring h1,
+  .recurring h2 {
+    font-size: 22px;
+    line-height: 1.2;
   }
 }
 
