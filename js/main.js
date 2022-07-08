@@ -297,7 +297,7 @@ let sliderBrends = new Swiper('.sliderBrends', {
 			autoHeight: true,
 		},
 		515: {
-			slidesPerView: 4.5, 
+			slidesPerView: 4.5,
 			spaceBetween: 30,
 			autoHeight: true,
 		},
@@ -1369,10 +1369,10 @@ animate({
 
 const iconMenuOpen = document.querySelector(".icon-menu");
 const iconMenuClose = document.querySelector(".menu-side-close");
-
-// const iconMenu = document.querySelector(".icon-menu");
 const body = document.querySelector("body");
 const menuBody = document.querySelector(".mob-menu");
+const search = document.querySelector(".searchBtn");
+const searchBlock = document.querySelector(".searchBlock");
 const menuListItemElems = document.querySelector(".mob-menu__list");
 const msNuarBlk = document.querySelector(".menu-side-nuar_blk");
 const mobsearch = document.querySelector(".header__mob-search-btn");
@@ -1392,20 +1392,24 @@ if (iconMenuOpen) {
 
 if (iconMenuClose) {
 	iconMenuClose.addEventListener("click", function () {
+		iconMenuClose.classList.remove("active");
 		body.classList.remove("_lock");
 		menuBody.classList.remove("active");
 		msNuarBlk.classList.remove("active");
 	});
 }
 
-// if (iconMenu) {
-// 	iconMenu.addEventListener("click", function () {
-// 		iconMenu.classList.toggle("active");
-// 		body.classList.toggle("_lock");
-// 		menuBody.classList.toggle("active");
-// 		msNuarBlk.classList.toggle("active");
-// 	});
-// }
+// ====================================== 
+
+// SEARCH
+if (search) {
+	search.addEventListener("click", function () {
+		body.classList.toggle("_lock");
+		searchBlock.classList.toggle("active");
+		msNuarBlk.classList.toggle("active");
+	});
+}
+// ========================================
 
 // Закрытие моб меню при клике на якорную ссылку
 if (menuListItemElems) {

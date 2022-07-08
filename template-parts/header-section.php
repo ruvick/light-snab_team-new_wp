@@ -14,6 +14,7 @@
 							if (!empty($mail)) { ?><a href="mailto:<? echo $mail; ?>" class="header__contacts-email"><? echo $mail; ?></a><? } ?>
 					</div>
 
+					<button class="header__search search searchBtn"></button>
 					<a href="<?php echo get_permalink(17172);?>" class="bascket-icon"><span class="bascket-icon__number bascet_counter">0</span></a>
 
 					<div class="icon-menu" aria-label="Бургер меню"> 
@@ -24,6 +25,19 @@
 
 				</div>
 		</header>
+
+		<!-- Поиск  -->
+		<div class="searchBlock">
+			<form role="search" method="get" action="<?php echo home_url( '/' ) ?>" id="searchform" class="searchBlock__form">
+				<input type="text" placeholder="Поиск" class="searchBlock__form-input input"
+					value="<?php echo get_search_query() ?>" name="s" id="s">
+				<button type="submit" tabindex="2" value="" id="searchsubmit" class="searchBlock__form-btn"></button>
+			</form>
+			<p class="searchBlock__text">
+				<span>Введите поисковый запрос, например:</span> <br>
+				Люстра, Бра из бронзы, Лампа 1234
+			</p>
+		</div>
 
 		<!-- Мобильное меню -->
 		<div class="mob-menu mob-menu_ns header__mob-menu">
