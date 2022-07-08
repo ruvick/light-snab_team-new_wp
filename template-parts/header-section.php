@@ -6,8 +6,8 @@
 					<a href="<? bloginfo("url"); ?>" class="logo-icon header__logo"></a>
 
 					<div class="header__contacts d-flex">
-						<? $adr = carbon_get_theme_option("as_address"); 
-							if (!empty($adr)){?><a href="#" class="header__contacts-address"><? echo $adr; ?></a><?}?> 
+						<!-- <? $adr = carbon_get_theme_option("as_address"); 
+							if (!empty($adr)){?><a href="#" class="header__contacts-address"><? echo $adr; ?></a><?}?>  -->
 						<? $tel = carbon_get_theme_option("as_phones_1"); 
 							if (!empty($tel)){?><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="header__contacts-phone"><? echo $tel; ?></a><?}?> 
 						<? $mail = carbon_get_theme_option("as_email");
